@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgMkt1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050C1A" />
+      <stop offset="50%" stop-color="#0B162C" />
+      <stop offset="100%" stop-color="#102142" />
+    </linearGradient>
+    <radialGradient id="mapGlow" cx="68%" cy="42%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.32" />
+      <stop offset="50%" stop-color="#0284C7" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#050C1A" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="starGlow" cx="24%" cy="78%" r="42%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#050C1A" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glass & Border -->
+    <linearGradient id="mapGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16233B" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#0E182A" stop-opacity="0.96" />
+    </linearGradient>
+    <linearGradient id="mapBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#2563EB" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.35" />
+    </linearGradient>
+    <linearGradient id="pinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#B91C1C" />
+    </linearGradient>
+    <linearGradient id="goldStars" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadowMkt1" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity="0.75" />
+    </filter>
+    <filter id="glowCyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowPin" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Tech Map Pattern -->
+    <pattern id="mapGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1" />
+      <circle cx="0" cy="0" r="1.2" fill="rgba(56,189,248,0.2)" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgMkt1)" />
+  <rect width="800" height="500" fill="url(#mapGrid)" />
+  <rect width="800" height="500" fill="url(#mapGlow)" />
+  <rect width="800" height="500" fill="url(#starGlow)" />
+
+  <!-- MAIN MAP & LOCAL SEO HUB SHELL -->
+  <g filter="url(#shadowMkt1)">
+    <rect x="65" y="50" width="670" height="400" rx="18" fill="url(#mapGlass)" stroke="url(#mapBorder)" stroke-width="1.6" />
+
+    <!-- Top Bar -->
+    <rect x="65" y="50" width="670" height="46" rx="18" fill="#0E1729" />
+    <path d="M65 96 h670" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+
+    <!-- Control dots -->
+    <circle cx="94" cy="73" r="5.5" fill="#EF4444" opacity="0.85" />
+    <circle cx="112" cy="73" r="5.5" fill="#F59E0B" opacity="0.85" />
+    <circle cx="130" cy="73" r="5.5" fill="#10B981" opacity="0.85" />
+
+    <!-- Search/Engine Header -->
+    <rect x="160" y="61" width="310" height="24" rx="7" fill="#080F1D" stroke="rgba(56,189,248,0.25)" stroke-width="1" />
+    <circle cx="176" cy="73" r="3.5" fill="#38BDF8" filter="url(#glowCyan)" />
+    <text x="188" y="77" fill="#E0F2FE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">GOOGLE MAPS &amp; LOCAL SEARCH #1</text>
+
+    <!-- Top Tag -->
+    <rect x="610" y="61" width="102" height="24" rx="12" fill="rgba(245,158,11,0.18)" stroke="rgba(245,158,11,0.45)" stroke-width="1.2" />
+    <circle cx="624" cy="73" r="3" fill="#F59E0B" />
+    <text x="634" y="77" fill="#FEF3C7" font-family="'Inter', sans-serif" font-size="9" font-weight="800" letter-spacing="0.05em">5.0 ★ RATED</text>
+
+    <!-- LEFT COLUMN: VERIFIED GOOGLE PROFILE & LOCAL RANKINGS -->
+    <g transform="translate(95, 115)">
+      <rect x="0" y="0" width="330" height="310" rx="14" fill="#0A1222" stroke="rgba(255,255,255,0.07)" stroke-width="1" />
+
+      <text x="20" y="28" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="0.1em">GOOGLE BUSINESS PROFILE</text>
+
+      <!-- Profile Header Card -->
+      <g transform="translate(20, 44)">
+        <rect x="0" y="0" width="290" height="74" rx="10" fill="rgba(56,189,248,0.12)" stroke="rgba(56,189,248,0.3)" stroke-width="1.2" />
+        <!-- Verified Business Icon -->
+        <circle cx="28" cy="37" r="16" fill="#2563EB" />
+        <path d="M22 37 L26 41 L34 33" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        
+        <text x="54" y="30" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="12" font-weight="800">Your Business Profile</text>
+        <text x="54" y="45" fill="#38BDF8" font-family="'Inter', sans-serif" font-size="9" font-weight="600">✓ Verified &amp; Optimized on Google</text>
+        
+        <!-- Stars Rating -->
+        <g transform="translate(54, 52)">
+          <text x="0" y="11" fill="#FBBF24" font-family="'Inter', sans-serif" font-size="11" font-weight="900">★★★★★</text>
+          <text x="64" y="11" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="9">5.0 (148 Reviews)</text>
+        </g>
+      </g>
+
+      <!-- Ranking Position Cards -->
+      <g transform="translate(20, 130)">
+        <!-- Keyword 1: #1 Rank -->
+        <rect x="0" y="0" width="290" height="38" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" />
+        <rect x="10" y="8" width="26" height="22" rx="5" fill="#10B981" />
+        <text x="23" y="23" text-anchor="middle" fill="#FFFFFF" font-family="'Inter Tight', sans-serif" font-size="11" font-weight="900">#1</text>
+        <text x="44" y="23" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700">"Services Near Me" Local Pack</text>
+
+        <!-- Keyword 2: #1 Rank -->
+        <rect x="0" y="44" width="290" height="38" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" />
+        <rect x="10" y="52" width="26" height="22" rx="5" fill="#2563EB" />
+        <text x="23" y="67" text-anchor="middle" fill="#FFFFFF" font-family="'Inter Tight', sans-serif" font-size="11" font-weight="900">#1</text>
+        <text x="44" y="67" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700">"Best [Your Category] City Area"</text>
+
+        <!-- Keyword 3: Directory Sync -->
+        <rect x="0" y="88" width="290" height="38" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" />
+        <rect x="10" y="96" width="26" height="22" rx="5" fill="#F59E0B" />
+        <text x="23" y="111" text-anchor="middle" fill="#FFFFFF" font-family="'Inter Tight', sans-serif" font-size="10" font-weight="900">40+</text>
+        <text x="44" y="111" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700">Citations &amp; Directory Networks Sync</text>
+      </g>
+
+      <!-- Monthly Reporting -->
+      <g transform="translate(20, 268)">
+        <rect x="0" y="0" width="290" height="28" rx="6" fill="rgba(56,189,248,0.12)" />
+        <text x="145" y="18" text-anchor="middle" fill="#BAE6FD" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">MONTHLY ROI &amp; PERFORMANCE REPORT</text>
+      </g>
+    </g>
+
+    <!-- RIGHT COLUMN: 3D MAP RADAR & PIN LOCATOR -->
+    <g transform="translate(445, 115)">
+      <rect x="0" y="0" width="260" height="310" rx="14" fill="#0A1222" stroke="rgba(56,189,248,0.25)" stroke-width="1.2" />
+
+      <!-- Map Radar Screen -->
+      <g transform="translate(18, 18)">
+        <rect x="0" y="0" width="224" height="215" rx="12" fill="#070E1A" stroke="rgba(255,255,255,0.06)" />
+        
+        <!-- Radar Circles -->
+        <circle cx="112" cy="98" r="80" fill="none" stroke="rgba(56,189,248,0.12)" stroke-width="1" />
+        <circle cx="112" cy="98" r="54" fill="none" stroke="rgba(56,189,248,0.2)" stroke-width="1.2" stroke-dasharray="4 4" />
+        <circle cx="112" cy="98" r="28" fill="none" stroke="rgba(56,189,248,0.35)" stroke-width="1.5" />
+
+        <!-- Crosshair Lines -->
+        <path d="M112 18 L112 178 M32 98 L192 98" stroke="rgba(56,189,248,0.1)" stroke-width="1" />
+
+        <!-- 3D Red Location Pin #1 -->
+        <g transform="translate(112, 98)" filter="url(#glowPin)">
+          <!-- Pin Shadow -->
+          <ellipse cx="0" cy="18" rx="16" ry="6" fill="rgba(0,0,0,0.6)" />
+          <!-- Pin Shape -->
+          <path d="M0 16 C-14 4, -16 -10, 0 -22 C16 -10, 14 4, 0 16 Z" fill="url(#pinGrad)" stroke="#FFFFFF" stroke-width="1.8" />
+          <!-- Pin Center Star -->
+          <circle cx="0" cy="-6" r="6.5" fill="#FFFFFF" />
+          <text x="0" y="-3.5" text-anchor="middle" fill="#B91C1C" font-family="'Inter Tight', sans-serif" font-size="7.5" font-weight="900">#1</text>
+        </g>
+
+        <!-- Customer Inflow Dots -->
+        <circle cx="68" cy="62" r="3.5" fill="#34D399" filter="url(#glowCyan)" />
+        <circle cx="160" cy="58" r="3.5" fill="#34D399" filter="url(#glowCyan)" />
+        <circle cx="155" cy="142" r="3.5" fill="#34D399" filter="url(#glowCyan)" />
+        <circle cx="58" cy="138" r="3.5" fill="#34D399" filter="url(#glowCyan)" />
+
+        <!-- Bottom Local Label -->
+        <rect x="18" y="174" width="188" height="28" rx="7" fill="rgba(14,23,42,0.85)" stroke="rgba(56,189,248,0.3)" stroke-width="1" />
+        <text x="112" y="192" text-anchor="middle" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700">LOCAL CUSTOMER REACH · 100%</text>
+      </g>
+
+      <!-- Action Button -->
+      <g transform="translate(18, 248)">
+        <rect x="0" y="0" width="224" height="42" rx="10" fill="#2563EB" />
+        <text x="112" y="26" text-anchor="middle" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11.5" font-weight="800">Dominate Local Maps</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- FLOATING MAP #1 BADGE -->
+  <g transform="translate(48, 385)" filter="url(#shadowMkt1)">
+    <rect x="0" y="0" width="185" height="46" rx="23" fill="#0E192D" stroke="#38BDF8" stroke-width="1.4" />
+    <circle cx="24" cy="23" r="14" fill="rgba(56,189,248,0.25)" />
+    <!-- Map Pin Icon -->
+    <path d="M24 14 C20 14, 18 17, 18 20 C18 25, 24 30, 24 30 C24 30, 30 25, 30 20 C30 17, 28 14, 24 14 Z" fill="#EF4444" filter="url(#glowPin)" />
+    <circle cx="24" cy="19" r="2" fill="#FFFFFF" />
+    <text x="46" y="21" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="10.5" font-weight="800">#1 Local Rank</text>
+    <text x="46" y="34" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700">GOOGLE MAP PACK</text>
+  </g>
+</svg>

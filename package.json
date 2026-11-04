@@ -1,0 +1,19 @@
+{
+  "name": "azora-solutions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Azora Solutions Web Application",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "test-email": "node test-titan-email.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.7",
+    "nodemailer": "^6.10.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,77 @@
+AZORA SOLUTIONS — TITAN EMAIL & LEAD SYSTEM SETUP GUIDE
+=========================================================
+
+MAIN BUGS FIXED:
+----------------
+1. Form Submission Blockers:
+   - Previously, send-lead-email.mjs threw 503 "Lead storage is temporarily unavailable"
+     if SUPABASE_SERVICE_ROLE_KEY was not configured in Netlify.
+   - It also threw 403 "Invalid form origin" because it strictly checked the origin against
+     request.url.origin, failing when users accessed the custom domain azorasolution.com.
+   - Now: Netlify & Vercel handlers allow all legitimate website traffic, make Supabase logging
+     graceful/optional, and prioritize sending the quote email directly via Titan SMTP!
+   - If tested locally or offline, lead-store.js automatically falls back to local/Supabase
+     storage without blocking the customer.
+
+2. Hardware Selection Link Mismatch:
+   - All links in hardware.html and index.html passed ?hardware=clover-station-duo, but quote.html
+     only checked ?product=, meaning no hardware was being selected when clicking "Request Quote"!
+   - Now: quote.html and app.js support ?hardware=, ?product=, ?plan=, and ?item=.
+   - Interactive toggle tabs were also added so customers can switch between POS Hardware
+     and Website/Marketing plans directly on the form.
+
+3. Missing Netlify & Vercel API Rewrites:
+   - /api/lead is now explicitly routed in netlify.toml, _redirects, and vercel.json.
+
+=========================================================
+HOW TO MAKE TITAN EMAIL SENDING WORK:
+=========================================================
+
+The email notification sends via Titan SMTP to: sales@azorasolution.com
+
+Step 1: If using Netlify:
+-------------------------
+1. Go to Netlify Dashboard -> Your Site -> Site configuration -> Environment variables.
+2. Add these environment variables:
+
+   SMTP_HOST = smtp.titan.email
+   SMTP_PORT = 465
+   SMTP_USER = sales@azorasolution.com
+   SMTP_PASSWORD = [Your Titan Mailbox Password or App Password]
+   SALES_EMAIL = sales@azorasolution.com
+
+   (Optional if you use Supabase lead storage):
+   SUPABASE_URL = https://ukgaxzxxulyypxhtkzit.supabase.co
+   SUPABASE_SERVICE_ROLE_KEY = [Your Supabase secret service_role key]
+
+3. Trigger a Deploy (or redeploy) on Netlify so the new environment variables take effect.
+
+Step 2: If Testing Locally on your Computer:
+--------------------------------------------
+1. Create a file named .env in the root of the project (e:\Azora_Titan_Fixed\.env) with:
+
+   SMTP_HOST=smtp.titan.email
+   SMTP_PORT=465
+   SMTP_USER=sales@azorasolution.com
+   SMTP_PASSWORD=your_titan_mailbox_password
+   SALES_EMAIL=sales@azorasolution.com
+
+2. Test your Titan connection immediately by running in terminal:
+   node test-titan-email.mjs your_titan_password
+   (This will send a test email to sales@azorasolution.com and report the result).
+
+3. Run the local website with live API:
+   npm start
+   Open http://localhost:3000/quote and submit a test quote!
+
+Step 3: Titan Email App Password (If needed):
+--------------------------------------------
+- If your Titan email (app.titan.email) has Two-Factor Authentication (2FA) enabled,
+  or if your account requires an App Password for SMTP:
+  1. Log in to https://app.titan.email
+  2. Go to Settings (gear icon) -> Preferences / Security -> App Passwords
+  3. Generate a new App Password for "Azora Website"
+  4. Use that password in SMTP_PASSWORD.
+
+- If port 465 times out due to network firewall restrictions, change:
+  SMTP_PORT = 587

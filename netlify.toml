@@ -1,0 +1,125 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/lead"
+  to = "/.netlify/functions/send-lead-email"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/google6438d683f2511e6a.html"
+  to = "/google6438d683f2511e6a.html"
+  status = 200
+
+[[redirects]]
+  from = "/google6438d683f2511e6a"
+  to = "/google6438d683f2511e6a.html"
+  status = 200
+
+[[redirects]]
+  from = "/hardware"
+  to = "/hardware.html"
+  status = 200
+
+[[redirects]]
+  from = "/hardware/"
+  to = "/hardware.html"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/services/"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/plans"
+  to = "/plans.html"
+  status = 200
+
+[[redirects]]
+  from = "/plans/"
+  to = "/plans.html"
+  status = 200
+
+[[redirects]]
+  from = "/plans-services"
+  to = "/plans-services.html"
+  status = 200
+
+[[redirects]]
+  from = "/plans-services/"
+  to = "/plans-services.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/about/"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/client-success"
+  to = "/client-success.html"
+  status = 200
+
+[[redirects]]
+  from = "/client-success/"
+  to = "/client-success.html"
+  status = 200
+
+[[redirects]]
+  from = "/get-a-quote"
+  to = "/get-a-quote.html"
+  status = 200
+
+[[redirects]]
+  from = "/get-a-quote/"
+  to = "/get-a-quote.html"
+  status = 200
+
+[[redirects]]
+  from = "/quote"
+  to = "/quote.html"
+  status = 200
+
+[[redirects]]
+  from = "/quote/"
+  to = "/quote.html"
+  status = 200
+
+[[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin-inventory"
+  to = "/admin-inventory.html"
+  status = 200
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/dashboard.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

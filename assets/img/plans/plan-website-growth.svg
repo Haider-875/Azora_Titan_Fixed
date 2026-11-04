@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060C18" />
+      <stop offset="50%" stop-color="#0B1528" />
+      <stop offset="100%" stop-color="#121F38" />
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="68%" cy="40%" r="52%">
+      <stop offset="0%" stop-color="#2469EB" stop-opacity="0.38" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#060C18" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="purpleGlow" cx="20%" cy="80%" r="40%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#060C18" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glass Panels -->
+    <linearGradient id="glassTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2D4A" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0F1A2E" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="featuredBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#2469EB" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="funnelGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2469EB" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="btnAzure" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadowHeavy" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity="0.7" />
+    </filter>
+    <filter id="glowBlue" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="dropSm" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.4" />
+    </filter>
+
+    <!-- Tech Grid Pattern -->
+    <pattern id="gridPattern2" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+      <circle cx="0" cy="0" r="1.2" fill="rgba(56,189,248,0.2)" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad2)" />
+  <rect width="800" height="500" fill="url(#gridPattern2)" />
+  <rect width="800" height="500" fill="url(#blueGlow)" />
+  <rect width="800" height="500" fill="url(#purpleGlow)" />
+
+  <!-- Connecting Light Paths -->
+  <path d="M60 250 Q280 180 500 240 T750 180" fill="none" stroke="rgba(56,189,248,0.12)" stroke-width="2" stroke-dasharray="6 8" />
+
+  <!-- MAIN DASHBOARD WINDOW / CONVERSION ENGINE -->
+  <g filter="url(#shadowHeavy)">
+    <!-- Main Shell -->
+    <rect x="65" y="50" width="670" height="400" rx="18" fill="url(#glassTop)" stroke="url(#featuredBorder)" stroke-width="1.6" />
+
+    <!-- Top Bar -->
+    <rect x="65" y="50" width="670" height="46" rx="18" fill="#101A2C" />
+    <path d="M65 96 h670" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+
+    <!-- Dots -->
+    <circle cx="94" cy="73" r="5.5" fill="#EF4444" opacity="0.85" />
+    <circle cx="112" cy="73" r="5.5" fill="#F59E0B" opacity="0.85" />
+    <circle cx="130" cy="73" r="5.5" fill="#10B981" opacity="0.85" />
+
+    <!-- Search/Engine Header -->
+    <rect x="160" y="61" width="300" height="24" rx="7" fill="#09111E" stroke="rgba(56,189,248,0.2)" stroke-width="1" />
+    <circle cx="176" cy="73" r="3.5" fill="#38BDF8" filter="url(#glowBlue)" />
+    <text x="188" y="77" fill="#E2E8F0" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">GROWTH LEAD ENGINE · ACTIVE</text>
+
+    <!-- Top Tag -->
+    <rect x="600" y="61" width="112" height="24" rx="12" fill="rgba(36,105,235,0.25)" stroke="rgba(96,165,250,0.5)" stroke-width="1.2" />
+    <circle cx="614" cy="73" r="3" fill="#60A5FA" filter="url(#glowBlue)" />
+    <text x="624" y="77" fill="#DBEAFE" font-family="'Inter', sans-serif" font-size="9" font-weight="800" letter-spacing="0.06em">CONVERSION +185%</text>
+
+    <!-- LEFT COLUMN: LEAD GENERATION FUNNEL & PIPELINE -->
+    <g transform="translate(95, 115)">
+      <!-- Panel Card -->
+      <rect x="0" y="0" width="330" height="310" rx="14" fill="#0C1525" stroke="rgba(255,255,255,0.07)" stroke-width="1" />
+      
+      <!-- Section Header -->
+      <text x="20" y="30" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="0.1em">LIVE CONVERSION FUNNEL</text>
+      
+      <!-- Funnel Step 1: Website Visitors -->
+      <g transform="translate(20, 50)">
+        <rect x="0" y="0" width="290" height="42" rx="8" fill="rgba(36,105,235,0.12)" stroke="rgba(56,189,248,0.25)" stroke-width="1" />
+        <text x="14" y="19" fill="#93C5FD" font-family="'Inter', sans-serif" font-size="10" font-weight="700">1. Website Visitors</text>
+        <text x="14" y="32" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8">ORGANIC &amp; LOCAL SEARCH</text>
+        <text x="240" y="26" text-anchor="end" fill="#FFFFFF" font-family="'Inter Tight', sans-serif" font-size="14" font-weight="900">4,820/mo</text>
+      </g>
+
+      <!-- Connecting Arrow -->
+      <path d="M165 94 L165 106 M161 102 L165 106 L169 102" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" />
+
+      <!-- Funnel Step 2: High-Intent Inquiries -->
+      <g transform="translate(20, 110)">
+        <rect x="0" y="0" width="290" height="42" rx="8" fill="rgba(36,105,235,0.2)" stroke="rgba(96,165,250,0.4)" stroke-width="1.2" />
+        <text x="14" y="19" fill="#60A5FA" font-family="'Inter', sans-serif" font-size="10" font-weight="800">2. Quote &amp; Booking Leads</text>
+        <text x="14" y="32" fill="#93C5FD" font-family="'JetBrains Mono', monospace" font-size="8">AUTOMATED SMART FORMS</text>
+        <text x="240" y="26" text-anchor="end" fill="#38BDF8" font-family="'Inter Tight', sans-serif" font-size="14" font-weight="900">342 Leads</text>
+      </g>
+
+      <!-- Connecting Arrow -->
+      <path d="M165 154 L165 166 M161 162 L165 166 L169 162" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" />
+
+      <!-- Funnel Step 3: Paying Customers Won -->
+      <g transform="translate(20, 170)">
+        <rect x="0" y="0" width="290" height="44" rx="8" fill="url(#btnAzure)" />
+        <text x="14" y="20" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="10.5" font-weight="900">3. Closed Customers</text>
+        <text x="14" y="33" fill="#DBEAFE" font-family="'JetBrains Mono', monospace" font-size="8">DIRECT ROI GENERATED</text>
+        <text x="240" y="27" text-anchor="end" fill="#FFFFFF" font-family="'Inter Tight', sans-serif" font-size="15" font-weight="900">$24,600+</text>
+      </g>
+
+      <!-- Feature Chips Below Funnel -->
+      <g transform="translate(20, 234)">
+        <rect x="0" y="0" width="90" height="52" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" />
+        <text x="10" y="18" fill="#38BDF8" font-family="'Inter', sans-serif" font-size="12" font-weight="800">10 Pages</text>
+        <text x="10" y="32" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="8">Expansion</text>
+        <text x="10" y="44" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="7">MAX DEPTH</text>
+
+        <rect x="98" y="0" width="90" height="52" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" />
+        <text x="108" y="18" fill="#34D399" font-family="'Inter', sans-serif" font-size="12" font-weight="800">G-Maps</text>
+        <text x="108" y="32" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="8">Sync Sync</text>
+        <text x="108" y="44" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="7">CONNECTED</text>
+
+        <rect x="196" y="0" width="94" height="52" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" />
+        <text x="206" y="18" fill="#FBBF24" font-family="'Inter', sans-serif" font-size="12" font-weight="800">Monthly</text>
+        <text x="206" y="32" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="8">Updates</text>
+        <text x="206" y="44" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="7">INCLUDED</text>
+      </g>
+    </g>
+
+    <!-- RIGHT COLUMN: INTERACTIVE APPOINTMENT & LEAD SCHEDULER WIDGET -->
+    <g transform="translate(445, 115)">
+      <!-- Widget Card -->
+      <rect x="0" y="0" width="260" height="310" rx="14" fill="#0C1525" stroke="rgba(56,189,248,0.2)" stroke-width="1.2" />
+
+      <!-- Calendar Header -->
+      <text x="20" y="28" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="12" font-weight="800">Appointment Engine</text>
+      <text x="20" y="42" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700">ONLINE BOOKING ENGINE</text>
+
+      <!-- Calendar Days Matrix Mockup -->
+      <g transform="translate(18, 56)">
+        <!-- Day Pills -->
+        <rect x="0" y="0" width="28" height="38" rx="6" fill="rgba(255,255,255,0.05)" />
+        <text x="14" y="15" text-anchor="middle" fill="#64748B" font-family="'Inter', sans-serif" font-size="8">M</text>
+        <text x="14" y="30" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10" font-weight="700">12</text>
+
+        <rect x="33" y="0" width="28" height="38" rx="6" fill="rgba(255,255,255,0.05)" />
+        <text x="47" y="15" text-anchor="middle" fill="#64748B" font-family="'Inter', sans-serif" font-size="8">T</text>
+        <text x="47" y="30" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10" font-weight="700">13</text>
+
+        <!-- Selected Active Day -->
+        <rect x="66" y="0" width="28" height="38" rx="6" fill="url(#btnAzure)" filter="url(#glowBlue)" />
+        <text x="80" y="15" text-anchor="middle" fill="#DBEAFE" font-family="'Inter', sans-serif" font-size="8" font-weight="700">W</text>
+        <text x="80" y="30" text-anchor="middle" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="10" font-weight="900">14</text>
+
+        <rect x="99" y="0" width="28" height="38" rx="6" fill="rgba(255,255,255,0.05)" />
+        <text x="113" y="15" text-anchor="middle" fill="#64748B" font-family="'Inter', sans-serif" font-size="8">T</text>
+        <text x="113" y="30" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10" font-weight="700">15</text>
+
+        <rect x="132" y="0" width="28" height="38" rx="6" fill="rgba(255,255,255,0.05)" />
+        <text x="146" y="15" text-anchor="middle" fill="#64748B" font-family="'Inter', sans-serif" font-size="8">F</text>
+        <text x="146" y="30" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10" font-weight="700">16</text>
+
+        <rect x="165" y="0" width="28" height="38" rx="6" fill="rgba(255,255,255,0.05)" />
+        <text x="179" y="15" text-anchor="middle" fill="#64748B" font-family="'Inter', sans-serif" font-size="8">S</text>
+        <text x="179" y="30" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10" font-weight="700">17</text>
+
+        <rect x="198" y="0" width="26" height="38" rx="6" fill="rgba(255,255,255,0.05)" />
+        <text x="211" y="15" text-anchor="middle" fill="#64748B" font-family="'Inter', sans-serif" font-size="8">S</text>
+        <text x="211" y="30" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10" font-weight="700">18</text>
+      </g>
+
+      <!-- Time Slots List -->
+      <g transform="translate(18, 108)">
+        <!-- Slot 1: Booked -->
+        <rect x="0" y="0" width="224" height="36" rx="7" fill="rgba(16,185,129,0.12)" stroke="rgba(52,211,153,0.3)" stroke-width="1" />
+        <circle cx="16" cy="18" r="4" fill="#34D399" />
+        <text x="28" y="22" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="10" font-weight="700">10:00 AM · Confirmed Booking</text>
+        
+        <!-- Slot 2: Hot Lead Active -->
+        <rect x="0" y="44" width="224" height="36" rx="7" fill="rgba(36,105,235,0.22)" stroke="rgba(96,165,250,0.5)" stroke-width="1.2" />
+        <circle cx="16" cy="62" r="4" fill="#60A5FA" filter="url(#glowBlue)" />
+        <text x="28" y="66" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="10" font-weight="800">01:30 PM · Quote Requested</text>
+
+        <!-- Slot 3: Available -->
+        <rect x="0" y="88" width="224" height="36" rx="7" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+        <circle cx="16" cy="106" r="4" fill="#64748B" />
+        <text x="28" y="110" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="10" font-weight="600">03:45 PM · Open Slot</text>
+      </g>
+
+      <!-- Direct CTA Button -->
+      <g transform="translate(18, 248)">
+        <rect x="0" y="0" width="224" height="42" rx="10" fill="url(#btnAzure)" filter="url(#dropSm)" />
+        <text x="112" y="26" text-anchor="middle" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11.5" font-weight="800">Auto-Capture Leads</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- FLOATING MOST POPULAR CALLOUT BADGE -->
+  <g transform="translate(48, 385)" filter="url(#dropSm)">
+    <rect x="0" y="0" width="180" height="46" rx="23" fill="#0C162A" stroke="#38BDF8" stroke-width="1.4" />
+    <circle cx="24" cy="23" r="14" fill="rgba(36,105,235,0.3)" />
+    <!-- Star/Spark Icon -->
+    <path d="M24 14 L26.5 20.5 L33 21.5 L28 26 L29.5 32.5 L24 29 L18.5 32.5 L20 26 L15 21.5 L21.5 20.5 Z" fill="#38BDF8" filter="url(#glowBlue)" />
+    <text x="46" y="21" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="10.5" font-weight="800">#1 Growth Choice</text>
+    <text x="46" y="34" fill="#60A5FA" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700">TOP CONVERTING</text>
+  </g>
+</svg>

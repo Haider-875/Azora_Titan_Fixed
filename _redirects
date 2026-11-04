@@ -1,0 +1,32 @@
+# API Endpoints
+/api/lead    /.netlify/functions/send-lead-email   200
+/api/*       /.netlify/functions/:splat            200
+
+# Google Search Console Verification
+/google6438d683f2511e6a.html    /google6438d683f2511e6a.html  200
+/google6438d683f2511e6a         /google6438d683f2511e6a.html  200
+
+# Azora Solutions Clean URL Redirects & Rewrites (Netlify & Cloudflare)
+/hardware              /hardware.html         200
+/hardware/             /hardware.html         200
+/services              /services.html         200
+/services/             /services.html         200
+/plans                 /plans.html            200
+/plans/                /plans.html            200
+/plans-services        /plans-services.html   200
+/plans-services/       /plans-services.html   200
+/about                 /about.html            200
+/about/                /about.html            200
+/client-success        /client-success.html   200
+/client-success/       /client-success.html   200
+/get-a-quote           /get-a-quote.html      200
+/get-a-quote/          /get-a-quote.html      200
+/quote                 /quote.html            200
+/quote/                /quote.html            200
+/success               /success.html          200
+/success/              /success.html          200
+/admin-inventory       /admin-inventory.html  200
+/admin-inventory/      /admin-inventory.html  200
+/dashboard             /dashboard.html        200
+/dashboard/            /dashboard.html        200
+

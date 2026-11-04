@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin-inventory
+Disallow: /admin-inventory.html
+Disallow: /dashboard
+Disallow: /dashboard.html
+
+Sitemap: https://azorasolution.com/sitemap.xml

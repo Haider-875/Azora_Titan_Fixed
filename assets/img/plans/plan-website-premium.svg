@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070712" />
+      <stop offset="50%" stop-color="#0E0D22" />
+      <stop offset="100%" stop-color="#181534" />
+    </linearGradient>
+    <radialGradient id="purpleGlow3" cx="70%" cy="35%" r="52%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#6D28D9" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#070712" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="amberGlow" cx="20%" cy="80%" r="42%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#070712" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glass & Border -->
+    <linearGradient id="premGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E193C" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#120E28" stop-opacity="0.96" />
+    </linearGradient>
+    <linearGradient id="premBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.4" />
+    </linearGradient>
+    <linearGradient id="purpleBtn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+    <linearGradient id="goldCrown" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadowPrem" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity="0.75" />
+    </filter>
+    <filter id="glowPurple" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowGold" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Tech Grid -->
+    <pattern id="gridPrem" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1" />
+      <circle cx="0" cy="0" r="1.2" fill="rgba(192,132,252,0.2)" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad3)" />
+  <rect width="800" height="500" fill="url(#gridPrem)" />
+  <rect width="800" height="500" fill="url(#purpleGlow3)" />
+  <rect width="800" height="500" fill="url(#amberGlow)" />
+
+  <!-- Connecting Cyber Wave -->
+  <path d="M40 180 C200 80, 350 280, 520 180 S760 260, 780 200" fill="none" stroke="rgba(192,132,252,0.12)" stroke-width="2" stroke-dasharray="6 8" />
+
+  <!-- MAIN ENTERPRISE PLATFORM SHELL -->
+  <g filter="url(#shadowPrem)">
+    <!-- Shell Box -->
+    <rect x="65" y="50" width="670" height="400" rx="18" fill="url(#premGlass)" stroke="url(#premBorder)" stroke-width="1.6" />
+
+    <!-- Topbar -->
+    <rect x="65" y="50" width="670" height="46" rx="18" fill="#130F26" />
+    <path d="M65 96 h670" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+
+    <!-- Control dots -->
+    <circle cx="94" cy="73" r="5.5" fill="#EF4444" opacity="0.85" />
+    <circle cx="112" cy="73" r="5.5" fill="#F59E0B" opacity="0.85" />
+    <circle cx="130" cy="73" r="5.5" fill="#10B981" opacity="0.85" />
+
+    <!-- Enterprise Badge in Topbar -->
+    <rect x="160" y="61" width="310" height="24" rx="7" fill="#0A0817" stroke="rgba(192,132,252,0.25)" stroke-width="1" />
+    <circle cx="176" cy="73" r="3.5" fill="#C084FC" filter="url(#glowPurple)" />
+    <text x="188" y="77" fill="#E9D5FF" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">ENTERPRISE COMMERCE &amp; POS SYNC</text>
+
+    <!-- 24/7 SLA Pill -->
+    <rect x="605" y="61" width="108" height="24" rx="12" fill="rgba(245,158,11,0.18)" stroke="rgba(245,158,11,0.5)" stroke-width="1.2" />
+    <circle cx="619" cy="73" r="3" fill="#F59E0B" filter="url(#glowGold)" />
+    <text x="629" y="77" fill="#FEF3C7" font-family="'Inter', sans-serif" font-size="9" font-weight="800" letter-spacing="0.05em">24/7 SLA VIP</text>
+
+    <!-- LEFT COLUMN: ENTERPRISE STORE & POS SYNC FLOW -->
+    <g transform="translate(95, 115)">
+      <!-- Box Container -->
+      <rect x="0" y="0" width="330" height="310" rx="14" fill="#0C0A1C" stroke="rgba(255,255,255,0.07)" stroke-width="1" />
+
+      <text x="20" y="28" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="0.1em">CLOUD POS &amp; COMMERCE SYNC</text>
+
+      <!-- Sync Diagram: Online Store <--> POS Terminal -->
+      <g transform="translate(20, 48)">
+        <!-- Node 1: Online Store / Custom Web App -->
+        <rect x="0" y="0" width="125" height="74" rx="10" fill="rgba(139,92,246,0.15)" stroke="rgba(192,132,252,0.4)" stroke-width="1.2" />
+        <rect x="12" y="12" width="22" height="22" rx="6" fill="#8B5CF6" />
+        <text x="42" y="26" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="800">Web App</text>
+        <text x="12" y="48" fill="#D8B4FE" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600">Custom Sections</text>
+        <text x="12" y="60" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="7.5">LIVE CATALOG</text>
+
+        <!-- Bi-Directional Synced Data Stream Beam -->
+        <g transform="translate(130, 24)">
+          <path d="M0 12 L30 12" stroke="#C084FC" stroke-width="2.5" stroke-dasharray="4 4" filter="url(#glowPurple)" />
+          <path d="M26 8 L30 12 L26 16 M4 8 L0 12 L4 16" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round" />
+          <text x="15" y="28" text-anchor="middle" fill="#FDE047" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700">2-WAY SYNC</text>
+        </g>
+
+        <!-- Node 2: Clover/POS Smart Terminal -->
+        <g transform="translate(165, 0)">
+          <rect x="0" y="0" width="125" height="74" rx="10" fill="rgba(245,158,11,0.12)" stroke="rgba(245,158,11,0.35)" stroke-width="1.2" />
+          <rect x="12" y="12" width="22" height="22" rx="6" fill="url(#goldCrown)" />
+          <text x="42" y="26" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="800">Clover POS</text>
+          <text x="12" y="48" fill="#FDE68A" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600">In-Store Hardware</text>
+          <text x="12" y="60" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="7.5">INSTANT ORDERS</text>
+        </g>
+      </g>
+
+      <!-- Advanced Features List -->
+      <g transform="translate(20, 140)">
+        <rect x="0" y="0" width="290" height="40" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" />
+        <circle cx="16" cy="20" r="4" fill="#C084FC" />
+        <text x="28" y="24" fill="#F3E8FF" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700">Unlimited Custom Design Sections</text>
+
+        <rect x="0" y="48" width="290" height="40" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" />
+        <circle cx="16" cy="68" r="4" fill="#38BDF8" />
+        <text x="28" y="72" fill="#E0F2FE" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700">Multi-Channel Analytics &amp; Auditing</text>
+
+        <rect x="0" y="96" width="290" height="40" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" />
+        <circle cx="16" cy="116" r="4" fill="#34D399" />
+        <text x="28" y="120" fill="#DCFCE7" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700">Priority 1-on-1 Engineering Support</text>
+      </g>
+
+      <!-- Bottom Status -->
+      <g transform="translate(20, 268)">
+        <rect x="0" y="0" width="290" height="28" rx="6" fill="rgba(192,132,252,0.12)" />
+        <text x="145" y="18" text-anchor="middle" fill="#E9D5FF" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">UPTIME SLA: 99.99% GUARANTEED</text>
+      </g>
+    </g>
+
+    <!-- RIGHT COLUMN: VIP EXECUTIVE DASHBOARD -->
+    <g transform="translate(445, 115)">
+      <rect x="0" y="0" width="260" height="310" rx="14" fill="#0C0A1C" stroke="rgba(192,132,252,0.25)" stroke-width="1.2" />
+
+      <!-- VIP Crown Header -->
+      <g transform="translate(20, 20)">
+        <rect x="0" y="0" width="36" height="36" rx="10" fill="url(#goldCrown)" filter="url(#glowGold)" />
+        <!-- Crown Icon -->
+        <path d="M10 24 L8 14 L14 18 L18 10 L22 18 L28 14 L26 24 Z" fill="#FFFFFF" />
+        <text x="46" y="18" fill="#FFFFFF" font-family="'Inter Tight', sans-serif" font-size="13" font-weight="900">VIP Premium Tier</text>
+        <text x="46" y="31" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700">EXECUTIVE SUITE</text>
+      </g>
+
+      <!-- High-Frequency Revenue Chart -->
+      <g transform="translate(20, 72)">
+        <rect x="0" y="0" width="220" height="95" rx="9" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" />
+        <text x="12" y="20" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="8">MONTHLY REVENUE STREAM</text>
+        <text x="12" y="38" fill="#FFFFFF" font-family="'Inter Tight', sans-serif" font-size="16" font-weight="900">$84,320.00</text>
+        <text x="145" y="36" fill="#34D399" font-family="'Inter', sans-serif" font-size="10" font-weight="800">↗ +280%</text>
+
+        <!-- Dynamic Graph Path -->
+        <path d="M12 80 Q50 72 90 60 T160 48 T210 32" fill="none" stroke="#C084FC" stroke-width="2.5" filter="url(#glowPurple)" />
+        <path d="M12 80 Q50 72 90 60 T160 48 T210 32 L210 88 L12 88 Z" fill="rgba(192,132,252,0.12)" />
+      </g>
+
+      <!-- KPI Metrics Grid -->
+      <g transform="translate(20, 178)">
+        <rect x="0" y="0" width="105" height="52" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" />
+        <text x="10" y="18" fill="#C084FC" font-family="'Inter', sans-serif" font-size="13" font-weight="800">Zero</text>
+        <text x="10" y="32" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="8">Limits</text>
+        <text x="10" y="44" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="7">SCALING UNLOCKED</text>
+
+        <rect x="115" y="0" width="105" height="52" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" />
+        <text x="125" y="18" fill="#F59E0B" font-family="'Inter', sans-serif" font-size="13" font-weight="800">&lt; 15 min</text>
+        <text x="125" y="32" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="8">Support</text>
+        <text x="125" y="44" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="7">DIRECT HOTLINE</text>
+      </g>
+
+      <!-- Action Button -->
+      <g transform="translate(20, 248)">
+        <rect x="0" y="0" width="220" height="42" rx="10" fill="url(#purpleBtn)" />
+        <text x="110" y="26" text-anchor="middle" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11.5" font-weight="800">Scale Without Limits</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- FLOATING ENTERPRISE CROWN BADGE -->
+  <g transform="translate(48, 385)" filter="url(#shadowPrem)">
+    <rect x="0" y="0" width="190" height="46" rx="23" fill="#150F2C" stroke="#C084FC" stroke-width="1.4" />
+    <circle cx="24" cy="23" r="14" fill="rgba(192,132,252,0.25)" />
+    <!-- Crown Icon -->
+    <path d="M16 27 L14 18 L19 22 L24 15 L29 22 L34 18 L32 27 Z" fill="#F59E0B" filter="url(#glowGold)" />
+    <text x="46" y="21" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="10.5" font-weight="800">VIP Enterprise</text>
+    <text x="46" y="34" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700">ZERO COMPROMISE</text>
+  </g>
+</svg>

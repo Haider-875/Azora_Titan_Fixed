@@ -1,0 +1,35 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Handle existing files and directories directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Specific rewrite rules
+  RewriteRule ^hardware/?$ hardware.html [L]
+  RewriteRule ^services/?$ services.html [L]
+  RewriteRule ^plans/?$ plans.html [L]
+  RewriteRule ^plans-services/?$ plans-services.html [L]
+  RewriteRule ^about/?$ about.html [L]
+  RewriteRule ^client-success/?$ client-success.html [L]
+  RewriteRule ^get-a-quote/?$ get-a-quote.html [L]
+  RewriteRule ^quote/?$ quote.html [L]
+  RewriteRule ^success/?$ success.html [L]
+  RewriteRule ^admin-inventory/?$ admin-inventory.html [L]
+  RewriteRule ^dashboard/?$ dashboard.html [L]
+
+  # Generic fallback for any other clean route
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^([^/]+)/?$ $1.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
