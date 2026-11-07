@@ -4,25 +4,25 @@
   <script>document.documentElement.className += ' js';</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get a Custom Quote | POS Systems &amp; Digital Services | Azora Solution</title>
-  <meta name="description" content="Request a fast, tailored quote for POS system hardware leasing, restaurant &amp; retail POS solutions, website development, or SEO marketing services from Azora Solution." />
-  <meta name="keywords" content="Get a quote Azora Solution, POS system quote, website development quote, digital marketing pricing" />
+  <title>Get a Custom Quote | Business Technology &amp; Growth Solutions | Azora Solutions</title>
+  <meta name="description" content="Request a fast, tailored quote for AI automation, custom website development, SEO &amp; Google Maps Pack, digital growth campaigns, or ongoing technical infrastructure from Azora Solutions." />
+  <meta name="keywords" content="Get a quote Azora Solutions, AI automation quote, website development quote, local SEO pricing, digital growth campaigns quote" />
   <link rel="canonical" href="https://azorasolution.com/get-a-quote" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231C273B'/%3E%3Cpath d='M32 14 50 50h-8.6L32 26.4 22.6 50H14z' fill='%23fff'/%3E%3Ccircle cx='32' cy='45' r='4.4' fill='%232469EB'/%3E%3C/svg%3E" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://azorasolution.com/get-a-quote" />
-  <meta property="og:site_name" content="Azora Solution" />
-  <meta property="og:title" content="Get a Custom Quote | POS Systems &amp; Digital Services | Azora Solution" />
-  <meta property="og:description" content="Request a fast, tailored quote for POS system hardware leasing, restaurant &amp; retail POS solutions, website development, or SEO marketing services from Azora Solution." />
+  <meta property="og:site_name" content="Azora Solutions" />
+  <meta property="og:title" content="Get a Custom Quote | Business Technology &amp; Growth Solutions | Azora Solutions" />
+  <meta property="og:description" content="Request a fast, tailored quote for AI automation, custom website development, SEO &amp; Google Maps Pack, digital growth campaigns, or ongoing technical infrastructure." />
   <meta property="og:image" content="https://azorasolution.com/assets/img/plans/plan-website-growth.svg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://azorasolution.com/get-a-quote" />
-  <meta name="twitter:title" content="Get a Custom Quote | POS Systems &amp; Digital Services | Azora Solution" />
-  <meta name="twitter:description" content="Request a fast, tailored quote for POS system hardware leasing, restaurant &amp; retail POS solutions, website development, or SEO marketing services from Azora Solution." />
+  <meta name="twitter:title" content="Get a Custom Quote | Business Technology &amp; Growth Solutions | Azora Solutions" />
+  <meta name="twitter:description" content="Request a fast, tailored quote for AI automation, custom website development, SEO &amp; Google Maps Pack, digital growth campaigns, or ongoing technical infrastructure." />
   <meta name="twitter:image" content="https://azorasolution.com/assets/img/plans/plan-website-growth.svg" />
 
   <!-- Structured Data / JSON-LD -->
@@ -65,208 +65,224 @@
           colors: {
             azora: {
               blue: '#1C273B',
-              ink:  '#070B14',
+              ink:  '#121B2C',
               dark: '#0B1320',
-              card: '#0F192C',
+              card: '#162238',
               red:  '#2469EB',
-              cyan: '#38BDF8',
               mist: '#F4F7FC',
               line: 'rgba(255,255,255,0.08)'
             }
           },
           fontFamily: {
-            heading: ['"Plus Jakarta Sans"', '"Inter Tight"', 'system-ui', 'sans-serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace']
-          }
+            heading: ['"Inter Tight"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace']
+          },
+          boxShadow: {
+            card: '0 4px 20px -2px rgba(0,0,0,0.5)',
+            lift: '0 25px 50px -12px rgba(0,0,0,0.7)',
+            chip: '0 10px 30px -10px rgba(36,105,235,.5)',
+            glow: '0 0 35px -5px rgba(36,105,235,0.3)'
+          },
+          borderRadius: { xl2: '1.25rem' }
         }
       }
     }
   </script>
 
-  <!-- Modern Styling Engine -->
-  <link rel="stylesheet" href="assets/css/azora-modern.css" />
-
   <style>
-    /* Dark interactive selectable cards */
-    .quote-hardware-card, .quote-plan-card {
+    :root { --azora-blue:#1C273B; --azora-red:#2469EB; }
+    *, ::before, ::after { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden !important; position: relative; }
+    html { scroll-behavior:smooth; background:#0B1320; color:#fff; }
+    body { -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; background:#0B1320; color:#fff; }
+    img, svg, video { max-width: 100%; }
+    ::selection { background:#2469EB; color:#fff; }
+    ::-webkit-scrollbar { width:10px; height:10px; }
+    ::-webkit-scrollbar-track { background:#0B1320; }
+    ::-webkit-scrollbar-thumb { background:#1E2D4A; border-radius:8px; border:2px solid #0B1320; }
+    ::-webkit-scrollbar-thumb:hover { background:#2469EB; }
+
+    .font-heading { letter-spacing:-0.02em; }
+
+    .glass-nav-dark {
+      border: 1px solid rgba(255,255,255,.10) !important;
+      background: rgba(14,23,38,.80) !important;
+      box-shadow: 0 12px 32px -18px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.12) !important;
+      backdrop-filter: blur(22px) saturate(150%);
+      -webkit-backdrop-filter: blur(22px) saturate(150%);
+    }
+
+    .link-underline { position:relative; }
+    .link-underline::after { content:''; position:absolute; left:0; right:100%; bottom:-4px; height:2px; background:#2469EB; transition:right .35s cubic-bezier(.16,1,.3,1); }
+    .link-underline:hover::after, .link-underline.active::after { right:0; }
+    .link-underline.active { color:#2469EB; }
+
+    /* Interactive selectable quote cards */
+    .quote-plan-card, .quote-hardware-card {
       position: relative;
       width: 100%;
       text-align: left;
-      padding: 16px 48px 16px 18px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 18px 48px 18px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 1rem;
-      background: rgba(15, 25, 44, 0.65);
-      backdrop-filter: blur(12px);
+      background: #121B2C;
+      cursor: pointer;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       gap: 3px;
-      cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      overflow: hidden;
     }
-    .quote-hardware-card:hover, .quote-plan-card:hover {
-      border-color: rgba(56, 189, 248, 0.4);
+    .quote-plan-card:hover, .quote-hardware-card:hover {
+      border-color: rgba(36, 105, 235, 0.45);
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px -5px rgba(36, 105, 235, 0.2);
-      background: rgba(22, 36, 62, 0.85);
+      box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.55), 0 0 20px -5px rgba(36, 105, 235, 0.25);
+      background: #162238;
     }
-    .quote-hardware-card.selected, .quote-plan-card.selected {
-      border-color: #38BDF8;
-      background: rgba(36, 105, 235, 0.2);
-      box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3), 0 12px 30px -8px rgba(36, 105, 235, 0.3);
+    .quote-plan-card.selected, .quote-hardware-card.selected {
+      border-color: #2469EB;
+      background: rgba(36, 105, 235, 0.12);
+      box-shadow: 0 0 0 2px rgba(36, 105, 235, 0.4), 0 14px 28px -6px rgba(0, 0, 0, 0.5);
     }
-    .quote-hardware-name, .quote-plan-name {
-      font-size: 14px;
-      font-weight: 800;
+    .quote-plan-name, .quote-hardware-name {
+      font-size: 14.5px;
+      font-weight: 700;
       color: #fff;
       line-height: 1.3;
     }
-    .quote-hardware-meta, .quote-plan-meta {
-      font-size: 10.5px;
-      color: rgba(255, 255, 255, 0.45);
-      font-weight: 600;
+    .quote-plan-meta, .quote-hardware-meta {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.4;
+      margin-top: 2px;
     }
-    .quote-hardware-price, .quote-plan-price {
-      margin-top: 5px;
+    .quote-plan-price, .quote-hardware-price {
+      margin-top: 6px;
       font-size: 14px;
       font-weight: 800;
-      color: #38BDF8;
+      color: #2469EB;
     }
-    .quote-hardware-price small, .quote-plan-price small {
-      font-size: 10px;
+    .quote-plan-price small, .quote-hardware-price small {
+      font-size: 10.5px;
       color: rgba(255, 255, 255, 0.5);
       margin-left: 2px;
+      font-weight: 500;
     }
     .quote-check {
       position: absolute;
-      right: 15px;
+      right: 18px;
       top: 50%;
       transform: translateY(-50%);
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       display: grid;
       place-items: center;
       color: #fff;
-      background: rgba(255, 255, 255, 0.05);
-      transition: all 0.2s;
+      background: rgba(255, 255, 255, 0.04);
+      transition: all 0.2s ease;
     }
     .quote-check svg {
       width: 13px;
       height: 13px;
       opacity: 0;
       transform: scale(0.5);
-      transition: all 0.2s;
+      transition: all 0.2s ease;
     }
-    .quote-hardware-card.selected .quote-check,
-    .quote-plan-card.selected .quote-check {
+    .quote-plan-card.selected .quote-check,
+    .quote-hardware-card.selected .quote-check {
       background: #2469EB;
-      border-color: #38BDF8;
-      box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+      border-color: #2469EB;
+      box-shadow: 0 0 12px rgba(36, 105, 235, 0.6);
     }
-    .quote-hardware-card.selected .quote-check svg,
-    .quote-plan-card.selected .quote-check svg {
+    .quote-plan-card.selected .quote-check svg,
+    .quote-hardware-card.selected .quote-check svg {
       opacity: 1;
       transform: scale(1);
     }
 
-    /* Form input styling */
-    .field-modern {
+    /* Form dark input styling */
+    .field-dark {
       width: 100%;
-      border-radius: 0.85rem;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(11, 19, 32, 0.8);
+      border-radius: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: #0B1320;
       padding: 0.75rem 1rem;
       font-size: 0.875rem;
       color: #fff;
-      transition: all 0.2s;
       outline: none;
+      transition: all 0.2s ease;
     }
-    .field-modern:focus {
-      border-color: #38BDF8;
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
-      background: rgba(15, 25, 44, 0.95);
+    .field-dark:focus {
+      border-color: #2469EB;
+      box-shadow: 0 0 0 3px rgba(36, 105, 235, 0.22);
+      background: #0F1726;
     }
-    .field-modern::placeholder {
-      color: rgba(255, 255, 255, 0.3);
+    .field-dark::placeholder {
+      color: rgba(255, 255, 255, 0.35);
     }
+
+    /* Reveal effect */
+    .rv { opacity: 1; }
+    html.js .rv { opacity:0; transform:translateY(24px); transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    html.js .rv.in { opacity:1; transform:none; }
   </style>
 </head>
-<body class="bg-[#070B14] font-sans text-slate-100 antialiased selection:bg-[#2469EB] selection:text-white" data-page="quote">
-
-  <!-- Background Canvas Grid -->
-  <div class="fixed inset-0 pointer-events-none -z-20 opacity-90"></div>
-  <div class="fixed inset-0 pointer-events-none -z-10 bg-radial-glow"></div>
+<body class="bg-[#0B1320] font-sans text-white antialiased selection:bg-azora-red selection:text-white" data-page="quote">
 
   <!-- ======================= HEADER ======================= -->
-  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <header id="site-header" class="fixed inset-x-0 top-0 z-40 transition-all duration-500">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div id="header-inner" class="glass-panel mt-3 flex items-center justify-between rounded-2xl px-4 py-3 sm:px-6">
+      <div id="header-inner" class="glass-nav-dark mt-3 flex items-center justify-between rounded-2xl px-4 py-3 sm:px-5">
         
         <!-- Logo -->
-        <a href="/" class="group flex items-center gap-3">
-          <div class="relative grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[#2469EB] to-[#1442a8] text-white shadow-lg shadow-blue-500/25 transition-transform duration-300 group-hover:scale-105">
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <a href="/" class="group flex items-center gap-2.5">
+          <span class="grid h-9 w-9 place-items-center rounded-xl bg-white text-azora-blue transition-transform duration-500 group-hover:rotate-6">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 3l9 18h-4.4L12 9.6 7.4 21H3z"/>
-              <circle cx="12" cy="18" r="1.6" fill="#38BDF8" stroke="none"/>
+              <circle cx="12" cy="18" r="1.6" fill="#2469EB" stroke="none"/>
             </svg>
-          </div>
-          <div class="leading-none">
-            <span class="block font-heading text-lg font-black tracking-tight text-white">AZORA</span>
-            <span class="mt-0.5 block font-mono text-[9px] font-bold uppercase tracking-[0.26em] text-sky-400">Solutions</span>
-          </div>
+          </span>
+          <span class="leading-none">
+            <span class="block font-heading text-[17px] font-extrabold tracking-tight text-white">AZORA</span>
+            <span class="mt-0.5 block font-mono text-[9px] font-semibold uppercase tracking-[0.28em] text-white/50">Solutions</span>
+          </span>
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden items-center gap-1 lg:flex">
-          <a href="/" class="nav-pill-link">Home</a>
-          <!-- <!-- <a href="/hardware" class="nav-pill-link">Hardware</a> --> -->
-          <a href="/services" class="nav-pill-link">Services</a>
-          <a href="/plans" class="nav-pill-link">Plans &amp; Pricing</a>
-          <a href="/client-success" class="nav-pill-link">Client Success</a>
-          <a href="/about" class="nav-pill-link">About</a>
+        <nav class="hidden items-center gap-8 lg:flex" id="nav-links">
+          <a href="/" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Home</a>
+          <!-- <a href="/hardware" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Hardware</a> -->
+          <a href="/services" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Services</a>
+          <a href="/plans" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Plans</a>
+          <a href="/about" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">About</a>
+          <a href="/client-success" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Client Success</a>
         </nav>
 
-        <!-- Right Action Center -->
-        <div class="flex items-center gap-3">
-          <a href="tel:+19843888298" class="hidden items-center gap-2 font-mono text-xs text-slate-300 hover:text-white sm:inline-flex px-3 py-1.5 rounded-lg hover:bg-white/5 transition-colors">
-            <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            1015 GLENDALE CHASE CT, Morrisville, North Carolina, 27560, USA
+        <!-- Right Action Button -->
+        <div class="flex items-center gap-2.5">
+          <a href="/get-a-quote" class="hidden items-center gap-2 rounded-xl bg-azora-red px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-chip transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 sm:inline-flex">
+            Get a Quote
           </a>
-
-          <button type="button" onclick="AZ.openQuoteModal()" class="btn-modern-primary !py-2.5 !px-4 text-xs">
-            <span>Fast Quote</span>
-            <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </button>
-
-          <!-- Mobile Toggle Button -->
-          <button id="menu-btn" aria-label="Toggle navigation menu" class="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-white transition-colors hover:bg-white/10 lg:hidden">
+          <button id="menu-btn" aria-label="Toggle menu" class="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-white transition-colors hover:bg-white/10 lg:hidden">
             <svg id="menu-ic-open" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
             <svg id="menu-ic-close" viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
           </button>
         </div>
       </div>
 
-      <!-- Mobile Animated Menu Drawer -->
-      <div id="mobile-menu" class="mt-2 hidden overflow-hidden rounded-2xl border border-white/12 bg-[#0B1320]/95 p-4 shadow-2xl backdrop-blur-2xl lg:hidden">
-        <nav class="flex flex-col space-y-1">
-          <a href="/" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Home</a>
-          <!-- <a href="/hardware" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">POS Hardware Lineup</a> -->
-          <a href="/services" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">All Services</a>
-          <a href="/plans" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Plans &amp; Pricing</a>
-          <a href="/client-success" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Client Success Stories</a>
-          <a href="/about" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">About Azora</a>
-          
-          <div class="pt-3 border-t border-white/10 space-y-2">
-            <a href="tel:+19843888298" class="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-xs font-semibold text-white">
-              <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Call (984) 388-8298
-            </a>
-            <button type="button" onclick="AZ.openQuoteModal()" class="w-full btn-modern-primary !py-3 text-xs">
-              Request a Custom Quote
-            </button>
-          </div>
+      <!-- Mobile Menu Drawer -->
+      <div id="mobile-menu" class="mt-2 hidden overflow-hidden rounded-2xl border border-white/10 bg-[#0E1726]/95 shadow-lift backdrop-blur-xl lg:hidden">
+        <nav class="flex flex-col p-3">
+          <a href="/" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Home</a>
+          <!-- <a href="/hardware" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Hardware</a> -->
+          <a href="/services" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Services</a>
+          <a href="/plans" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Plans</a>
+          <a href="/about" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">About</a>
+          <a href="/client-success" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Client Success</a>
+          <a href="/get-a-quote" class="mt-2 flex items-center justify-center gap-2 rounded-xl bg-azora-red px-4 py-3 text-sm font-semibold text-white">Get a Quote</a>
         </nav>
       </div>
     </div>
@@ -278,130 +294,179 @@
     <!-- HERO SECTION -->
     <section class="relative overflow-hidden border-b border-white/10 pb-12 pt-12 sm:pt-16 lg:pb-16 lg:pt-20">
       <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-        <div class="absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-[#2469EB]/20 blur-[130px]"></div>
+        <div class="absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-azora-red/15 blur-[140px]"></div>
       </div>
 
       <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <div class="rv in">
-          <div class="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-500/10 px-3.5 py-1.5 font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-sky-400">
-            <span class="h-1.5 w-1.5 rounded-full bg-sky-400 animate-pulse"></span>Tailored Fleet &amp; Plan Configuration
+          <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-azora-red/30 bg-azora-red/10 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-azora-red">
+            <span class="h-1.5 w-1.5 rounded-full bg-azora-red"></span>Tailored Proposal &amp; Estimate
           </div>
-          <h1 class="mt-6 font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl leading-[1.1]">
-            Build Your Custom <span class="text-gradient-cyan">Commercial Stack</span>.
+          <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl leading-[1.1]">
+            Build Your Custom <span class="text-azora-red">Digital Solution</span>.
           </h1>
-          <p class="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-slate-300">
-            Select one or more POS terminals, website development packages, or local SEO campaigns. Our engineering specialists will assemble your proposal within 2 hours.
+          <p class="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-white/65">
+            Select the core services and growth packages that best match your business goals. Our engineering specialists will assemble your tailored proposal within 2 hours.
           </p>
         </div>
       </div>
     </section>
 
     <!-- FORM & CONFIGURATOR CONTAINER -->
-    <section class="relative py-16 lg:py-24">
+    <section class="relative py-14 lg:py-20">
       <div class="mx-auto max-w-3xl px-4 sm:px-6">
         
-        <div class="rv in card-glass-interactive rounded-3xl p-6 sm:p-10 border-white/12 shadow-2xl">
+        <div class="rv in rounded-2xl sm:rounded-3xl border border-white/10 bg-[#121B2C]/90 p-6 sm:p-10 shadow-card backdrop-blur-xl">
           
           <form id="quote-form" action="success.html" method="get" novalidate>
             
+            <!-- Contact Details Grid -->
             <div class="grid gap-5 sm:grid-cols-2">
               <div>
-                <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="q-business">
-                  Business Name <span class="text-sky-400">*</span>
+                <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-white/70" for="q-business">
+                  Business Name <span class="text-azora-red">*</span>
                 </label>
-                <input id="q-business" name="business" class="field-modern" placeholder="e.g. Gotham Bistro &amp; Lounge" required />
+                <input id="q-business" name="business" class="field-dark" placeholder="e.g. Apex Dynamics LLC" required />
               </div>
               <div>
-                <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="q-contact">
-                  Contact Full Name <span class="text-sky-400">*</span>
+                <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-white/70" for="q-contact">
+                  Contact Full Name <span class="text-azora-red">*</span>
                 </label>
-                <input id="q-contact" name="contact" class="field-modern" placeholder="e.g. Alex Henderson" required />
+                <input id="q-contact" name="contact" class="field-dark" placeholder="e.g. Alex Henderson" required />
               </div>
             </div>
 
             <div class="mt-5 grid gap-5 sm:grid-cols-2">
               <div>
-                <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="q-email">
-                  Work Email <span class="text-sky-400">*</span>
+                <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-white/70" for="q-email">
+                  Work Email <span class="text-azora-red">*</span>
                 </label>
-                <input id="q-email" name="email" type="email" class="field-modern" placeholder="alex@gothambistro.com" required />
+                <input id="q-email" name="email" type="email" class="field-dark" placeholder="alex@apexdynamics.com" required />
               </div>
               <div>
-                <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="q-phone">
+                <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-white/70" for="q-phone">
                   Phone Number
                 </label>
-                <input id="q-phone" name="phone" type="tel" class="field-modern" placeholder="(984) 000-0000" />
+                <input id="q-phone" name="phone" type="tel" class="field-dark" placeholder="(984) 388-8298" />
               </div>
             </div>
 
             <div class="mt-5">
-              <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="q-locations">
-                Active Physical Locations
+              <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-white/70" for="q-locations">
+                Active Locations / Business Scale
               </label>
-              <select id="q-locations" name="locations" class="field-modern">
-                <option value="1">1 Single Location</option>
-                <option value="2-5">2 &ndash; 5 Locations</option>
-                <option value="6-20">6 &ndash; 20 Multi-Unit Chain</option>
-                <option value="20+">20+ Enterprise Franchise</option>
+              <select id="q-locations" name="locations" class="field-dark">
+                <option value="1">1 Single Location / Remote</option>
+                <option value="2-5">2 – 5 Locations</option>
+                <option value="6-20">6 – 20 Locations / Regional</option>
+                <option value="20+">20+ Enterprise / Multi-Unit</option>
               </select>
             </div>
 
             <!-- Category Switcher Tabs -->
             <div class="mt-8 border-t border-white/10 pt-6">
-              <div class="mb-5 grid grid-cols-2 gap-2 rounded-2xl bg-[#090F1C] p-1.5 border border-white/10" id="quote-category-tabs">
-                <button type="button" id="tab-hardware" class="rounded-xl py-3 text-xs font-bold transition-all bg-[#2469EB] text-white shadow-chip">
-                  POS Hardware Terminals
+              <div class="mb-5 grid grid-cols-2 gap-2 rounded-2xl bg-[#0B1320] p-1.5 border border-white/10" id="quote-category-tabs">
+                <button type="button" id="tab-services" class="rounded-xl py-3 text-xs font-bold transition-all bg-azora-red text-white shadow-chip">
+                  Core Services
                 </button>
-                <button type="button" id="tab-plan" class="rounded-xl py-3 text-xs font-bold transition-all text-slate-400 hover:text-white">
-                  Website &amp; Marketing Plans
+                <button type="button" id="tab-plan" class="rounded-xl py-3 text-xs font-bold transition-all text-white/60 hover:text-white">
+                  Monthly Growth Plans
                 </button>
               </div>
 
-              <!-- Hardware Grid Container -->
-              <div id="quote-mode-hardware">
+              <!-- Core Services Grid Container -->
+              <div id="quote-mode-services">
                 <div class="mb-4 flex items-end justify-between gap-3">
                   <div>
-                    <span class="block text-sm font-bold text-white">Select POS Hardware</span>
-                    <span class="mt-0.5 block text-xs text-slate-400">Click to select or deselect terminals for your quote.</span>
+                    <span class="block text-sm font-bold text-white">Select Core Services</span>
+                    <span class="mt-0.5 block text-xs text-white/50">Click to select the solutions you need for your operations.</span>
                   </div>
-                  <span id="hardware-count" class="hidden shrink-0 rounded-full bg-white/5 border border-white/10 px-3 py-1 font-mono text-[10px] font-bold uppercase text-sky-400"></span>
+                  <span class="shrink-0 rounded-full bg-white/5 border border-white/10 px-3 py-1 font-mono text-[10px] font-bold uppercase text-white/70">5 Available</span>
                 </div>
-                <div class="grid gap-3 sm:grid-cols-2" id="hardware-quote-grid"></div>
+                <div class="grid gap-3 sm:grid-cols-2" id="services-quote-grid">
+                  <!-- AI Automation -->
+                  <button type="button" class="quote-plan-card" data-id="ai-automation" onclick="AZ.toggleQuoteItem('ai-automation', this)">
+                    <span class="quote-plan-name">AI Automation</span>
+                    <span class="quote-plan-meta">Custom AI workflows that eliminate repetitive manual tasks and accelerate operations.</span>
+                    <span class="quote-plan-price">Custom Scope</span>
+                    <span class="quote-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>
+                  </button>
+
+                  <!-- Website Development -->
+                  <button type="button" class="quote-plan-card" data-id="website-development" onclick="AZ.toggleQuoteItem('website-development', this)">
+                    <span class="quote-plan-name">Website Development</span>
+                    <span class="quote-plan-meta">High-speed, conversion-focused websites engineered for credibility and search authority.</span>
+                    <span class="quote-plan-price">From $99<small>/mo</small></span>
+                    <span class="quote-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>
+                  </button>
+
+                  <!-- SEO & Google Maps Pack -->
+                  <button type="button" class="quote-plan-card" data-id="seo-google-maps" onclick="AZ.toggleQuoteItem('seo-google-maps', this)">
+                    <span class="quote-plan-name">SEO &amp; Google Maps Pack</span>
+                    <span class="quote-plan-meta">Google Business Profile optimization and geo-targeted ranking strategies.</span>
+                    <span class="quote-plan-price">From $285<small>/mo</small></span>
+                    <span class="quote-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>
+                  </button>
+
+                  <!-- Digital Growth Campaigns -->
+                  <button type="button" class="quote-plan-card" data-id="digital-growth" onclick="AZ.toggleQuoteItem('digital-growth', this)">
+                    <span class="quote-plan-name">Digital Growth Campaigns</span>
+                    <span class="quote-plan-meta">Targeted landing pages and multi-channel acquisition funnels designed to deliver inquiries.</span>
+                    <span class="quote-plan-price">Custom Strategy</span>
+                    <span class="quote-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>
+                  </button>
+
+                  <!-- Ongoing Support & Infrastructure -->
+                  <button type="button" class="quote-plan-card sm:col-span-2" data-id="support-infrastructure" onclick="AZ.toggleQuoteItem('support-infrastructure', this)">
+                    <span class="quote-plan-name">Ongoing Support &amp; Infrastructure</span>
+                    <span class="quote-plan-meta">Proactive maintenance, 24/7 uptime monitoring, security patching, and dedicated technical helpdesk.</span>
+                    <span class="quote-plan-price">Included / Retainer</span>
+                    <span class="quote-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>
+                  </button>
+                </div>
               </div>
 
-              <!-- Plan Grid Container -->
+              <!-- Growth Plans Container -->
               <div id="quote-mode-plan" class="hidden">
                 <div class="mb-4">
                   <span class="block text-sm font-bold text-white">Select Growth Plans</span>
-                  <span class="mt-0.5 block text-xs text-slate-400">Choose the digital strategy package that fits your goals.</span>
+                  <span class="mt-0.5 block text-xs text-white/50">Choose a structured monthly development or marketing plan.</span>
                 </div>
-                <div class="grid gap-3 sm:grid-cols-2" id="plan-quote-picks"></div>
+                <div class="grid gap-3 sm:grid-cols-2" id="plan-quote-picks">
+                  <!-- Populated by JS -->
+                </div>
               </div>
 
-              <!-- Hidden selections storage -->
+              <!-- Hidden selections storage for lead-store & app.js -->
               <div class="hidden" id="quote-picks"></div>
-              <p class="mt-4 font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-sky-400/80" id="quote-pick-count">
-                Select any terminals or plans above
-              </p>
+              
+              <div class="mt-4 flex items-center justify-between text-xs">
+                <p class="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-azora-red" id="quote-pick-count">
+                  Select any services or plans above
+                </p>
+              </div>
             </div>
 
+            <!-- Notes Section -->
             <div class="mt-6 border-t border-white/10 pt-6">
-              <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="q-message">
-                Additional Notes or Special Requirements (Optional)
+              <label class="mb-2 block text-xs font-mono font-bold uppercase tracking-wider text-white/70" for="q-message">
+                Additional Notes or Project Requirements (Optional)
               </label>
-              <textarea id="q-message" name="message" rows="3" class="field-modern resize-none" placeholder="e.g. We require online ordering integration with 2 Clover Flex handhelds..."></textarea>
+              <textarea id="q-message" name="message" rows="3" class="field-dark resize-none" placeholder="e.g. We require a custom CRM integration, automated appointment reminders, and local SEO across 3 clinics..."></textarea>
             </div>
 
-            <button type="submit" id="quote-submit" class="mt-8 btn-modern-primary w-full !py-4 text-sm justify-center shadow-lg shadow-blue-500/25">
+            <!-- Submit Button -->
+            <button type="submit" id="quote-submit" class="mt-8 flex w-full items-center justify-center gap-2 rounded-xl bg-azora-red py-4 text-sm font-bold text-white shadow-chip transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110">
               <span>Generate Formal Proposal</span>
               <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
 
-            <div class="mt-4 flex items-center justify-center gap-3 text-slate-500 font-mono text-[10.5px]">
+            <!-- Trust Badges -->
+            <div class="mt-5 flex flex-wrap items-center justify-center gap-4 text-white/40 font-mono text-[10.5px]">
               <span class="flex items-center gap-1.5"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 256-Bit SSL Encrypted</span>
-              <span>&bull;</span>
-              <span>Zero Commitment Quote</span>
-              <span>&bull;</span>
+              <span>•</span>
+              <span>Zero Commitment Proposal</span>
+              <span>•</span>
               <span>Direct Human Review</span>
             </div>
 
@@ -414,8 +479,8 @@
 
   </main>
 
-  <!-- ======================= WATERMARK FOOTER ======================= -->
-  <footer class="relative overflow-hidden border-t border-white/10 bg-[#05080F] text-slate-300">
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="overflow-hidden relative border-t border-white/10 bg-[#0B1320] py-16 text-white sm:py-20">
     <!-- Big AZORA watermark behind footer content with bottom fade blending into background -->
     <div class="pointer-events-none select-none absolute inset-x-0 bottom-0 z-0 flex items-end justify-center overflow-hidden" aria-hidden="true">
       <span class="font-heading font-black tracking-tighter leading-none text-white opacity-[0.06] text-[20vw] translate-y-[15%]"
@@ -424,83 +489,75 @@
       </span>
     </div>
 
-    
-
-    <div class="z-10 relative mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 lg:px-8">
-      <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
-        
-        <div>
-          <a href="/" class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[#2469EB] to-[#1442a8] text-white">
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M12 3l9 18h-4.4L12 9.6 7.4 21H3z"/>
-                <circle cx="12" cy="18" r="1.6" fill="#38BDF8" stroke="none"/>
-              </svg>
-            </div>
-            <div class="leading-none">
-              <span class="block font-heading text-lg font-black tracking-tight text-white">AZORA</span>
-              <span class="mt-0.5 block font-mono text-[9px] font-bold uppercase tracking-[0.26em] text-sky-400">Solutions</span>
-            </div>
+    <div class="z-10 relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
+        <div class="lg:col-span-2">
+          <a href="/" class="flex items-center gap-2.5">
+            <span class="grid h-9 w-9 place-items-center rounded-xl bg-white text-azora-blue">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 18h-4.4L12 9.6 7.4 21H3z"/><circle cx="12" cy="18" r="1.6" fill="#2469EB" stroke="none"/></svg>
+            </span>
+            <span class="leading-none">
+              <span class="block font-heading text-[17px] font-extrabold tracking-tight text-white">AZORA</span>
+              <span class="mt-0.5 block font-mono text-[9px] font-semibold uppercase tracking-[0.28em] text-white/50">Solutions</span>
+            </span>
           </a>
-          <p class="mt-4 max-w-sm text-xs leading-relaxed text-slate-400">
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
             Azora Solutions helps businesses strengthen their digital presence and operate more efficiently through practical technology and growth-focused services.
           </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-300">Nationwide USA</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-300">24/7 Priority Support</span>
+          <div class="mt-6 flex items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-400">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Nationwide Support
+            </span>
           </div>
         </div>
 
         <div>
-          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Core Services</h4>
-          <ul class="mt-4 space-y-2 text-xs">
-            <li><a href="/services#ai-automation" class="hover:text-white transition-colors">AI Automation</a></li>
-            <li><a href="/services#website-development" class="hover:text-white transition-colors">Website Development</a></li>
-            <li><a href="/services#seo-google-maps" class="hover:text-white transition-colors">SEO &amp; Google Maps Pack</a></li>
-            <li><a href="/services#digital-growth" class="hover:text-white transition-colors">Digital Growth Campaigns</a></li>
-            <li><a href="/services#support-infrastructure" class="hover:text-white transition-colors">Ongoing Support</a></li>
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Core Services</h4>
+          <ul class="mt-4 space-y-2.5 text-sm text-white/65">
+            <li><a href="/services#ai-automation" class="transition-colors hover:text-white">AI Automation</a></li>
+            <li><a href="/services#website-development" class="transition-colors hover:text-white">Website Development</a></li>
+            <li><a href="/services#seo-google-maps" class="transition-colors hover:text-white">SEO &amp; Google Maps Pack</a></li>
+            <li><a href="/services#digital-growth" class="transition-colors hover:text-white">Digital Growth Campaigns</a></li>
+            <li><a href="/services#support-infrastructure" class="transition-colors hover:text-white">Ongoing Support</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Company</h4>
-          <ul class="mt-4 space-y-2 text-xs">
-            <li><a href="/services" class="hover:text-white transition-colors">Services Overview</a></li>
-            <li><a href="/plans" class="hover:text-white transition-colors">Plans &amp; Pricing</a></li>
-            <li><a href="/client-success" class="hover:text-white transition-colors">Client Success Stories</a></li>
-            <li><a href="/about" class="hover:text-white transition-colors">About Azora</a></li>
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Company</h4>
+          <ul class="mt-4 space-y-2.5 text-sm text-white/65">
+            <li><a href="/about" class="transition-colors hover:text-white">About</a></li>
+            <li><a href="/client-success" class="transition-colors hover:text-white">Client Success</a></li>
+            <li><a href="/services" class="transition-colors hover:text-white">Services</a></li>
+            <li><a href="/plans" class="transition-colors hover:text-white">Plans</a></li>
+            <li><a href="/admin-inventory" class="transition-colors hover:text-white">Inventory Admin</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Contact</h4>
-          <div class="mt-4 space-y-2 text-xs">
-            <a href="mailto:sales@azorasolution.com" class="flex items-center gap-2 text-slate-300 hover:text-white">
-              <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span> sales@azorasolution.com
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Get Started</h4>
+          <p class="mt-4 text-sm leading-relaxed text-white/55">Quote a single service or complete digital growth package.</p>
+          <div class="mt-5 space-y-2 text-sm text-white/65">
+            <a href="mailto:sales@azorasolution.com" class="block transition-colors hover:text-white">
+              sales@azorasolution.com
             </a>
-            <p class="text-[11.5px] text-slate-400 leading-relaxed">
+            <a href="tel:+19843888298" class="block transition-colors hover:text-white">
               1015 GLENDALE CHASE CT, Morrisville, North Carolina, 27560, USA
-            </p>
+            </a>
           </div>
-          <button type="button" onclick="AZ.openQuoteModal()" class="mt-5 btn-modern-primary w-full !py-2.5 text-xs justify-center">
-            Request Rapid Quote
-          </button>
+          <a href="/get-a-quote" class="mt-5 inline-flex items-center gap-2 rounded-xl bg-azora-red px-5 py-3 text-sm font-semibold text-white shadow-chip transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110">
+            Get a Quote
+          </a>
         </div>
-
       </div>
 
-      <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-[11px] text-slate-500 sm:flex-row">
-        <p>&copy; 2026 Azora Solutions. All rights reserved.</p>
-        <div class="flex gap-6 font-mono text-[10px] uppercase tracking-wider">
-          <a href="/about" class="hover:text-slate-300">Privacy Policy</a>
-          <a href="/about" class="hover:text-slate-300">Terms of Service</a>
-          <a href="/hardware" class="hover:text-slate-300">Merchant Agreement</a>
-        </div>
+      <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
+        <p class="text-xs text-white/40">© 2026 Azora Solutions. All rights reserved.</p>
+        <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-white/35">Business Technology &amp; Growth Solutions</p>
       </div>
     </div>
   </footer>
 
-  <!-- Interactive Global Quote Modal Container -->
+  <!-- Modals & Concierge roots -->
   <div id="modal-root"></div>
   <div id="concierge-root"></div>
 
@@ -516,45 +573,26 @@
   <script>
     (function(){
       var params = new URLSearchParams(location.search);
-      var productParam = params.get('product') || params.get('hardware') || params.get('plan') || params.get('item') || '';
+      var productParam = params.get('product') || params.get('service') || params.get('plan') || params.get('item') || '';
       if (productParam === 'website-starter') productParam = 'website-essential';
       var isPlanParam = params.get('type') === 'plan' || params.get('plan') || productParam.indexOf('website') !== -1 || productParam.indexOf('marketing') !== -1 || productParam.indexOf('seo') !== -1;
       
-      var products = (window.AZ_DATA && window.AZ_DATA.products) || [];
-      var hardwareMode = document.getElementById('quote-mode-hardware');
+      var servicesMode = document.getElementById('quote-mode-services');
       var planMode = document.getElementById('quote-mode-plan');
-      var tabHardware = document.getElementById('tab-hardware');
+      var tabServices = document.getElementById('tab-services');
       var tabPlan = document.getElementById('tab-plan');
-      var grid = document.getElementById('hardware-quote-grid');
       var planGrid = document.getElementById('plan-quote-picks');
       var hidden = document.getElementById('quote-picks');
       var count = document.getElementById('quote-pick-count');
-      var hardwareCount = document.getElementById('hardware-count');
-
-      // Populate hardware cards
-      if (grid && products.length) {
-        grid.innerHTML = products.map(function(p){
-          return '<button type="button" class="quote-hardware-card" data-id="'+p.id+'" onclick="AZ.toggleQuoteItem(\''+p.id+'\', this)">' +
-            '<span class="quote-hardware-name">'+p.name+'</span>' +
-            '<span class="quote-hardware-meta">'+p.category+'</span>' +
-            '<span class="quote-hardware-price">'+p.lease+'<small>/mo</small></span>' +
-            '<span class="quote-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>' +
-          '</button>';
-        }).join('');
-        if (hardwareCount) {
-          hardwareCount.textContent = products.length + ' models available';
-          hardwareCount.classList.remove('hidden');
-        }
-      }
 
       // Populate plans cards
       var plans = [
-        {id:'website-essential', name:'Starter Website Plan', meta:'Custom Web Development', price:'$99'},
-        {id:'website-growth', name:'Growth Engine Website Plan', meta:'Custom Web Development', price:'$185'},
-        {id:'website-premium', name:'Dominance Enterprise Plan', meta:'Custom Web Development', price:'$249'},
-        {id:'marketing-starter', name:'Local Starter SEO Plan', meta:'Marketing & Local SEO', price:'$285'},
-        {id:'marketing-growth', name:'Local Growth SEO Plan', meta:'Marketing & Local SEO', price:'$365'},
-        {id:'marketing-premium', name:'Market Leader Apex Plan', meta:'Marketing & Local SEO', price:'$399'}
+        {id:'website-essential', name:'Starter Website Plan', meta:'Custom Web Development & Hosting', price:'$99'},
+        {id:'website-growth', name:'Growth Engine Website Plan', meta:'Conversion-Optimized Business Platform', price:'$185'},
+        {id:'website-premium', name:'Dominance Enterprise Plan', meta:'High-Scale Custom Web Architecture', price:'$249'},
+        {id:'marketing-starter', name:'Local Starter SEO Plan', meta:'Google Business Profile & Local Search', price:'$285'},
+        {id:'marketing-growth', name:'Local Growth SEO Plan', meta:'Multi-Keyword Ranking & Authority Building', price:'$365'},
+        {id:'marketing-premium', name:'Market Leader Apex Plan', meta:'Omni-Channel Local Dominance', price:'$399'}
       ];
 
       if (planGrid) {
@@ -572,11 +610,11 @@
         if (!hidden || !count) return;
         var selected = hidden.querySelectorAll('.pick.on').length;
         if (!selected) {
-          count.textContent = 'Select any terminals or plans above';
+          count.textContent = 'Select any services or plans above';
         } else if (selected === 1) {
-          count.textContent = '1 item selected for your custom proposal';
+          count.textContent = '1 solution selected for your proposal';
         } else {
-          count.textContent = selected + ' items selected for your custom proposal';
+          count.textContent = selected + ' solutions selected for your proposal';
         }
       }
 
@@ -599,25 +637,25 @@
 
       function switchTab(target) {
         if (target === 'plan') {
-          if (hardwareMode) hardwareMode.classList.add('hidden');
+          if (servicesMode) servicesMode.classList.add('hidden');
           if (planMode) planMode.classList.remove('hidden');
-          if (tabPlan) tabPlan.className = 'rounded-xl py-3 text-xs font-bold transition-all bg-[#2469EB] text-white shadow-chip';
-          if (tabHardware) tabHardware.className = 'rounded-xl py-3 text-xs font-bold transition-all text-slate-400 hover:text-white';
+          if (tabPlan) tabPlan.className = 'rounded-xl py-3 text-xs font-bold transition-all bg-azora-red text-white shadow-chip';
+          if (tabServices) tabServices.className = 'rounded-xl py-3 text-xs font-bold transition-all text-white/60 hover:text-white';
         } else {
           if (planMode) planMode.classList.add('hidden');
-          if (hardwareMode) hardwareMode.classList.remove('hidden');
-          if (tabHardware) tabHardware.className = 'rounded-xl py-3 text-xs font-bold transition-all bg-[#2469EB] text-white shadow-chip';
-          if (tabPlan) tabPlan.className = 'rounded-xl py-3 text-xs font-bold transition-all text-slate-400 hover:text-white';
+          if (servicesMode) servicesMode.classList.remove('hidden');
+          if (tabServices) tabServices.className = 'rounded-xl py-3 text-xs font-bold transition-all bg-azora-red text-white shadow-chip';
+          if (tabPlan) tabPlan.className = 'rounded-xl py-3 text-xs font-bold transition-all text-white/60 hover:text-white';
         }
       }
 
-      if (tabHardware && tabPlan) {
-        tabHardware.addEventListener('click', function(){ switchTab('hardware'); });
+      if (tabServices && tabPlan) {
+        tabServices.addEventListener('click', function(){ switchTab('services'); });
         tabPlan.addEventListener('click', function(){ switchTab('plan'); });
       }
 
       // Initial tab switch based on URL parameters
-      switchTab(isPlanParam ? 'plan' : 'hardware');
+      switchTab(isPlanParam ? 'plan' : 'services');
 
       // Preselect if query param provided
       if (productParam) {
@@ -627,7 +665,7 @@
           if (elToSelect) {
             elToSelect.click();
           }
-        }, 80);
+        }, 100);
       }
     })();
   </script>
