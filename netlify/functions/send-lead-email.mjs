@@ -275,9 +275,9 @@ async function supabaseRequest(url, key, method, path, payload) {
 }
 
 function makeTransport(targetPort) {
-  const smtpUser = process.env.SMTP_USER || 'sales@azorasolution.com';
+  const smtpUser = process.env.SMTP_USER;
   const smtpPassword = process.env.SMTP_PASSWORD || process.env.TITAN_PASSWORD || process.env.TITAN_MAIL_PASSWORD || '';
-  if (!smtpPassword) {
+  if (!smtpPassword || !smtpUser) {
     return null;
   }
   const port = Number(targetPort || process.env.SMTP_PORT || 465);
@@ -361,8 +361,8 @@ export default async function handler(request) {
   }
 
   // 2. Titan SMTP Email Notification (with automatic 465/587 fallback)
-  const smtpRecipient = process.env.SALES_EMAIL || 'sales@azorasolution.com';
-  const smtpSender = process.env.SMTP_USER || 'sales@azorasolution.com';
+  const smtpRecipient = process.env.SALES_EMAIL || process.env.SMTP_USER || '';
+  const smtpSender = process.env.SMTP_USER || process.env.SALES_EMAIL || '';
   let emailSent = false;
   let emailWarning = null;
 

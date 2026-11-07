@@ -1,0 +1,14 @@
+# Netlify build output ignore
+.git
+.github
+node_modules
+.env
+.env.*
+*.env
+*.log
+TITAN_NETLIFY_SETUP.txt
+TITAN_SQL_MIGRATION.sql
+test-titan-email.mjs
+README.txt
+README_ADMIN.txt
+README_DASHBOARD.txt

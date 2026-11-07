@@ -9,9 +9,9 @@
 import 'dotenv/config';
 import nodemailer from 'nodemailer';
 
-const host = process.env.SMTP_HOST || 'smtp.titan.email';
-const user = process.env.SMTP_USER || 'sales@azorasolution.com';
-const recipient = process.env.SALES_EMAIL || 'sales@azorasolution.com';
+const host = process.env.SMTP_HOST || '';
+const user = process.env.SMTP_USER || '';
+const recipient = process.env.SALES_EMAIL || user || '';
 const password = process.argv[2] || process.env.SMTP_PASSWORD || process.env.TITAN_PASSWORD || '';
 const customPort = process.argv[3] ? Number(process.argv[3]) : (process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) : null);
 

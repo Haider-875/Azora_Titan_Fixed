@@ -14,7 +14,7 @@ const corsHeaders = {
 };
 
 // Target sales inbox
-const PRIMARY_SALES_EMAIL = Deno.env.get("SALES_EMAIL") || "sales@azorasolution.com";
+const PRIMARY_SALES_EMAIL = Deno.env.get("SALES_EMAIL") || "";
 
 // Email sender address
 const SENDER_EMAIL = Deno.env.get("SENDER_EMAIL") || "Azora Solutions Leads <notifications@azorasolution.com>";

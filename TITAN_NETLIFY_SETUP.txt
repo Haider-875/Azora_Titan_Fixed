@@ -34,15 +34,15 @@ Step 1: If using Netlify:
 1. Go to Netlify Dashboard -> Your Site -> Site configuration -> Environment variables.
 2. Add these environment variables:
 
-   SMTP_HOST = smtp.titan.email
+   SMTP_HOST = your_smtp_host
    SMTP_PORT = 465
-   SMTP_USER = sales@azorasolution.com
-   SMTP_PASSWORD = [Your Titan Mailbox Password or App Password]
-   SALES_EMAIL = sales@azorasolution.com
+   SMTP_USER = your_smtp_username
+   SMTP_PASSWORD = [Your Mailbox Password or App Password]
+   SALES_EMAIL = your_recipient_email
 
    (Optional if you use Supabase lead storage):
-   SUPABASE_URL = https://ukgaxzxxulyypxhtkzit.supabase.co
-   SUPABASE_SERVICE_ROLE_KEY = [Your Supabase secret service_role key]
+   SUPABASE_URL = your_supabase_project_url
+   SUPABASE_SERVICE_ROLE_KEY = [Your Supabase secret key]
 
 3. Trigger a Deploy (or redeploy) on Netlify so the new environment variables take effect.
 
@@ -50,11 +50,11 @@ Step 2: If Testing Locally on your Computer:
 --------------------------------------------
 1. Create a file named .env in the root of the project (e:\Azora_Titan_Fixed\.env) with:
 
-   SMTP_HOST=smtp.titan.email
+   SMTP_HOST=your_smtp_host
    SMTP_PORT=465
-   SMTP_USER=sales@azorasolution.com
-   SMTP_PASSWORD=your_titan_mailbox_password
-   SALES_EMAIL=sales@azorasolution.com
+   SMTP_USER=your_smtp_username
+   SMTP_PASSWORD=your_mailbox_password
+   SALES_EMAIL=your_recipient_email
 
 2. Test your Titan connection immediately by running in terminal:
    node test-titan-email.mjs your_titan_password
@@ -75,3 +75,4 @@ Step 3: Titan Email App Password (If needed):
 
 - If port 465 times out due to network firewall restrictions, change:
   SMTP_PORT = 587
+
