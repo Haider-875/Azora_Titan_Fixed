@@ -165,7 +165,7 @@
         <!-- Desktop nav -->
         <nav class="hidden items-center gap-8 lg:flex" id="nav-links">
           <a href="/" class="link-underline text-[13.5px] font-semibold text-azora-blue/75 transition-colors hover:text-azora-blue">Home</a>
-          <a href="/hardware" class="link-underline text-[13.5px] font-semibold text-azora-blue/75 transition-colors hover:text-azora-blue">Hardware</a>
+          <!-- <a href="/hardware" class="link-underline text-[13.5px] font-semibold text-azora-blue/75 transition-colors hover:text-azora-blue">Hardware</a> -->
           <a href="/services" class="link-underline text-[13.5px] font-semibold text-azora-blue/75 transition-colors hover:text-azora-blue">Services</a>
           <a href="/plans" class="link-underline text-[13.5px] font-semibold text-azora-blue/75 transition-colors hover:text-azora-blue">Plans</a>
           <a href="/about" class="link-underline text-[13.5px] font-semibold text-azora-blue/75 transition-colors hover:text-azora-blue">About</a>
@@ -187,7 +187,7 @@
       <div id="mobile-menu" class="mt-2 hidden overflow-hidden rounded-2xl border border-azora-blue/10 bg-white/95 shadow-lift backdrop-blur-xl lg:hidden">
         <nav class="flex flex-col p-3">
           <a href="/" class="rounded-xl px-4 py-3 text-sm font-semibold hover:bg-azora-mist">Home</a>
-          <a href="/hardware" class="rounded-xl px-4 py-3 text-sm font-semibold hover:bg-azora-mist">Hardware</a>
+          <!-- <a href="/hardware" class="rounded-xl px-4 py-3 text-sm font-semibold hover:bg-azora-mist">Hardware</a> -->
           <a href="/services" class="rounded-xl px-4 py-3 text-sm font-semibold hover:bg-azora-mist">Services</a>
           <a href="/plans" class="rounded-xl px-4 py-3 text-sm font-semibold hover:bg-azora-mist">Plans</a>
           <a href="/about" class="rounded-xl px-4 py-3 text-sm font-semibold hover:bg-azora-mist">About</a>
@@ -216,8 +216,16 @@
 
   <!-- ======================= FOOTER ======================= -->
   <footer class="relative overflow-hidden bg-azora-ink text-white">
+    <!-- Big AZORA watermark behind footer content with bottom fade blending into background -->
+    <div class="pointer-events-none select-none absolute inset-x-0 bottom-0 z-0 flex items-end justify-center overflow-hidden" aria-hidden="true">
+      <span class="font-heading font-black tracking-tighter leading-none text-white opacity-[0.06] text-[20vw] translate-y-[15%]"
+            style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 92%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 92%);">
+        AZORA
+      </span>
+    </div>
+
     <div class="bg-darkgrid absolute inset-0 opacity-60"></div>
-    <div class="relative mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:px-8">
+    <div class="z-10 relative mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:px-8">
       <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <a href="/" class="flex items-center gap-2.5">
@@ -230,20 +238,21 @@
             </span>
           </a>
           <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/55">
-            Premium POS hardware on flexible leasing from $29.99/month. Clover, Dejavoo, PAX, Audrey &amp; Joy terminals for modern commerce.
+            Azora Solutions helps businesses strengthen their digital presence and operate more efficiently through practical technology and growth-focused services.
           </p>
           <div class="mt-6 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/12 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">Nationwide Deployment</span>
+            <span class="rounded-full border border-white/12 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">Digital Solutions For Modern Businesses</span>
           </div>
         </div>
 
         <div>
-          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Hardware</h4>
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Core Services</h4>
           <ul class="mt-4 space-y-2.5 text-sm text-white/65">
-            <li><a href="/hardware?brand=clover" class="transition-colors hover:text-white">Clover Series</a></li>
-            <li><a href="/hardware?brand=dejavoo" class="transition-colors hover:text-white">Dejavoo Terminals</a></li>
-            <li><a href="/hardware?brand=pax" class="transition-colors hover:text-white">PAX Smart Terminals</a></li>
-            <li><a href="/hardware?brand=bundles" class="transition-colors hover:text-white">Audrey &amp; Joy Bundles</a></li>
+            <li><a href="/services#ai-automation" class="transition-colors hover:text-white">AI Automation</a></li>
+            <li><a href="/services#website-development" class="transition-colors hover:text-white">Website Development</a></li>
+            <li><a href="/services#seo-google-maps" class="transition-colors hover:text-white">SEO &amp; Google Maps Pack</a></li>
+            <li><a href="/services#digital-growth" class="transition-colors hover:text-white">Digital Growth Campaigns</a></li>
+            <li><a href="/services#support-infrastructure" class="transition-colors hover:text-white">Ongoing Support</a></li>
           </ul>
         </div>
 
@@ -260,14 +269,14 @@
 
         <div>
           <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Get Started</h4>
-          <p class="mt-4 text-sm leading-relaxed text-white/55">Quote a single terminal or complete digital growth package.</p>
+          <p class="mt-4 text-sm leading-relaxed text-white/55">Discuss your digital growth and AI automation requirements.</p>
           <div class="mt-5 space-y-2 text-sm text-white/65">
-            <a href="mailto:info@azorasolution.com" class="block transition-colors hover:text-white">
-              info@azorasolution.com
+            <a href="mailto:sales@azorasolution.com" class="block transition-colors hover:text-white">
+              sales@azorasolution.com
             </a>
-            <a href="tel:+19843888298" class="block transition-colors hover:text-white">
-              (984) 388-8298
-            </a>
+            <p class="text-xs text-white/50 leading-relaxed">
+              1015 GLENDALE CHASE CT, Morrisville, North Carolina, 27560, USA
+            </p>
           </div>
           <a href="/get-a-quote" class="mt-5 inline-flex items-center gap-2 rounded-xl bg-azora-red px-5 py-3 text-sm font-semibold text-white shadow-chip transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110">
             Get a Quote
@@ -277,9 +286,11 @@
 
       <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
         <p class="text-xs text-white/40">© 2026 Azora Solutions. All rights reserved.</p>
-        <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-white/35">POS Hardware Leasing · From $29.99/mo</p>
+        <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-white/35">Business Technology &amp; Growth Solutions</p>
       </div>
     </div>
+
+    
   </footer>
 
   <!-- Modals + concierge -->

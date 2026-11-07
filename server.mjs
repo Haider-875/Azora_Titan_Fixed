@@ -60,13 +60,16 @@ const server = http.createServer(async (req, res) => {
   }
 
   // 2. Static File Resolution
+  const cleanName = pathname.replace(/^\/+|\/+$/g, '');
   let filePath = path.join(__dirname, pathname === '/' ? 'index.html' : pathname);
 
-  if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+  // If a corresponding .html file exists at root (e.g., /services -> services.html),
+  // prefer it over directory index.html (matching Netlify _redirects and Apache .htaccess)
+  if (cleanName && fs.existsSync(path.join(__dirname, cleanName + '.html'))) {
+    filePath = path.join(__dirname, cleanName + '.html');
+  } else if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
     filePath = path.join(filePath, 'index.html');
-  }
-
-  if (!fs.existsSync(filePath) && !path.extname(filePath)) {
+  } else if (!fs.existsSync(filePath) && !path.extname(filePath)) {
     if (fs.existsSync(filePath + '.html')) {
       filePath = filePath + '.html';
     } else if (fs.existsSync(path.join(filePath, 'index.html'))) {

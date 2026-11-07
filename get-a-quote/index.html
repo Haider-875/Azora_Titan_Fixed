@@ -197,7 +197,7 @@
 <body class="bg-[#070B14] font-sans text-slate-100 antialiased selection:bg-[#2469EB] selection:text-white" data-page="quote">
 
   <!-- Background Canvas Grid -->
-  <div class="fixed inset-0 pointer-events-none -z-20 bg-darkgrid opacity-90"></div>
+  <div class="fixed inset-0 pointer-events-none -z-20 opacity-90"></div>
   <div class="fixed inset-0 pointer-events-none -z-10 bg-radial-glow"></div>
 
   <!-- ======================= HEADER ======================= -->
@@ -222,7 +222,7 @@
         <!-- Desktop Navigation -->
         <nav class="hidden items-center gap-1 lg:flex">
           <a href="/" class="nav-pill-link">Home</a>
-          <a href="/hardware" class="nav-pill-link">Hardware</a>
+          <!-- <!-- <a href="/hardware" class="nav-pill-link">Hardware</a> --> -->
           <a href="/services" class="nav-pill-link">Services</a>
           <a href="/plans" class="nav-pill-link">Plans &amp; Pricing</a>
           <a href="/client-success" class="nav-pill-link">Client Success</a>
@@ -233,7 +233,7 @@
         <div class="flex items-center gap-3">
           <a href="tel:+19843888298" class="hidden items-center gap-2 font-mono text-xs text-slate-300 hover:text-white sm:inline-flex px-3 py-1.5 rounded-lg hover:bg-white/5 transition-colors">
             <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            (984) 388-8298
+            1015 GLENDALE CHASE CT, Morrisville, North Carolina, 27560, USA
           </a>
 
           <button type="button" onclick="AZ.openQuoteModal()" class="btn-modern-primary !py-2.5 !px-4 text-xs">
@@ -253,7 +253,7 @@
       <div id="mobile-menu" class="mt-2 hidden overflow-hidden rounded-2xl border border-white/12 bg-[#0B1320]/95 p-4 shadow-2xl backdrop-blur-2xl lg:hidden">
         <nav class="flex flex-col space-y-1">
           <a href="/" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Home</a>
-          <a href="/hardware" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">POS Hardware Lineup</a>
+          <!-- <a href="/hardware" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">POS Hardware Lineup</a> -->
           <a href="/services" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">All Services</a>
           <a href="/plans" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Plans &amp; Pricing</a>
           <a href="/client-success" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Client Success Stories</a>
@@ -416,11 +416,17 @@
 
   <!-- ======================= WATERMARK FOOTER ======================= -->
   <footer class="relative overflow-hidden border-t border-white/10 bg-[#05080F] text-slate-300">
-    <div class="pointer-events-none absolute -bottom-10 left-1/2 -translate-x-1/2 select-none opacity-[0.03]" aria-hidden="true">
-      <span class="font-heading text-[18vw] font-black tracking-tighter text-white">AZORA</span>
+    <!-- Big AZORA watermark behind footer content with bottom fade blending into background -->
+    <div class="pointer-events-none select-none absolute inset-x-0 bottom-0 z-0 flex items-end justify-center overflow-hidden" aria-hidden="true">
+      <span class="font-heading font-black tracking-tighter leading-none text-white opacity-[0.06] text-[20vw] translate-y-[15%]"
+            style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 92%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 92%);">
+        AZORA
+      </span>
     </div>
 
-    <div class="relative mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 lg:px-8">
+    
+
+    <div class="z-10 relative mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 lg:px-8">
       <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
         
         <div>
@@ -437,7 +443,7 @@
             </div>
           </a>
           <p class="mt-4 max-w-sm text-xs leading-relaxed text-slate-400">
-            Tailored hardware leasing and scalable digital marketing infrastructure for modern retail, dining, and service operations.
+            Azora Solutions helps businesses strengthen their digital presence and operate more efficiently through practical technology and growth-focused services.
           </p>
           <div class="mt-6 flex flex-wrap gap-2">
             <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-300">Nationwide USA</span>
@@ -446,36 +452,35 @@
         </div>
 
         <div>
-          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Hardware Fleet</h4>
+          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Core Services</h4>
           <ul class="mt-4 space-y-2 text-xs">
-            <li><a href="/hardware?brand=clover" class="hover:text-white transition-colors">Clover Series (Flex, Mini, Duo)</a></li>
-            <li><a href="/hardware?brand=dejavoo" class="hover:text-white transition-colors">Dejavoo Smart Android</a></li>
-            <li><a href="/hardware?brand=pax" class="hover:text-white transition-colors">PAX Payment Lineup</a></li>
-            <li><a href="/hardware?brand=audrey" class="hover:text-white transition-colors">Audrey Enterprise Kiosks</a></li>
-            <li><a href="/hardware" class="text-sky-400 hover:underline">Explore Full 10+ Catalog &rarr;</a></li>
+            <li><a href="/services#ai-automation" class="hover:text-white transition-colors">AI Automation</a></li>
+            <li><a href="/services#website-development" class="hover:text-white transition-colors">Website Development</a></li>
+            <li><a href="/services#seo-google-maps" class="hover:text-white transition-colors">SEO &amp; Google Maps Pack</a></li>
+            <li><a href="/services#digital-growth" class="hover:text-white transition-colors">Digital Growth Campaigns</a></li>
+            <li><a href="/services#support-infrastructure" class="hover:text-white transition-colors">Ongoing Support</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Growth Services</h4>
+          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Company</h4>
           <ul class="mt-4 space-y-2 text-xs">
-            <li><a href="/services" class="hover:text-white transition-colors">All Solutions Overview</a></li>
-            <li><a href="/plans" class="hover:text-white transition-colors">Web &amp; SEO Pricing Plans</a></li>
-            <li><a href="/client-success" class="hover:text-white transition-colors">Client Case Studies</a></li>
+            <li><a href="/services" class="hover:text-white transition-colors">Services Overview</a></li>
+            <li><a href="/plans" class="hover:text-white transition-colors">Plans &amp; Pricing</a></li>
+            <li><a href="/client-success" class="hover:text-white transition-colors">Client Success Stories</a></li>
             <li><a href="/about" class="hover:text-white transition-colors">About Azora</a></li>
-            <li><a href="/dashboard" class="hover:text-white transition-colors">Client Portal / Dashboard</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Direct Contact</h4>
+          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Contact</h4>
           <div class="mt-4 space-y-2 text-xs">
-            <a href="tel:+19843888298" class="flex items-center gap-2 text-slate-300 hover:text-white">
-              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> (984) 388-8298
+            <a href="mailto:sales@azorasolution.com" class="flex items-center gap-2 text-slate-300 hover:text-white">
+              <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span> sales@azorasolution.com
             </a>
-            <a href="mailto:info@azorasolution.com" class="flex items-center gap-2 text-slate-300 hover:text-white">
-              <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span> info@azorasolution.com
-            </a>
+            <p class="text-[11.5px] text-slate-400 leading-relaxed">
+              1015 GLENDALE CHASE CT, Morrisville, North Carolina, 27560, USA
+            </p>
           </div>
           <button type="button" onclick="AZ.openQuoteModal()" class="mt-5 btn-modern-primary w-full !py-2.5 text-xs justify-center">
             Request Rapid Quote

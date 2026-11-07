@@ -431,18 +431,6 @@ export default async function handler(request) {
       }
     }
   }
-  } catch (smtpError) {
-    console.error('[Titan Mail] Email delivery failed:', smtpError.message);
-    emailWarning = 'Email notification error: ' + smtpError.message;
-    if (sbUrl && sbKey && saved.id) {
-      try {
-        await supabaseRequest(sbUrl, sbKey, 'PATCH', '?id=eq.' + encodeURIComponent(saved.id), {
-          email_status: 'failed',
-          email_error: String(smtpError.message).slice(0, 400)
-        });
-      } catch {}
-    }
-  }
 
   return reply(200, {
     ok: true,

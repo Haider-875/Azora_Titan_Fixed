@@ -51,12 +51,12 @@
   }
   </script>
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS Play CDN -->
+  <!-- Tailwind CSS (Play CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -65,573 +65,467 @@
           colors: {
             azora: {
               blue: '#1C273B',
-              ink:  '#070B14',
+              ink:  '#121B2C',
               dark: '#0B1320',
-              card: '#0F192C',
+              card: '#162238',
               red:  '#2469EB',
-              cyan: '#38BDF8',
               mist: '#F4F7FC',
               line: 'rgba(255,255,255,0.08)'
             }
           },
           fontFamily: {
-            heading: ['"Plus Jakarta Sans"', '"Inter Tight"', 'system-ui', 'sans-serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace']
-          }
+            heading: ['"Inter Tight"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace']
+          },
+          boxShadow: {
+            card: '0 4px 20px -2px rgba(0,0,0,0.5)',
+            lift: '0 25px 50px -12px rgba(0,0,0,0.7)',
+            chip: '0 10px 30px -10px rgba(36,105,235,.5)',
+            glow: '0 0 35px -5px rgba(36,105,235,0.3)'
+          },
+          borderRadius: { xl2: '1.25rem' }
         }
       }
     }
   </script>
 
-  <!-- Modern Styling Engine -->
-  <link rel="stylesheet" href="assets/css/azora-modern.css" />
-</head>
-<body class="bg-[#070B14] font-sans text-slate-100 antialiased selection:bg-[#2469EB] selection:text-white" data-page="client-success">
+  <style>
+    :root { --azora-blue:#1C273B; --azora-red:#2469EB; }
+    *, ::before, ::after { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden !important; position: relative; }
+    html { scroll-behavior:smooth; background:#0B1320; color:#fff; }
+    body { -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; background:#0B1320; color:#fff; }
+    img, svg, video { max-width: 100%; }
+    ::selection { background:#2469EB; color:#fff; }
+    ::-webkit-scrollbar { width:10px; height:10px; }
+    ::-webkit-scrollbar-track { background:#0B1320; }
+    ::-webkit-scrollbar-thumb { background:#1E2D4A; border-radius:8px; border:2px solid #0B1320; }
+    ::-webkit-scrollbar-thumb:hover { background:#2469EB; }
 
-  <!-- Background Canvas Grid -->
-  <div class="fixed inset-0 pointer-events-none -z-20 bg-darkgrid opacity-90"></div>
-  <div class="fixed inset-0 pointer-events-none -z-10 bg-radial-glow"></div>
+    .font-heading { letter-spacing:-0.02em; }
+
+    /* Reveal on scroll */
+    html.js .rv { opacity:0; transform:translateY(24px); transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    html.js .rv.in { opacity:1; transform:none; }
+    .rv-d1 { transition-delay:.08s } .rv-d2 { transition-delay:.16s } .rv-d3 { transition-delay:.24s }
+    .rv-d4 { transition-delay:.32s } .rv-d5 { transition-delay:.40s } .rv-d6 { transition-delay:.48s }
+
+    .bg-darkgrid {
+      background-image:
+        radial-gradient(ellipse 65% 55% at 50% -10%, rgba(36,105,235,.22), transparent 70%),
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size:100% 100%, 44px 44px, 44px 44px;
+    }
+    
+    .bg-subtle-grid {
+      background-color: #0B1320;
+    }
+
+    .glass-nav-dark {
+      border:1px solid rgba(255,255,255,.10) !important;
+      background:rgba(14,23,38,.80) !important;
+      box-shadow:0 12px 32px -18px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.12) !important;
+      backdrop-filter:blur(22px) saturate(150%);
+      -webkit-backdrop-filter:blur(22px) saturate(150%);
+    }
+
+    .link-underline { position:relative; }
+    .link-underline::after { content:''; position:absolute; left:0; right:100%; bottom:-4px; height:2px; background:#2469EB; transition:right .35s cubic-bezier(.16,1,.3,1); }
+    .link-underline:hover::after, .link-underline.active::after { right:0; }
+    .link-underline.active { color:#2469EB; }
+
+    .case-card {
+      transition:transform .4s cubic-bezier(.16,1,.3,1), border-color .4s, box-shadow .4s, background .4s;
+    }
+    .case-card:hover {
+      transform:translateY(-6px);
+      border-color:rgba(36,105,235,0.45);
+      box-shadow:0 24px 50px -15px rgba(0,0,0,0.7), 0 0 30px -10px rgba(36,105,235,0.25);
+      background:rgba(22,34,56,0.85);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-[#0B1320] font-sans text-white antialiased" data-page="stories">
 
   <!-- ======================= HEADER ======================= -->
-  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <header id="site-header" class="fixed inset-x-0 top-0 z-40 transition-all duration-500">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div id="header-inner" class="glass-panel mt-3 flex items-center justify-between rounded-2xl px-4 py-3 sm:px-6">
-        
+      <div id="header-inner" class="glass-nav-dark mt-3 flex items-center justify-between rounded-2xl px-4 py-3 sm:px-5">
         <!-- Logo -->
-        <a href="/" class="group flex items-center gap-3">
-          <div class="relative grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[#2469EB] to-[#1442a8] text-white shadow-lg shadow-blue-500/25 transition-transform duration-300 group-hover:scale-105">
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3l9 18h-4.4L12 9.6 7.4 21H3z"/>
-              <circle cx="12" cy="18" r="1.6" fill="#38BDF8" stroke="none"/>
-            </svg>
-          </div>
-          <div class="leading-none">
-            <span class="block font-heading text-lg font-black tracking-tight text-white">AZORA</span>
-            <span class="mt-0.5 block font-mono text-[9px] font-bold uppercase tracking-[0.26em] text-sky-400">Solutions</span>
-          </div>
+        <a href="/" class="group flex items-center gap-2.5">
+          <span class="grid h-9 w-9 place-items-center rounded-xl bg-white text-azora-blue transition-transform duration-500 group-hover:rotate-6">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 18h-4.4L12 9.6 7.4 21H3z"/><circle cx="12" cy="18" r="1.6" fill="#2469EB" stroke="none"/></svg>
+          </span>
+          <span class="leading-none">
+            <span class="block font-heading text-[17px] font-extrabold tracking-tight text-white">AZORA</span>
+            <span class="mt-0.5 block font-mono text-[9px] font-semibold uppercase tracking-[0.28em] text-white/50">Solutions</span>
+          </span>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden items-center gap-1 lg:flex">
-          <a href="/" class="nav-pill-link">Home</a>
-          <a href="/hardware" class="nav-pill-link">Hardware</a>
-          <a href="/services" class="nav-pill-link">Services</a>
-          <a href="/plans" class="nav-pill-link">Plans &amp; Pricing</a>
-          <a href="/client-success" class="nav-pill-link active">Client Success</a>
-          <a href="/about" class="nav-pill-link">About</a>
+        <!-- Desktop nav -->
+        <nav class="hidden items-center gap-8 lg:flex" id="nav-links">
+          <a href="/" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Home</a>
+          <!-- <a href="/hardware" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Hardware</a> -->
+          <a href="/services" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Services</a>
+          <a href="/plans" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Plans</a>
+          <a href="/about" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">About</a>
+          <a href="/client-success" class="link-underline active text-[13.5px] font-semibold text-azora-red transition-colors">Client Success</a>
         </nav>
 
-        <!-- Right Action Center -->
-        <div class="flex items-center gap-3">
-          <a href="tel:+19843888298" class="hidden items-center gap-2 font-mono text-xs text-slate-300 hover:text-white sm:inline-flex px-3 py-1.5 rounded-lg hover:bg-white/5 transition-colors">
-            <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            (984) 388-8298
+        <div class="flex items-center gap-2.5">
+          <a href="/get-a-quote" class="hidden items-center gap-2 rounded-xl bg-azora-red px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-chip transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 sm:inline-flex">
+            Get a Quote
           </a>
-
-          <button type="button" onclick="AZ.openQuoteModal()" class="btn-modern-primary !py-2.5 !px-4 text-xs">
-            <span>Get a Quote</span>
-            <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </button>
-
-          <!-- Mobile Toggle Button -->
-          <button id="menu-btn" aria-label="Toggle navigation menu" class="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-white transition-colors hover:bg-white/10 lg:hidden">
+          <button id="menu-btn" aria-label="Toggle menu" class="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-white transition-colors hover:bg-white/10 lg:hidden">
             <svg id="menu-ic-open" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
             <svg id="menu-ic-close" viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
           </button>
         </div>
       </div>
 
-      <!-- Mobile Animated Menu Drawer -->
-      <div id="mobile-menu" class="mt-2 hidden overflow-hidden rounded-2xl border border-white/12 bg-[#0B1320]/95 p-4 shadow-2xl backdrop-blur-2xl lg:hidden">
-        <nav class="flex flex-col space-y-1">
-          <a href="/" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Home</a>
-          <a href="/hardware" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">POS Hardware Lineup</a>
-          <a href="/services" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">All Services</a>
-          <a href="/plans" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Plans &amp; Pricing</a>
-          <a href="/client-success" class="rounded-xl px-4 py-3 text-sm font-semibold text-sky-400 bg-white/5">Client Success Stories</a>
-          <a href="/about" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">About Azora</a>
-          
-          <div class="pt-3 border-t border-white/10 space-y-2">
-            <a href="tel:+19843888298" class="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-xs font-semibold text-white">
-              <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Call (984) 388-8298
-            </a>
-            <button type="button" onclick="AZ.openQuoteModal()" class="w-full btn-modern-primary !py-3 text-xs">
-              Request a Custom Quote
-            </button>
-          </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="mt-2 hidden overflow-hidden rounded-2xl border border-white/10 bg-[#0E1726]/95 shadow-lift backdrop-blur-xl lg:hidden">
+        <nav class="flex flex-col p-3">
+          <a href="/" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Home</a>
+          <!-- <a href="/hardware" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Hardware</a> -->
+          <a href="/services" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Services</a>
+          <a href="/plans" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Plans</a>
+          <a href="/about" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">About</a>
+          <a href="/client-success" class="rounded-xl px-4 py-3 text-sm font-semibold text-azora-red hover:bg-white/5">Client Success</a>
+          <a href="/get-a-quote" class="mt-2 flex items-center justify-center gap-2 rounded-xl bg-azora-red px-4 py-3 text-sm font-semibold text-white">Get a Quote</a>
         </nav>
       </div>
     </div>
   </header>
 
   <!-- ======================= MAIN CONTENT ======================= -->
-  <main id="app" class="relative min-h-screen pt-[96px]">
+  <main id="app" class="min-h-screen pt-[92px]">
 
     <!-- HERO SECTION -->
-    <section class="relative overflow-hidden border-b border-white/10 pb-16 pt-12 sm:pt-16 lg:pb-24 lg:pt-20">
-      <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-        <div class="absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-[#2469EB]/20 blur-[130px]"></div>
-      </div>
-
+    <section class="relative overflow-hidden border-b border-white/10 pb-16 pt-16 lg:pb-24 lg:pt-20">
       <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <div class="rv in mx-auto max-w-3xl">
-          <div class="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-500/10 px-3.5 py-1.5 font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-sky-400">
-            <span class="h-1.5 w-1.5 rounded-full bg-sky-400 animate-pulse"></span>Proven Merchant ROI
+          <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-azora-red/30 bg-azora-red/10 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-azora-red">
+            <span class="h-1.5 w-1.5 rounded-full bg-azora-red"></span>
+            Solution Snapshots
           </div>
-          <h1 class="mt-6 font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.08]">
-            Real Deployments. Measured <span class="text-gradient-cyan">Business Velocity</span>.
+          <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Real deployments. Measured operational growth.
           </h1>
-          <p class="mx-auto mt-6 max-w-2xl text-[16px] leading-relaxed text-slate-300">
-            See how forward-thinking restaurants, retailers, and service contractors eliminate payment bottlenecks and scale inbound customer volume with Azora.
+          <p class="mx-auto mt-5 max-w-2xl text-[16px] leading-relaxed text-white/65">
+            Explore how modern businesses leverage Azora's AI automation, custom website engineering, and geo-targeted local search systems to accelerate revenue.
           </p>
         </div>
 
-        <!-- Metric Counters Ribbon -->
-        <div class="rv in rv-d2 mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4">
-          <div class="rounded-2xl border border-white/10 bg-[#0F192C]/70 p-5 text-center backdrop-blur-xl">
-            <div class="font-heading text-3xl sm:text-4xl font-black tracking-tight text-white">
-              1,200<span class="text-sky-400">+</span>
+        <div class="rv in rv-d2 mx-auto mt-10 sm:mt-14 grid max-w-5xl grid-cols-2 gap-3.5 sm:gap-5 sm:grid-cols-4">
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-6 text-center backdrop-blur-sm">
+            <div class="font-heading text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
+              <span class="counter" data-count="1200">1,200</span><span class="text-azora-red">+</span>
             </div>
-            <div class="mt-2 font-mono text-[10px] font-semibold uppercase tracking-wider text-slate-400">Terminals Active</div>
+            <div class="mt-2 font-mono text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-white/50">Terminals Active</div>
           </div>
-          <div class="rounded-2xl border border-white/10 bg-[#0F192C]/70 p-5 text-center backdrop-blur-xl">
-            <div class="font-heading text-3xl sm:text-4xl font-black tracking-tight text-white">
-              340<span class="text-sky-400">+</span>
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-6 text-center backdrop-blur-sm">
+            <div class="font-heading text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
+              <span class="counter" data-count="340">340</span><span class="text-azora-red">+</span>
             </div>
-            <div class="mt-2 font-mono text-[10px] font-semibold uppercase tracking-wider text-slate-400">Merchant Partners</div>
+            <div class="mt-2 font-mono text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-white/50">Merchant Partners</div>
           </div>
-          <div class="rounded-2xl border border-white/10 bg-[#0F192C]/70 p-5 text-center backdrop-blur-xl">
-            <div class="font-heading text-3xl sm:text-4xl font-black tracking-tight text-emerald-400">
-              100<span class="text-xs text-white/50">%</span>
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-6 text-center backdrop-blur-sm">
+            <div class="font-heading text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
+              100<span class="text-azora-red">%</span>
             </div>
-            <div class="mt-2 font-mono text-[10px] font-semibold uppercase tracking-wider text-slate-400">Warranty Protection</div>
+            <div class="mt-2 font-mono text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-white/50">Hardware Warranty</div>
           </div>
-          <div class="rounded-2xl border border-white/10 bg-[#0F192C]/70 p-5 text-center backdrop-blur-xl">
-            <div class="font-heading text-3xl sm:text-4xl font-black tracking-tight text-sky-400">
-              24<span class="text-xs text-white/50">hr</span>
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-6 text-center backdrop-blur-sm">
+            <div class="font-heading text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
+              24<span class="text-azora-red text-xl sm:text-3xl font-bold">hr</span>
             </div>
-            <div class="mt-2 font-mono text-[10px] font-semibold uppercase tracking-wider text-slate-400">Overnight Dispatch</div>
+            <div class="mt-2 font-mono text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-white/50">Replacement Dispatch</div>
           </div>
-        </div>
-
-        <!-- Industry Filter Pills -->
-        <div class="mt-12 inline-flex flex-wrap items-center justify-center gap-2 rounded-2xl border border-white/10 bg-[#0B1320]/80 p-1.5 backdrop-blur-xl">
-          <button type="button" onclick="filterCase('all')" id="case-btn-all" class="rounded-xl px-4 py-2 text-xs font-bold transition-all bg-[#2469EB] text-white shadow-chip">All Deployments</button>
-          <button type="button" onclick="filterCase('dining')" id="case-btn-dining" class="rounded-xl px-4 py-2 text-xs font-bold transition-all text-slate-400 hover:text-white">Dining &amp; Hospitality</button>
-          <button type="button" onclick="filterCase('retail')" id="case-btn-retail" class="rounded-xl px-4 py-2 text-xs font-bold transition-all text-slate-400 hover:text-white">Specialty Retail</button>
-          <button type="button" onclick="filterCase('trades')" id="case-btn-trades" class="rounded-xl px-4 py-2 text-xs font-bold transition-all text-slate-400 hover:text-white">Field &amp; Contractors</button>
-          <button type="button" onclick="filterCase('medical')" id="case-btn-medical" class="rounded-xl px-4 py-2 text-xs font-bold transition-all text-slate-400 hover:text-white">Healthcare &amp; Corporate</button>
         </div>
       </div>
     </section>
 
-    <!-- CASE STUDIES GRID -->
+    <!-- STRUCTURED CASE STUDIES -->
     <section class="relative border-b border-white/10 py-20 lg:py-28">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch" id="case-studies-container">
+        <div class="rv mx-auto max-w-3xl text-center">
+          <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-azora-red/30 bg-azora-red/10 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-azora-red">
+            <span class="h-1.5 w-1.5 rounded-full bg-azora-red"></span>
+            Case Studies
+          </div>
+          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">Industry Implementations</h2>
+          <p class="mt-4 text-[15px] leading-relaxed text-white/60">
+            Examining how different business models eliminate hardware bottlenecks and expand customer reach.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           
           <!-- CASE 1: Multi-Unit Dining -->
-          <div class="case-item dining card-glass-interactive p-7 rounded-3xl flex flex-col justify-between" data-category="dining">
-            <div>
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider text-sky-400">Hospitality &amp; Dining</span>
-                <span class="rounded-full bg-emerald-500/15 border border-emerald-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-emerald-300">Multi-Unit</span>
+          <div class="rv rv-d1 case-card flex flex-col rounded-2xl border border-white/10 bg-[#162238]/60 p-7 backdrop-blur-sm">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-azora-red">Hospitality &amp; Dining</span>
+              <span class="rounded-full bg-emerald-500/15 border border-emerald-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-emerald-300">Multi-Unit</span>
+            </div>
+            <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Regional Restaurant Group</h3>
+            <div class="mt-4 space-y-3 flex-1 text-[13px] text-white/70">
+              <div>
+                <strong class="text-white">Challenge:</strong> High upfront cost to upgrade POS terminals across 3 dining locations while contending with commission fees from third-party delivery apps.
               </div>
-              <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Tri-County Restaurant Group</h3>
-              
-              <div class="mt-5 space-y-3.5 text-xs text-slate-300">
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-white block mb-1">Operational Bottleneck:</span>
-                  Prohibitive upfront capital requirement to modernize POS across 3 busy casual dining locations while losing 28% margin to delivery apps.
-                </div>
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-sky-400 block mb-1">Azora Integrated Solution:</span>
-                  Leased 6 Clover Station Duo terminals with KDS kitchen display printers, paired with a custom web direct ordering platform.
-                </div>
-                <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300">
-                  <span class="font-bold block mb-1">Quantifiable Result:</span>
-                  Preserved cash reserves to open location #4, shifted 42% of repeat digital orders away from 3rd-party aggregators to direct zero-commission ordering.
-                </div>
+              <div>
+                <strong class="text-white">Azora Solution:</strong> Leased 6 Clover Station Duo terminals with integrated kitchen printers, combined with a custom mobile-responsive direct ordering website.
+              </div>
+              <div>
+                <strong class="text-white">Outcome:</strong> Preserved working capital for opening a 4th unit, while shifting repeat customer orders from delivery aggregators to direct web ordering.
               </div>
             </div>
-
-            <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="font-mono text-slate-400">Hardware: Clover Duo</span>
-              <button type="button" onclick="AZ.openQuoteModal('clover-station-duo')" class="text-sky-400 hover:text-white font-semibold">Lease System &rarr;</button>
+            <div class="mt-6 border-t border-white/10 pt-4 flex items-center justify-between text-xs text-white/50">
+              <span>Hardware: Clover Station Duo</span>
+              <span class="font-mono text-azora-red">Website Growth</span>
             </div>
           </div>
 
           <!-- CASE 2: Specialty Retail Boutique -->
-          <div class="case-item retail card-glass-interactive p-7 rounded-3xl flex flex-col justify-between" data-category="retail">
-            <div>
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider text-sky-400">Specialty Commerce</span>
-                <span class="rounded-full bg-blue-500/15 border border-blue-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-blue-300">Retail Floor</span>
+          <div class="rv rv-d2 case-card flex flex-col rounded-2xl border border-white/10 bg-[#162238]/60 p-7 backdrop-blur-sm">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-azora-red">Specialty Commerce</span>
+              <span class="rounded-full bg-blue-500/15 border border-blue-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-blue-300">Retail Floor</span>
+            </div>
+            <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Urban Boutique &amp; Apparel</h3>
+            <div class="mt-4 space-y-3 flex-1 text-[13px] text-white/70">
+              <div>
+                <strong class="text-white">Challenge:</strong> Slow customer checkout lines during peak hours and virtually non-existent search visibility for neighborhood shoppers.
               </div>
-              <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Urban Boutique &amp; Apparel</h3>
-              
-              <div class="mt-5 space-y-3.5 text-xs text-slate-300">
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-white block mb-1">Operational Bottleneck:</span>
-                  Checkout lines crawling during peak weekends, leading to abandoned basket carts and zero rank for nearby "boutique clothing" searches.
-                </div>
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-sky-400 block mb-1">Azora Integrated Solution:</span>
-                  Audrey A7 dual-screen interactive terminal paired with Local SEO Starter optimization and automated Google Review generation.
-                </div>
-                <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300">
-                  <span class="font-bold block mb-1">Quantifiable Result:</span>
-                  Cut customer checkout time by 55%, captured #2 Google 3-Pack rank for target district, and increased foot-traffic visits by 34%.
-                </div>
+              <div>
+                <strong class="text-white">Azora Solution:</strong> Audrey A7 dual-display customer-facing terminal paired with local Google Business Profile optimization and local keyword targeting.
+              </div>
+              <div>
+                <strong class="text-white">Outcome:</strong> Doubled transaction processing speed at checkout and established Top 3 Local Map Pack presence for nearby boutique searches.
               </div>
             </div>
-
-            <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="font-mono text-slate-400">Hardware: Audrey A7</span>
-              <button type="button" onclick="AZ.openQuoteModal('audrey-a7')" class="text-sky-400 hover:text-white font-semibold">Lease System &rarr;</button>
+            <div class="mt-6 border-t border-white/10 pt-4 flex items-center justify-between text-xs text-white/50">
+              <span>Hardware: Audrey A7 Bundle</span>
+              <span class="font-mono text-azora-red">Local Starter SEO</span>
             </div>
           </div>
 
-          <!-- CASE 3: Field Trades & Contractors -->
-          <div class="case-item trades card-glass-interactive p-7 rounded-3xl flex flex-col justify-between" data-category="trades">
-            <div>
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider text-sky-400">Contractors &amp; Trades</span>
-                <span class="rounded-full bg-amber-500/15 border border-amber-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-amber-300">On-Site Fleet</span>
+          <!-- CASE 3: Field Trades & Services -->
+          <div class="rv rv-d3 case-card flex flex-col rounded-2xl border border-white/10 bg-[#162238]/60 p-7 backdrop-blur-sm">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-azora-red">Trades &amp; Field Work</span>
+              <span class="rounded-full bg-amber-500/15 border border-amber-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-amber-300">On-Site Fleet</span>
+            </div>
+            <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Commercial HVAC &amp; Plumbing</h3>
+            <div class="mt-4 space-y-3 flex-1 text-[13px] text-white/70">
+              <div>
+                <strong class="text-white">Challenge:</strong> Technicians required rugged wireless payment terminals in the field and an emergency dispatch website to capture service calls.
               </div>
-              <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Metro Mechanical &amp; Plumbing</h3>
-              
-              <div class="mt-5 space-y-3.5 text-xs text-slate-300">
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-white block mb-1">Operational Bottleneck:</span>
-                  Technicians chasing delayed client invoice payments for weeks and poor mobile search presence during after-hours emergency pipe leaks.
-                </div>
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-sky-400 block mb-1">Azora Integrated Solution:</span>
-                  Dejavoo Z9 mobile 4G terminals for 8 work vans, combined with emergency click-to-call website landing pages and Local Growth SEO.
-                </div>
-                <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300">
-                  <span class="font-bold block mb-1">Quantifiable Result:</span>
-                  Immediate job-completion credit card settlement, dropping outstanding receivables by 82% while gaining 45+ inbound monthly dispatch calls.
-                </div>
+              <div>
+                <strong class="text-white">Azora Solution:</strong> Dejavoo Z9 mobile terminals with cellular 4G connectivity paired with an emergency call-first landing page and geo-targeted SEO.
+              </div>
+              <div>
+                <strong class="text-white">Outcome:</strong> Immediate on-the-spot payment settlement upon job completion, reducing outstanding accounts receivable and increasing inbound emergency leads.
               </div>
             </div>
-
-            <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="font-mono text-slate-400">Hardware: Dejavoo Z9</span>
-              <button type="button" onclick="AZ.openQuoteModal('dejavoo-z9')" class="text-sky-400 hover:text-white font-semibold">Lease System &rarr;</button>
+            <div class="mt-6 border-t border-white/10 pt-4 flex items-center justify-between text-xs text-white/50">
+              <span>Hardware: Dejavoo Z9 Wireless</span>
+              <span class="font-mono text-azora-red">Growth Marketing</span>
             </div>
           </div>
 
-          <!-- CASE 4: Healthcare & Dental -->
-          <div class="case-item medical card-glass-interactive p-7 rounded-3xl flex flex-col justify-between" data-category="medical">
-            <div>
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider text-sky-400">Healthcare &amp; Dental</span>
-                <span class="rounded-full bg-emerald-500/15 border border-emerald-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-emerald-300">Private Practice</span>
+          <!-- CASE 4: Healthcare & Dental Practice -->
+          <div class="rv rv-d1 case-card flex flex-col rounded-2xl border border-white/10 bg-[#162238]/60 p-7 backdrop-blur-sm">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-azora-red">Healthcare &amp; Dental</span>
+              <span class="rounded-full bg-emerald-500/15 border border-emerald-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-emerald-300">Practice</span>
+            </div>
+            <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Multi-Doctor Family Dental</h3>
+            <div class="mt-4 space-y-3 flex-1 text-[13px] text-white/70">
+              <div>
+                <strong class="text-white">Challenge:</strong> Outdated website with no mobile appointment intake, combined with difficulty competing against corporate dental chains in local search.
               </div>
-              <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Apex Family Dental Associates</h3>
-              
-              <div class="mt-5 space-y-3.5 text-xs text-slate-300">
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-white block mb-1">Operational Bottleneck:</span>
-                  Clunky copay collection and lack of modern digital intake, losing new patients to corporate dental conglomerates.
-                </div>
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-sky-400 block mb-1">Azora Integrated Solution:</span>
-                  PAX A920 contactless Android terminals alongside a responsive patient intake portal with appointment inquiry sync.
-                </div>
-                <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300">
-                  <span class="font-bold block mb-1">Quantifiable Result:</span>
-                  New patient digital consultations surged 60% over 6 months; patients praised touchless Apple Pay/Google Pay checkout experience.
-                </div>
+              <div>
+                <strong class="text-white">Azora Solution:</strong> PAX A920 smart contactless terminal for front-desk copays alongside a modern patient appointment portal and ongoing local search management.
+              </div>
+              <div>
+                <strong class="text-white">Outcome:</strong> Substantial growth in monthly online appointment inquiries and a contactless checkout experience praised by patients.
               </div>
             </div>
-
-            <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="font-mono text-slate-400">Hardware: PAX A920</span>
-              <button type="button" onclick="AZ.openQuoteModal('pax-a920')" class="text-sky-400 hover:text-white font-semibold">Lease System &rarr;</button>
+            <div class="mt-6 border-t border-white/10 pt-4 flex items-center justify-between text-xs text-white/50">
+              <span>Hardware: PAX A920 Smart POS</span>
+              <span class="font-mono text-azora-red">Website Premium</span>
             </div>
           </div>
 
-          <!-- CASE 5: Corporate & Legal Firm -->
-          <div class="case-item medical card-glass-interactive p-7 rounded-3xl flex flex-col justify-between" data-category="medical">
-            <div>
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider text-sky-400">Legal &amp; Advisory</span>
-                <span class="rounded-full bg-purple-500/15 border border-purple-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-purple-300">Corporate</span>
+          <!-- CASE 5: Professional Legal Firm -->
+          <div class="rv rv-d2 case-card flex flex-col rounded-2xl border border-white/10 bg-[#162238]/60 p-7 backdrop-blur-sm">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-azora-red">Legal &amp; Advisory</span>
+              <span class="rounded-full bg-purple-500/15 border border-purple-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-purple-300">Corporate</span>
+            </div>
+            <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Boutique Estate &amp; Business Law</h3>
+            <div class="mt-4 space-y-3 flex-1 text-[13px] text-white/70">
+              <div>
+                <strong class="text-white">Challenge:</strong> Needed an authoritative corporate website with dedicated practice area breakdowns and secure retainer payment capabilities.
               </div>
-              <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Sterling &amp; Cross Law Partners</h3>
-              
-              <div class="mt-5 space-y-3.5 text-xs text-slate-300">
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-white block mb-1">Operational Bottleneck:</span>
-                  An outdated 2018 corporate website failing to generate corporate retainer inquiries, coupled with manual trust account billing.
-                </div>
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-sky-400 block mb-1">Azora Integrated Solution:</span>
-                  Dominance Website Engineering package with encrypted retainer invoice payment portal and high-authority practice area funnels.
-                </div>
-                <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300">
-                  <span class="font-bold block mb-1">Quantifiable Result:</span>
-                  Client conversion rate rose from 1.1% to 4.8%; secured 14 new corporate retainers in Q1 alone.
-                </div>
+              <div>
+                <strong class="text-white">Azora Solution:</strong> Enterprise web development with integrated consultation scheduling and Clover Flex terminal for in-office retainer transactions.
+              </div>
+              <div>
+                <strong class="text-white">Outcome:</strong> Streamlined client intake process, higher conversion from corporate visitors, and zero payment processing interruptions.
               </div>
             </div>
-
-            <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="font-mono text-slate-400">Plan: Website Dominance</span>
-              <button type="button" onclick="AZ.openQuoteModal('plan-website-premium')" class="text-sky-400 hover:text-white font-semibold">View Plan &rarr;</button>
+            <div class="mt-6 border-t border-white/10 pt-4 flex items-center justify-between text-xs text-white/50">
+              <span>Hardware: Clover Flex</span>
+              <span class="font-mono text-azora-red">Market Leader SEO</span>
             </div>
           </div>
 
-          <!-- CASE 6: Automotive & Collision -->
-          <div class="case-item trades card-glass-interactive p-7 rounded-3xl flex flex-col justify-between" data-category="trades">
-            <div>
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-xs font-bold uppercase tracking-wider text-sky-400">Automotive &amp; Collision</span>
-                <span class="rounded-full bg-blue-500/15 border border-blue-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-blue-300">Service Bay</span>
+          <!-- CASE 6: Mobile Pop-Up & Markets -->
+          <div class="rv rv-d3 case-card flex flex-col rounded-2xl border border-white/10 bg-[#162238]/60 p-7 backdrop-blur-sm">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold uppercase tracking-wider text-azora-red">Pop-up &amp; Mobile</span>
+              <span class="rounded-full bg-blue-500/15 border border-blue-500/30 px-3 py-0.5 font-mono text-[9px] font-bold uppercase text-blue-300">Market Fleet</span>
+            </div>
+            <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Artisan Bakery &amp; Farm Market</h3>
+            <div class="mt-4 space-y-3 flex-1 text-[13px] text-white/70">
+              <div>
+                <strong class="text-white">Challenge:</strong> Need for ultra-reliable battery life and tap-to-pay speed at crowded weekend farmers markets without expensive terminal purchases.
               </div>
-              <h3 class="mt-4 font-heading text-xl font-extrabold text-white">Precision Auto Care Group</h3>
-              
-              <div class="mt-5 space-y-3.5 text-xs text-slate-300">
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-white block mb-1">Operational Bottleneck:</span>
-                  Service bays needed curbside mobile payments to speed up vehicle pick-up times, and organic ranking was buried beneath chain franchises.
-                </div>
-                <div class="p-3 rounded-xl bg-white/5 border border-white/5">
-                  <span class="font-bold text-sky-400 block mb-1">Azora Integrated Solution:</span>
-                  Clover Flex wireless LTE handheld terminals paired with Market Leader SEO covering 4 surrounding townships.
-                </div>
-                <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300">
-                  <span class="font-bold block mb-1">Quantifiable Result:</span>
-                  Vehicle delivery turnaround accelerated by 18 minutes per ticket; #1 rank attained for auto repair keywords across 3 counties.
-                </div>
+              <div>
+                <strong class="text-white">Azora Solution:</strong> Leased 3 Joy Smart Mobile terminals with built-in thermal printers and SIM cards for instant transactions anywhere.
+              </div>
+              <div>
+                <strong class="text-white">Outcome:</strong> Zero downtime during weekend rushes, seamless battery longevity, and simple month-to-month terminal flexibility.
               </div>
             </div>
-
-            <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="font-mono text-slate-400">Hardware: Clover Flex</span>
-              <button type="button" onclick="AZ.openQuoteModal('clover-flex')" class="text-sky-400 hover:text-white font-semibold">Lease System &rarr;</button>
+            <div class="mt-6 border-t border-white/10 pt-4 flex items-center justify-between text-xs text-white/50">
+              <span>Hardware: Joy Smart Mobile</span>
+              <span class="font-mono text-azora-red">Website Starter</span>
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
 
-    <!-- TESTIMONIALS SLIDER SECTION -->
-    <section class="relative border-b border-white/10 py-20 lg:py-28 bg-[#090F1C]">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
-        <div class="rv text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-sky-400">
-            Merchant Endorsements
+    <!-- CALL TO ACTION -->
+    <section class="relative overflow-hidden bg-azora-ink py-20 lg:py-24">
+      <div class="absolute inset-0"></div>
+      <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
+        <div class="rv">
+          <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 text-white/70 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.22em]">
+            <span class="h-1.5 w-1.5 rounded-full bg-white/70"></span>Next Step
           </div>
-          <h2 class="mt-4 font-heading text-3xl font-extrabold text-white sm:text-4xl">
-            Trusted By Business Owners Nationwide
-          </h2>
-          <p class="mt-3 text-sm text-slate-400">
-            Hear directly from operators who made the switch to Azora's managed hardware and growth systems.
+          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-5xl">Ready to write your growth story?</h2>
+          <p class="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/60">
+            Quote POS hardware on flexible leasing or explore our transparent website and marketing plans.
           </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          <div class="card-glass-interactive p-6 rounded-2xl flex flex-col justify-between">
-            <div class="text-amber-400 text-sm tracking-widest">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="mt-4 text-xs leading-relaxed text-slate-300 flex-1">
-              "When one of our main kitchen terminals stopped printing on a Friday night, Azora had a replacement configured and delivered by 10 AM Saturday. That kind of uptime guarantee is priceless."
-            </p>
-            <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-3">
-              <div class="h-9 w-9 rounded-full bg-[#2469EB] flex items-center justify-center font-bold text-white text-xs">MD</div>
-              <div>
-                <span class="block text-xs font-bold text-white">Marco Delgado</span>
-                <span class="block text-[10px] text-slate-400">Owner, Delgado's Taqueria</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-glass-interactive p-6 rounded-2xl flex flex-col justify-between border-sky-400/30">
-            <div class="text-amber-400 text-sm tracking-widest">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="mt-4 text-xs leading-relaxed text-slate-300 flex-1">
-              "We didn't just get POS terminals — we got a complete redesign of our website and local Google ranking. Our inbound website inquiries tripled within 90 days of launching."
-            </p>
-            <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-3">
-              <div class="h-9 w-9 rounded-full bg-sky-500 flex items-center justify-center font-bold text-white text-xs">SR</div>
-              <div>
-                <span class="block text-xs font-bold text-white">Sarah Reynolds</span>
-                <span class="block text-[10px] text-slate-400">Founder, Velvet &amp; Stone Boutique</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-glass-interactive p-6 rounded-2xl flex flex-col justify-between">
-            <div class="text-amber-400 text-sm tracking-widest">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="mt-4 text-xs leading-relaxed text-slate-300 flex-1">
-              "The zero upfront capital model allowed our multi-location plumbing company to outfit 8 service vans with wireless 4G card readers immediately. Game changer for cash flow."
-            </p>
-            <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-3">
-              <div class="h-9 w-9 rounded-full bg-emerald-500 flex items-center justify-center font-bold text-white text-xs">TH</div>
-              <div>
-                <span class="block text-xs font-bold text-white">Tyler Hayes</span>
-                <span class="block text-[10px] text-slate-400">Operations Director, Apex Mechanical</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- BOTTOM CTA -->
-    <section class="relative overflow-hidden py-20 lg:py-28">
-      <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-        <div class="absolute bottom-0 left-1/2 h-[380px] w-[650px] -translate-x-1/2 rounded-full bg-[#2469EB]/15 blur-[120px]"></div>
-      </div>
-
-      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-        <div class="card-glass-interactive rounded-3xl p-8 sm:p-12 border-sky-400/30">
-          <h2 class="font-heading text-3xl font-extrabold text-white sm:text-4xl">
-            Ready To Modernize Your Commercial Systems?
-          </h2>
-          <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-slate-300">
-            Tell us about your setup and we will construct a custom proposal covering hardware leasing, site engineering, and localized organic discovery.
-          </p>
-
-          <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <button type="button" onclick="AZ.openQuoteModal()" class="btn-modern-primary !py-3.5 !px-8 text-sm">
-              <span>Request Custom Proposal</span>
-              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </button>
-            <a href="tel:+19843888298" class="btn-modern-ghost !py-3.5 !px-6 text-sm">
-              Call (984) 388-8298
+          <div class="mt-9 flex flex-wrap items-center justify-center gap-3.5">
+            <a href="/get-a-quote" class="inline-flex items-center gap-2.5 rounded-xl bg-azora-red px-8 py-4 text-sm font-bold text-white shadow-chip transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110">
+              Get a Quote Today
+            </a>
+            <a href="/hardware" class="rounded-xl border border-white/25 px-8 py-4 text-sm font-bold text-white transition-all hover:border-white hover:bg-white/5">
+              Explore Hardware Fleet
             </a>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ======================= WATERMARK FOOTER ======================= -->
-  <footer class="relative overflow-hidden border-t border-white/10 bg-[#05080F] text-slate-300">
-    <div class="pointer-events-none absolute -bottom-10 left-1/2 -translate-x-1/2 select-none opacity-[0.03]" aria-hidden="true">
-      <span class="font-heading text-[18vw] font-black tracking-tighter text-white">AZORA</span>
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="relative overflow-hidden bg-[#070D18] text-white">
+    <!-- Big AZORA watermark behind footer content with bottom fade blending into background -->
+    <div class="pointer-events-none select-none absolute inset-x-0 bottom-0 z-0 flex items-end justify-center overflow-hidden" aria-hidden="true">
+      <span class="font-heading font-black tracking-tighter leading-none text-white opacity-[0.06] text-[20vw] translate-y-[15%]"
+            style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 92%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 92%);">
+        AZORA
+      </span>
     </div>
 
-    <div class="relative mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 lg:px-8">
-      <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
-        
+    <div class="absolute inset-0 opacity-40"></div>
+    <div class="z-10 relative mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
-          <a href="/" class="flex items-center gap-3">
-            <div class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[#2469EB] to-[#1442a8] text-white">
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M12 3l9 18h-4.4L12 9.6 7.4 21H3z"/>
-                <circle cx="12" cy="18" r="1.6" fill="#38BDF8" stroke="none"/>
-              </svg>
-            </div>
-            <div class="leading-none">
-              <span class="block font-heading text-lg font-black tracking-tight text-white">AZORA</span>
-              <span class="mt-0.5 block font-mono text-[9px] font-bold uppercase tracking-[0.26em] text-sky-400">Solutions</span>
-            </div>
+          <a href="/" class="flex items-center gap-2.5">
+            <span class="grid h-9 w-9 place-items-center rounded-xl bg-white text-azora-blue">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 18h-4.4L12 9.6 7.4 21H3z"/><circle cx="12" cy="18" r="1.6" fill="#2469EB" stroke="none"/></svg>
+            </span>
+            <span class="leading-none">
+              <span class="block font-heading text-[17px] font-extrabold tracking-tight text-white">AZORA</span>
+              <span class="mt-0.5 block font-mono text-[9px] font-semibold uppercase tracking-[0.28em] text-white/50">Solutions</span>
+            </span>
           </a>
-          <p class="mt-4 max-w-sm text-xs leading-relaxed text-slate-400">
-            Equipping American enterprises with enterprise POS hardware, modern high-converting websites, and local organic dominance.
+          <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/55">
+            Azora Solutions helps businesses strengthen their digital presence and operate more efficiently through practical technology and growth-focused services.
           </p>
           <div class="mt-6 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-300">Nationwide USA</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-300">24/7 Overnight Swap</span>
+            <span class="rounded-full border border-white/12 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">Nationwide Deployment</span>
           </div>
         </div>
 
         <div>
-          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Hardware Fleet</h4>
-          <ul class="mt-4 space-y-2 text-xs">
-            <li><a href="/hardware?brand=clover" class="hover:text-white transition-colors">Clover Series (Flex, Mini, Duo)</a></li>
-            <li><a href="/hardware?brand=dejavoo" class="hover:text-white transition-colors">Dejavoo Smart Android</a></li>
-            <li><a href="/hardware?brand=pax" class="hover:text-white transition-colors">PAX Payment Lineup</a></li>
-            <li><a href="/hardware?brand=audrey" class="hover:text-white transition-colors">Audrey Enterprise Kiosks</a></li>
-            <li><a href="/hardware" class="text-sky-400 hover:underline">Explore Full 10+ Catalog &rarr;</a></li>
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Core Services</h4>
+          <ul class="mt-4 space-y-2.5 text-sm text-white/65">
+            <li><a href="/services#ai-automation" class="transition-colors hover:text-white">AI Automation</a></li>
+            <li><a href="/services#website-development" class="transition-colors hover:text-white">Website Development</a></li>
+            <li><a href="/services#seo-google-maps" class="transition-colors hover:text-white">SEO &amp; Google Maps Pack</a></li>
+            <li><a href="/services#digital-growth" class="transition-colors hover:text-white">Digital Growth Campaigns</a></li>
+            <li><a href="/services#support-infrastructure" class="transition-colors hover:text-white">Ongoing Support</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Growth Services</h4>
-          <ul class="mt-4 space-y-2 text-xs">
-            <li><a href="/services" class="hover:text-white transition-colors">All Solutions Overview</a></li>
-            <li><a href="/plans" class="hover:text-white transition-colors">Web &amp; SEO Pricing Plans</a></li>
-            <li><a href="/client-success" class="text-sky-400 hover:text-white transition-colors font-semibold">Client Case Studies</a></li>
-            <li><a href="/about" class="hover:text-white transition-colors">About Azora</a></li>
-            <li><a href="/dashboard" class="hover:text-white transition-colors">Client Portal / Dashboard</a></li>
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Company</h4>
+          <ul class="mt-4 space-y-2.5 text-sm text-white/65">
+            <li><a href="/about" class="transition-colors hover:text-white">About</a></li>
+            <li><a href="/client-success" class="transition-colors hover:text-white">Client Success</a></li>
+            <li><a href="/services" class="transition-colors hover:text-white">Services</a></li>
+            <li><a href="/#faq" class="transition-colors hover:text-white">FAQ</a></li>
+            <li><a href="/admin-inventory" class="transition-colors hover:text-white">Inventory Admin</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-sky-400">Direct Contact</h4>
-          <div class="mt-4 space-y-2 text-xs">
-            <a href="tel:+19843888298" class="flex items-center gap-2 text-slate-300 hover:text-white">
-              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> (984) 388-8298
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Get Started</h4>
+          <p class="mt-4 text-sm leading-relaxed text-white/55">Discuss your digital growth and AI automation requirements.</p>
+          <div class="mt-5 space-y-2 text-sm text-white/65">
+            <a href="mailto:sales@azorasolution.com" class="block transition-colors hover:text-white">
+              sales@azorasolution.com
             </a>
-            <a href="mailto:info@azorasolution.com" class="flex items-center gap-2 text-slate-300 hover:text-white">
-              <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span> info@azorasolution.com
-            </a>
+            <p class="text-xs text-white/50 leading-relaxed">
+              1015 GLENDALE CHASE CT, Morrisville, North Carolina, 27560, USA
+            </p>
           </div>
-          <button type="button" onclick="AZ.openQuoteModal()" class="mt-5 btn-modern-primary w-full !py-2.5 text-xs justify-center">
-            Request Rapid Quote
-          </button>
+          <a href="/get-a-quote" class="mt-5 inline-flex items-center gap-2 rounded-xl bg-azora-red px-5 py-3 text-sm font-semibold text-white shadow-chip transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110">
+            Get a Quote
+          </a>
         </div>
-
       </div>
 
-      <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-[11px] text-slate-500 sm:flex-row">
-        <p>&copy; 2026 Azora Solutions. All rights reserved.</p>
-        <div class="flex gap-6 font-mono text-[10px] uppercase tracking-wider">
-          <a href="/about" class="hover:text-slate-300">Privacy Policy</a>
-          <a href="/about" class="hover:text-slate-300">Terms of Service</a>
-          <a href="/hardware" class="hover:text-slate-300">Merchant Agreement</a>
-        </div>
+      <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
+        <p class="text-xs text-white/40">© 2026 Azora Solutions. All rights reserved.</p>
+        <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-white/35">Business Technology &amp; Growth Solutions</p>
       </div>
     </div>
+      
   </footer>
 
-  <!-- Interactive Global Quote Modal Container -->
+  <!-- Modals + concierge -->
   <div id="modal-root"></div>
   <div id="concierge-root"></div>
 
-  <!-- Global Application Scripts -->
-  <script defer src="assets/js/data.js"></script>
-  <script defer src="assets/js/imgdata.js"></script>
-  <script defer src="assets/js/app.js"></script>
-
-  <!-- Case Filter Logic -->
-  <script>
-    function filterCase(cat) {
-      var btns = ['all', 'dining', 'retail', 'trades', 'medical'];
-      btns.forEach(function(b) {
-        var el = document.getElementById('case-btn-' + b);
-        if (el) {
-          if (b === cat) {
-            el.className = 'rounded-xl px-4 py-2 text-xs font-bold transition-all bg-[#2469EB] text-white shadow-chip';
-          } else {
-            el.className = 'rounded-xl px-4 py-2 text-xs font-bold transition-all text-slate-400 hover:text-white';
-          }
-        }
-      });
-
-      var items = document.querySelectorAll('.case-item');
-      items.forEach(function(item) {
-        if (cat === 'all' || item.dataset.category === cat) {
-          item.style.display = 'flex';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    }
-  </script>
+  <script src="/assets/js/data.js" defer></script>
+  <script src="/assets/js/imgdata.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
 </body>
 </html>

@@ -153,17 +153,12 @@
 
     .bg-darkgrid {
       background-image:
-        radial-gradient(ellipse 65% 55% at 50% -10%, rgba(36,105,235,.22), transparent 70%),
-        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-      background-size:100% 100%, 44px 44px, 44px 44px;
+        radial-gradient(ellipse 65% 55% at 50% -10%, rgba(36,105,235,.16), transparent 70%);
+      background-size:100% 100%;
     }
     
     .bg-subtle-grid {
-      background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-      background-size:40px 40px;
+      background-image: none;
     }
 
     .glass-nav-dark {
@@ -225,10 +220,7 @@
       position:absolute;
       inset:0;
       pointer-events:none;
-      opacity:.3;
-      background-image:linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
-      background-size:24px 24px;
-      mask-image:linear-gradient(135deg, black, transparent 75%);
+      opacity:0;
     }
 
     .project-card {
@@ -359,7 +351,7 @@
         <!-- Desktop nav -->
         <nav class="hidden items-center gap-8 lg:flex" id="nav-links">
           <a href="/" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Home</a>
-          <a href="/hardware" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Hardware</a>
+          <!-- <a href="/hardware" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Hardware</a> -->
           <a href="/services" class="link-underline active text-[13.5px] font-semibold text-azora-red transition-colors">Services</a>
           <a href="/plans" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">Plans</a>
           <a href="/about" class="link-underline text-[13.5px] font-semibold text-white/75 transition-colors hover:text-white">About</a>
@@ -381,7 +373,7 @@
       <div id="mobile-menu" class="mt-2 hidden overflow-hidden rounded-2xl border border-white/10 bg-[#0E1726]/95 shadow-lift backdrop-blur-xl lg:hidden">
         <nav class="flex flex-col p-3">
           <a href="/" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Home</a>
-          <a href="/hardware" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Hardware</a>
+          <!-- <a href="/hardware" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Hardware</a> -->
           <a href="/services" class="rounded-xl px-4 py-3 text-sm font-semibold text-azora-red hover:bg-white/5">Services</a>
           <a href="/plans" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">Plans</a>
           <a href="/about" class="rounded-xl px-4 py-3 text-sm font-semibold text-white/80 hover:bg-white/5">About</a>
@@ -401,40 +393,78 @@
         <div class="rv in mx-auto max-w-3xl">
           <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-azora-red/30 bg-azora-red/10 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-azora-red">
             <span class="h-1.5 w-1.5 rounded-full bg-azora-red"></span>
-            Comprehensive Growth Solutions
+            Digital Solutions for Modern Businesses
           </div>
           <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Integrated Services Built For Modern Commerce.
+            Strengthen Your Digital Presence.
           </h1>
           <p class="mx-auto mt-5 max-w-2xl text-[15.5px] leading-relaxed text-white/65">
-            We bridge the gap between in-person payment hardware, high-converting digital storefronts, and local organic dominance to scale your revenue.
+            Azora Solutions helps businesses strengthen their digital presence and operate more efficiently through practical technology and growth-focused services. We bring website development, AI automation, and local search marketing together under one provider.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- SERVICE CARDS GRID -->
-    <section class="bg-subtle-grid relative border-b border-white/10 py-20 lg:py-28">
+    <!-- CORE SERVICES SHOWCASE -->
+    <section id="core-services" class="bg-subtle-grid relative border-b border-white/10 py-20 lg:py-28">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="rv mx-auto max-w-3xl text-center">
           <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-azora-red/30 bg-azora-red/10 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-azora-red">
             <span class="h-1.5 w-1.5 rounded-full bg-azora-red"></span>
             What We Deliver
           </div>
-          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">Core Service Offerings</h2>
+          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">Core Services</h2>
           <p class="mt-4 text-[15px] leading-relaxed text-white/60">
-            Each service is engineered to function stand-alone or integrate directly with your POS fleet and sales channels.
+            End-to-end digital solutions engineered to build credibility, reach nearby customers, and generate more enquiries.
           </p>
         </div>
 
-        <div class="mt-14 grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3 items-stretch">
+        <div class="mt-14 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           
-          <!-- SERVICE 1: Website Design & Dev -->
-          <div class="service-card">
+          <!-- SERVICE 1: AI Automation -->
+          <div id="ai-automation" class="service-card">
+            <div class="service-preview flex flex-col justify-between p-5 sm:p-6 min-h-[160px]">
+              <div class="relative z-10 flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-purple-500/15 border border-purple-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-purple-300 backdrop-blur">
+                  <span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span>Operational Tech
+                </span>
+                <span class="rounded-full bg-white/10 border border-white/10 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-white/70 backdrop-blur">
+                  Smart Workflows
+                </span>
+              </div>
+              <div class="relative z-10 mt-6 flex items-center justify-between gap-3">
+                <div class="grid h-12 w-12 place-items-center rounded-xl bg-azora-red/20 text-azora-red border border-azora-red/30">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4 4 4 0 0 1-4-4V6a4 4 0 0 1 4-4zM6 10a4 4 0 0 0-4 4v2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4v-2a4 4 0 0 0-4-4M12 11v9M8 15h8"/></svg>
+                </div>
+                <div class="text-right">
+                  <span class="font-mono text-[10px] uppercase tracking-widest text-white/40">Efficiency</span>
+                  <span class="block font-heading text-lg font-bold text-white">AI Automation</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <h3 class="font-heading text-2xl font-extrabold text-white">AI Automation</h3>
+              <p class="mt-3 text-[13.5px] leading-relaxed text-white/60 min-h-[44px]">
+                Custom AI automation that reduces repetitive tasks and streamlines day-to-day business workflows.
+              </p>
+              <ul class="mt-6 space-y-2.5 flex-1 border-t border-white/10 pt-5 text-[13px] text-white/75">
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Automated client response &amp; lead capture</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Workflow &amp; appointment scheduling automation</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>CRM and internal operations integration</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Elimination of time-consuming manual entry</li>
+              </ul>
+              <a class="mt-7 flex h-12 items-center justify-center rounded-xl bg-white/10 text-[13.5px] font-bold text-white transition-all hover:bg-azora-red hover:shadow-chip" href="/get-a-quote">
+                Automate Your Workflow
+              </a>
+            </div>
+          </div>
+
+          <!-- SERVICE 2: Website Development -->
+          <div id="website-development" class="service-card">
             <div class="service-preview flex flex-col justify-between p-5 sm:p-6 min-h-[160px]">
               <div class="relative z-10 flex flex-wrap items-center justify-between gap-2">
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-emerald-300 backdrop-blur">
-                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Development
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Modern Web
                 </span>
                 <span class="rounded-full bg-white/10 border border-white/10 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-white/70 backdrop-blur">
                   From $99/mo
@@ -445,21 +475,21 @@
                   <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.7 2.6 4 5.7 4 9s-1.3 6.4-4 9c-2.7-2.6-4-5.7-4-9s1.3-6.4 4-9z"/></svg>
                 </div>
                 <div class="text-right">
-                  <span class="font-mono text-[10px] uppercase tracking-widest text-white/40">Tier Model</span>
-                  <span class="block font-heading text-lg font-bold text-white">Turnkey Websites</span>
+                  <span class="font-mono text-[10px] uppercase tracking-widest text-white/40">Digital Storefront</span>
+                  <span class="block font-heading text-lg font-bold text-white">Web Development</span>
                 </div>
               </div>
             </div>
             <div class="flex flex-1 flex-col p-6 sm:p-7">
-              <h3 class="font-heading text-2xl font-extrabold text-white">Website Design &amp; Development</h3>
+              <h3 class="font-heading text-2xl font-extrabold text-white">Website Development</h3>
               <p class="mt-3 text-[13.5px] leading-relaxed text-white/60 min-h-[44px]">
-                High-performance, mobile-first websites tailored for local businesses, lead capture, and streamlined customer conversions.
+                Clean, mobile-optimized business websites built for speed, conversion, and credibility—turning visitors into calls, appointments, and repeat buyers.
               </p>
               <ul class="mt-6 space-y-2.5 flex-1 border-t border-white/10 pt-5 text-[13px] text-white/75">
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom responsive UI &amp; brand styling</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Fast load speed &amp; Core Web Vitals optimization</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Interactive quote, contact &amp; appointment forms</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Continuous hosting, SSL &amp; maintenance updates</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>High-speed, conversion-focused mobile UX</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Built-in lead capture &amp; booking funnels</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Core Web Vitals &amp; technical performance</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Turnkey hosting, security SSL &amp; updates</li>
               </ul>
               <a class="mt-7 flex h-12 items-center justify-center rounded-xl bg-white/10 text-[13.5px] font-bold text-white transition-all hover:bg-azora-red hover:shadow-chip" href="/plans#website-plans">
                 Explore Website Plans
@@ -467,15 +497,15 @@
             </div>
           </div>
 
-          <!-- SERVICE 2: Local SEO & Google Presence (FEATURED) -->
-          <div class="service-card featured">
+          <!-- SERVICE 3: SEO & Google Maps Pack (FEATURED) -->
+          <div id="seo-google-maps" class="service-card featured">
             <div class="service-preview featured flex flex-col justify-between p-5 sm:p-6 min-h-[160px]">
               <div class="relative z-10 flex flex-wrap items-center justify-between gap-2">
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-azora-red/30 border border-azora-red/50 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-blue-200 backdrop-blur">
-                  <span class="h-1.5 w-1.5 rounded-full bg-azora-red animate-pulse"></span>SEO &amp; Maps
+                  <span class="h-1.5 w-1.5 rounded-full bg-azora-red animate-pulse"></span>High Demand
                 </span>
                 <span class="rounded-full bg-azora-red px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-white shadow-chip">
-                  High Demand
+                  From $285/mo
                 </span>
               </div>
               <div class="relative z-10 mt-6 flex items-center justify-between gap-3">
@@ -483,37 +513,37 @@
                   <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
                 </div>
                 <div class="text-right">
-                  <span class="font-mono text-[10px] uppercase tracking-widest text-azora-red">Local Dominance</span>
-                  <span class="block font-heading text-lg font-bold text-white">From $285/mo</span>
+                  <span class="font-mono text-[10px] uppercase tracking-widest text-azora-red">Local Visibility</span>
+                  <span class="block font-heading text-lg font-bold text-white">Google Maps Pack</span>
                 </div>
               </div>
             </div>
             <div class="flex flex-1 flex-col p-6 sm:p-7">
-              <h3 class="font-heading text-2xl font-extrabold text-white">Local SEO &amp; Google Map Pack</h3>
+              <h3 class="font-heading text-2xl font-extrabold text-white">SEO &amp; Google Maps Pack</h3>
               <p class="mt-3 text-[13.5px] leading-relaxed text-white/70 min-h-[44px]">
-                Rank in Google's Top 3 Local Pack and capture nearby high-intent searchers ready to call, visit, or buy.
+                Google Business Profile optimization and geo-targeted strategies that help local businesses become more visible to nearby customers.
               </p>
               <ul class="mt-6 space-y-2.5 flex-1 border-t border-white/10 pt-5 text-[13px] text-white/85">
                 <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Google Business Profile auditing &amp; continuous optimization</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>High-intent geo-targeted keyword positioning</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Local citation cleanup &amp; directory syndication</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Transparent monthly ranking &amp; conversion reporting</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Top-3 Google Map Pack geo-targeted ranking</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Local citation cleanup &amp; directory authority</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Transparent monthly rankings &amp; search call reports</li>
               </ul>
               <a class="mt-7 flex h-12 items-center justify-center rounded-xl bg-azora-red text-[13.5px] font-bold text-white shadow-chip transition-all hover:brightness-110 hover:-translate-y-0.5" href="/plans#marketing-plans">
-                Explore Marketing Plans
+                Explore SEO &amp; Maps Plans
               </a>
             </div>
           </div>
 
-          <!-- SERVICE 3: Growth Marketing & Campaigns -->
-          <div class="service-card">
+          <!-- SERVICE 4: Digital Growth Campaigns -->
+          <div id="digital-growth" class="service-card">
             <div class="service-preview flex flex-col justify-between p-5 sm:p-6 min-h-[160px]">
               <div class="relative z-10 flex flex-wrap items-center justify-between gap-2">
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-blue-500/15 border border-blue-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-blue-300 backdrop-blur">
-                  Marketing
+                  Lead Gen
                 </span>
                 <span class="rounded-full bg-white/10 border border-white/10 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-white/70 backdrop-blur">
-                  Growth Engine
+                  Predictable Flow
                 </span>
               </div>
               <div class="relative z-10 mt-6 flex items-center justify-between gap-3">
@@ -522,36 +552,36 @@
                 </div>
                 <div class="text-right">
                   <span class="font-mono text-[10px] uppercase tracking-widest text-white/40">Acquisition</span>
-                  <span class="block font-heading text-lg font-bold text-white">Lead Generation</span>
+                  <span class="block font-heading text-lg font-bold text-white">Growth Campaigns</span>
                 </div>
               </div>
             </div>
             <div class="flex flex-1 flex-col p-6 sm:p-7">
-              <h3 class="font-heading text-2xl font-extrabold text-white">Growth Marketing &amp; Lead Gen</h3>
+              <h3 class="font-heading text-2xl font-extrabold text-white">Digital Growth Campaigns</h3>
               <p class="mt-3 text-[13.5px] leading-relaxed text-white/60 min-h-[44px]">
-                Targeted digital marketing campaigns and landing pages designed to generate predictable customer pipeline.
+                Targeted landing pages, content strategies, and multi-channel conversion tracking designed to create a consistent flow of enquiries.
               </p>
               <ul class="mt-6 space-y-2.5 flex-1 border-t border-white/10 pt-5 text-[13px] text-white/75">
                 <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>High-converting campaign landing pages</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Competitor market positioning &amp; keyword gaps</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Multi-channel lead tracking &amp; call attribution</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Ongoing strategy calls and optimization</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Audience targeting &amp; content messaging</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Multi-channel conversion &amp; call tracking</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Ongoing conversion rate optimization</li>
               </ul>
               <a class="mt-7 flex h-12 items-center justify-center rounded-xl bg-white/10 text-[13.5px] font-bold text-white transition-all hover:bg-azora-red hover:shadow-chip" href="/get-a-quote">
-                Request Strategy Call
+                Launch Growth Campaign
               </a>
             </div>
           </div>
 
-          <!-- SERVICE 4: Website Maintenance & Growth -->
-          <div class="service-card">
+          <!-- SERVICE 5: Ongoing Support & Infrastructure -->
+          <div id="support-infrastructure" class="service-card md:col-span-2 lg:col-span-2">
             <div class="service-preview flex flex-col justify-between p-5 sm:p-6 min-h-[160px]">
               <div class="relative z-10 flex flex-wrap items-center justify-between gap-2">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-purple-500/15 border border-purple-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-purple-300 backdrop-blur">
-                  Support
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/15 border border-cyan-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-cyan-300 backdrop-blur">
+                  Dedicated Support
                 </span>
                 <span class="rounded-full bg-white/10 border border-white/10 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-white/70 backdrop-blur">
-                  24/7 Monitoring
+                  Reliable Infrastructure
                 </span>
               </div>
               <div class="relative z-10 mt-6 flex items-center justify-between gap-3">
@@ -560,67 +590,30 @@
                 </div>
                 <div class="text-right">
                   <span class="font-mono text-[10px] uppercase tracking-widest text-white/40">Reliability</span>
-                  <span class="block font-heading text-lg font-bold text-white">Full Management</span>
+                  <span class="block font-heading text-lg font-bold text-white">Support &amp; Infrastructure</span>
                 </div>
-              </div>
-            </div>
-            <div class="flex flex-1 flex-col p-6 sm:p-7">
-              <h3 class="font-heading text-2xl font-extrabold text-white">Website Maintenance &amp; Growth</h3>
-              <p class="mt-3 text-[13.5px] leading-relaxed text-white/60 min-h-[44px]">
-                Proactive updates, uptime monitoring, security patching, and monthly content changes without developer headaches.
-              </p>
-              <ul class="mt-6 space-y-2.5 flex-1 border-t border-white/10 pt-5 text-[13px] text-white/75">
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Regular content, pricing &amp; banner updates</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Automated cloud backups &amp; recovery</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Security firewalls &amp; malware prevention</li>
-                <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority technical support helpdesk</li>
-              </ul>
-              <a class="mt-7 flex h-12 items-center justify-center rounded-xl bg-white/10 text-[13.5px] font-bold text-white transition-all hover:bg-azora-red hover:shadow-chip" href="/get-a-quote">
-                Get Support Details
-              </a>
-            </div>
-          </div>
-
-          <!-- SERVICE 5: POS & Payment Integration -->
-          <div class="service-card md:col-span-2 xl:col-span-2">
-            <div class="service-preview flex flex-col justify-between p-5 sm:p-6 min-h-[160px]">
-              <div class="relative z-10 flex flex-wrap items-center justify-between gap-2">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-amber-300 backdrop-blur">
-                  Hardware &amp; Payments
-                </span>
-                <span class="rounded-full bg-white/10 border border-white/10 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.16em] text-white/70 backdrop-blur">
-                  Leasing From $29.99/mo
-                </span>
-              </div>
-              <div class="relative z-10 mt-6 flex items-center justify-between gap-3">
-                <div class="grid h-12 w-12 place-items-center rounded-xl bg-azora-red/20 text-azora-red border border-azora-red/30">
-                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M9 20.5h6M12 16.5v4"/></svg>
-                </div>
-                <div class="text-right">
-                  <span class="font-mono text-[10px] uppercase tracking-widest text-white/40">Omnichannel</span>
-                  <span class="block font-heading text-lg font-bold text-white">POS Terminal Deployment</span>
               </div>
             </div>
             <div class="flex flex-1 flex-col p-6 sm:p-7">
               <div class="grid gap-6 md:grid-cols-2">
                 <div>
-                  <h3 class="font-heading text-2xl font-extrabold text-white">POS Hardware &amp; Payment Integration</h3>
+                  <h3 class="font-heading text-2xl font-extrabold text-white">Ongoing Support &amp; Infrastructure</h3>
                   <p class="mt-3 text-[13.5px] leading-relaxed text-white/60">
-                    Connect your in-store sales counter to your digital ecosystem. We provide smart countertop and handheld POS terminals (Clover, Dejavoo, PAX, Audrey) with flexible leasing.
+                    Proactive website maintenance, uptime monitoring, monthly content updates, and dependable technical support so you never worry about tech issues.
                   </p>
                 </div>
                 <div>
                   <ul class="space-y-2.5 text-[13px] text-white/75">
-                    <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Next-day hardware replacement warranty</li>
-                    <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Direct payment gateway &amp; processor compatibility</li>
-                    <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Zero upfront equipment burden</li>
+                    <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>24/7 uptime &amp; system performance monitoring</li>
+                    <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Regular monthly content, banner &amp; pricing revisions</li>
+                    <li class="flex items-center gap-2"><svg class="h-4 w-4 text-azora-red shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Automated cloud security, firewalls &amp; daily backups</li>
                   </ul>
                 </div>
               </div>
               <div class="mt-7 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-5">
-                <span class="text-xs text-white/50">Clover · Dejavoo · PAX · Audrey · Joy</span>
-                <a class="flex h-11 items-center justify-center rounded-xl bg-azora-red px-6 text-[13.5px] font-bold text-white shadow-chip transition-all hover:brightness-110" href="/hardware">
-                  Explore Hardware Fleet
+                <span class="text-xs text-white/50">Direct Developer Access · Fast Turnaround · Guaranteed Uptime</span>
+                <a class="flex h-11 items-center justify-center rounded-xl bg-azora-red px-6 text-[13.5px] font-bold text-white shadow-chip transition-all hover:brightness-110" href="/get-a-quote">
+                  Get Dedicated Support
                 </a>
               </div>
             </div>
@@ -719,11 +712,11 @@
             </div>
             <h3 class="mt-6 font-heading text-xl font-extrabold tracking-tight text-white">Specialty Retail Commerce</h3>
             <p class="mt-2.5 text-[13.5px] leading-relaxed text-white/60">
-              Connected in-store countertop POS hardware with an online product catalog and curbside pickup engine, providing regular foot-traffic customers with convenient repeat ordering.
+              Connected custom web platform with an online product catalog and curbside pickup engine, providing regular customers with convenient repeat ordering.
             </p>
             <div class="mt-6 border-t border-white/10 pt-4">
               <span class="font-mono text-[10px] uppercase tracking-wider text-white/40">Scope:</span>
-              <p class="mt-1 text-xs font-semibold text-white/80">Clover POS Sync · Catalog Showcase · In-Store Pickup</p>
+              <p class="mt-1 text-xs font-semibold text-white/80">Digital Ordering Platform · Catalog Showcase · In-Store Pickup</p>
             </div>
           </div>
 
@@ -771,21 +764,148 @@
       </div>
     </section>
 
+    <!-- THE AZORA ADVANTAGE -->
+    <section class="border-t border-white/10 bg-[#0B1320] py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="rv mx-auto max-w-3xl text-center">
+          <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-azora-red/30 bg-azora-red/10 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-azora-red">
+            <span class="h-1.5 w-1.5 rounded-full bg-azora-red"></span>Why Choose Us
+          </div>
+          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">The Azora Advantage</h2>
+          <p class="mt-4 text-[15px] leading-relaxed text-white/60">
+            Azora operates as a dedicated digital technology partner, reducing overhead and technical complexity for its clients.
+          </p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rv rounded-2xl border border-white/10 bg-[#121B2C]/70 p-7 backdrop-blur-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-azora-red/15 text-azora-red border border-azora-red/25">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </span>
+            <h3 class="mt-5 font-heading text-lg font-bold text-white">Practical, Cost-Conscious Solutions</h3>
+            <p class="mt-2.5 text-[13.5px] leading-relaxed text-white/60">
+              Technology recommendations designed around business needs and budgets without unnecessary complexity.
+            </p>
+          </div>
+
+          <div class="rv rv-d1 rounded-2xl border border-white/10 bg-[#121B2C]/70 p-7 backdrop-blur-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-azora-red/15 text-azora-red border border-azora-red/25">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </span>
+            <h3 class="mt-5 font-heading text-lg font-bold text-white">Business-Focused Technology</h3>
+            <p class="mt-2.5 text-[13.5px] leading-relaxed text-white/60">
+              Every website and digital component is built to improve usability, visibility, and return on investment.
+            </p>
+          </div>
+
+          <div class="rv rv-d2 rounded-2xl border border-white/10 bg-[#121B2C]/70 p-7 backdrop-blur-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-azora-red/15 text-azora-red border border-azora-red/25">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+            </span>
+            <h3 class="mt-5 font-heading text-lg font-bold text-white">Growth-Oriented Digital Systems</h3>
+            <p class="mt-2.5 text-[13.5px] leading-relaxed text-white/60">
+              Conversion-focused websites and local search strategies that build long-term online visibility.
+            </p>
+          </div>
+
+          <div class="rv rv-d3 rounded-2xl border border-white/10 bg-[#121B2C]/70 p-7 backdrop-blur-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-azora-red/15 text-azora-red border border-azora-red/25">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <h3 class="mt-5 font-heading text-lg font-bold text-white">Responsive Technical Support</h3>
+            <p class="mt-2.5 text-[13.5px] leading-relaxed text-white/60">
+              Direct assistance for website updates, content changes, and technical issues when you need it.
+            </p>
+          </div>
+
+          <div class="rv rv-d4 rounded-2xl border border-white/10 bg-[#121B2C]/70 p-7 backdrop-blur-sm sm:col-span-2 lg:col-span-2">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-azora-red/15 text-azora-red border border-azora-red/25">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </span>
+            <h3 class="mt-5 font-heading text-lg font-bold text-white">Scalable Digital Infrastructure</h3>
+            <p class="mt-2.5 text-[13.5px] leading-relaxed text-white/60">
+              Flexible digital systems that can grow alongside a business, from a single location to multiple regional or nationwide branches.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERY METHODOLOGY (4 PHASES) -->
+    <section class="border-t border-white/10 bg-[#070D18] py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="rv mx-auto max-w-3xl text-center">
+          <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-azora-red/30 bg-azora-red/10 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-azora-red">
+            <span class="h-1.5 w-1.5 rounded-full bg-azora-red"></span>Structured Process
+          </div>
+          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">Delivery Methodology</h2>
+          <p class="mt-4 text-[15px] leading-relaxed text-white/60">
+            Azora follows a structured four-phase framework to ensure speed, precision, and alignment with client goals.
+          </p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rv rounded-2xl border border-white/10 bg-[#121B2C]/70 p-6">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold uppercase text-azora-red">Phase 1</span>
+              <span class="rounded-full bg-white/5 border border-white/10 px-2.5 py-0.5 font-mono text-[10px] text-white/70">Understand</span>
+            </div>
+            <h3 class="mt-4 font-heading text-xl font-bold text-white">Discovery</h3>
+            <p class="mt-2 text-xs leading-relaxed text-white/60">
+              Review business goals, workflow requirements, existing digital presence, and local competition.
+            </p>
+          </div>
+
+          <div class="rv rv-d1 rounded-2xl border border-white/10 bg-[#121B2C]/70 p-6">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold uppercase text-azora-red">Phase 2</span>
+              <span class="rounded-full bg-white/5 border border-white/10 px-2.5 py-0.5 font-mono text-[10px] text-white/70">Build</span>
+            </div>
+            <h3 class="mt-4 font-heading text-xl font-bold text-white">Development</h3>
+            <p class="mt-2 text-xs leading-relaxed text-white/60">
+              Develop the website, configure automation workflows, and prepare local SEO assets.
+            </p>
+          </div>
+
+          <div class="rv rv-d2 rounded-2xl border border-white/10 bg-[#121B2C]/70 p-6">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold uppercase text-azora-red">Phase 3</span>
+              <span class="rounded-full bg-white/5 border border-white/10 px-2.5 py-0.5 font-mono text-[10px] text-white/70">Launch</span>
+            </div>
+            <h3 class="mt-4 font-heading text-xl font-bold text-white">Deployment</h3>
+            <p class="mt-2 text-xs leading-relaxed text-white/60">
+              Publish the website, activate agreed automations, and optimize Google Business Profile presence.
+            </p>
+          </div>
+
+          <div class="rv rv-d3 rounded-2xl border border-white/10 bg-[#121B2C]/70 p-6">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold uppercase text-azora-red">Phase 4</span>
+              <span class="rounded-full bg-white/5 border border-white/10 px-2.5 py-0.5 font-mono text-[10px] text-white/70">Grow</span>
+            </div>
+            <h3 class="mt-4 font-heading text-xl font-bold text-white">Optimization</h3>
+            <p class="mt-2 text-xs leading-relaxed text-white/60">
+              Ongoing updates, keyword tracking, performance monitoring, and proactive support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CALL TO ACTION -->
-    <section class="relative overflow-hidden bg-azora-ink py-20 lg:py-24">
-      <div class="bg-darkgrid absolute inset-0"></div>
+    <section class="relative overflow-hidden bg-[#0A101C] py-20 lg:py-24">
       <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
         <div class="rv">
           <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 text-white/70 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.22em]">
             <span class="h-1.5 w-1.5 rounded-full bg-white/70"></span>Let's Collaborate
           </div>
-          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-5xl">Build your custom growth solution.</h2>
+          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-5xl">Ready to strengthen your digital presence?</h2>
           <p class="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/60">
-            Get in touch with our team to configure hardware, develop a high-converting web presence, or scale your local rankings.
+            Get in touch to discuss your business goals, custom website development, AI automation, and digital growth requirements.
           </p>
           <div class="mt-9 flex flex-wrap items-center justify-center gap-3.5">
             <a href="/get-a-quote" class="inline-flex items-center gap-2.5 rounded-xl bg-azora-red px-8 py-4 text-sm font-bold text-white shadow-chip transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110">
-              Get a Custom Quote
+              Get in Touch
             </a>
             <a href="/plans" class="rounded-xl border border-white/25 px-8 py-4 text-sm font-bold text-white transition-all hover:border-white hover:bg-white/5">
               Explore Pricing Plans
@@ -797,9 +917,16 @@
   </main>
 
   <!-- ======================= FOOTER ======================= -->
-  <footer class="relative overflow-hidden bg-[#070D18] text-white">
-    <div class="bg-darkgrid absolute inset-0 opacity-40"></div>
-    <div class="relative mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:px-8">
+  <footer class="relative overflow-hidden bg-[#070D18] text-white border-t border-white/10">
+    <!-- Big AZORA watermark behind footer content with bottom fade blending into background -->
+    <div class="pointer-events-none select-none absolute inset-x-0 bottom-0 z-0 flex items-end justify-center overflow-hidden" aria-hidden="true">
+      <span class="font-heading font-black tracking-tighter leading-none text-white opacity-[0.06] text-[20vw] translate-y-[15%]"
+            style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 92%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 92%);">
+        AZORA
+      </span>
+    </div>
+
+    <div class="z-10 relative mx-auto max-w-7xl px-4 pb-6 pt-16 sm:px-6 lg:px-8">
       <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <a href="/" class="flex items-center gap-2.5">
@@ -812,47 +939,48 @@
             </span>
           </a>
           <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/55">
-            Integrated POS hardware, custom web development, and local growth marketing for modern American businesses.
+            Azora Solutions helps businesses strengthen their digital presence and operate more efficiently through practical technology and growth-focused services.
           </p>
           <div class="mt-6 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/12 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">Nationwide Deployment</span>
+            <span class="rounded-full border border-white/12 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">Digital Solutions For Modern Businesses</span>
           </div>
         </div>
 
         <div>
-          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Hardware</h4>
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Core Services</h4>
           <ul class="mt-4 space-y-2.5 text-sm text-white/65">
-            <li><a href="/hardware?brand=clover" class="transition-colors hover:text-white">Clover Series</a></li>
-            <li><a href="/hardware?brand=dejavoo" class="transition-colors hover:text-white">Dejavoo Terminals</a></li>
-            <li><a href="/hardware?brand=pax" class="transition-colors hover:text-white">PAX Smart Terminals</a></li>
-            <li><a href="/hardware?brand=bundles" class="transition-colors hover:text-white">Audrey &amp; Joy Bundles</a></li>
+            <li><a href="/services#ai-automation" class="transition-colors hover:text-white">AI Automation</a></li>
+            <li><a href="/services#website-development" class="transition-colors hover:text-white">Website Development</a></li>
+            <li><a href="/services#seo-google-maps" class="transition-colors hover:text-white">SEO &amp; Google Maps Pack</a></li>
+            <li><a href="/services#digital-growth" class="transition-colors hover:text-white">Digital Growth Campaigns</a></li>
+            <li><a href="/services#support-infrastructure" class="transition-colors hover:text-white">Ongoing Support</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Company</h4>
           <ul class="mt-4 space-y-2.5 text-sm text-white/65">
-            <li><a href="/about" class="transition-colors hover:text-white">About</a></li>
+            <li><a href="/about" class="transition-colors hover:text-white">About Us</a></li>
             <li><a href="/client-success" class="transition-colors hover:text-white">Client Success</a></li>
             <li><a href="/services" class="transition-colors hover:text-white">Services</a></li>
-            <li><a href="/#faq" class="transition-colors hover:text-white">FAQ</a></li>
-            <li><a href="/admin-inventory" class="transition-colors hover:text-white">Inventory Admin</a></li>
+            <li><a href="/plans" class="transition-colors hover:text-white">Plans &amp; Pricing</a></li>
+            <li><a href="/get-a-quote" class="transition-colors hover:text-white">Contact Us</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Get Started</h4>
-          <p class="mt-4 text-sm leading-relaxed text-white/55">Quote a single terminal or complete digital growth package.</p>
-          <div class="mt-5 space-y-2 text-sm text-white/65">
-            <a href="mailto:info@azorasolution.com" class="block transition-colors hover:text-white">
-              info@azorasolution.com
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Contact</h4>
+          <p class="mt-4 text-sm leading-relaxed text-white/55">Get in touch to discuss your digital growth requirements.</p>
+          <div class="mt-4 space-y-2 text-sm text-white/65">
+            <a href="mailto:sales@azorasolution.com" class="block transition-colors hover:text-white">
+              sales@azorasolution.com
             </a>
-            <a href="tel:+19843888298" class="block transition-colors hover:text-white">
-              (984) 388-8298
-            </a>
+            <p class="text-xs text-white/50 leading-relaxed">
+              1015 GLENDALE CHASE CT, Morrisville, North Carolina, 27560, USA
+            </p>
           </div>
           <a href="/get-a-quote" class="mt-5 inline-flex items-center gap-2 rounded-xl bg-azora-red px-5 py-3 text-sm font-semibold text-white shadow-chip transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110">
-            Get a Quote
+            Get in Touch
           </a>
         </div>
       </div>
@@ -862,21 +990,17 @@
         <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-white/35">Business Technology &amp; Growth Solutions</p>
       </div>
     </div>
+
+    
   </footer>
 
   <!-- Modals + concierge -->
   <div id="modal-root"></div>
-  <div id="concierge-root">
-    <button id="concierge-btn" aria-label="Open AI concierge" onclick="if(window.AZ&&AZ.toggleConcierge){AZ.toggleConcierge();}else{window.location.href='/get-a-quote';}" class="fixed bottom-6 right-6 z-[60] grid h-14 w-14 place-items-center rounded-2xl bg-azora-red text-white shadow-lift transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 hover:shadow-chip border border-white/15 cursor-pointer">
-      <span id="concierge-dot" class="absolute -right-1 -top-1 h-3.5 w-3.5 rounded-full border-2 border-[#121B2C] bg-azora-red animate-pulse"></span>
-      <span id="concierge-ic-open"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8c-1.3 0-2.6-.3-3.7-.9L4 20l1-5.1A8 8 0 1 1 21 12z"/></svg></span>
-      <span id="concierge-ic-close" class="hidden"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
-    </button>
-  </div>
+  <div id="concierge-root"></div>
 
-  <script src="assets/js/data.js" defer></script>
-  <script src="assets/js/imgdata.js" defer></script>
-  <script src="assets/js/app.js" defer></script>
+  <script src="/assets/js/data.js" defer></script>
+  <script src="/assets/js/imgdata.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
 
   <script>
     (function() {

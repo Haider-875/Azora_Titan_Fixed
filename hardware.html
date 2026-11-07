@@ -329,7 +329,7 @@
         <!-- Desktop nav -->
         <nav class="hidden items-center gap-8 lg:flex" id="nav-links">
           <a href="index.html" class="link-underline text-[13.5px] font-semibold text-slate-300 transition-colors hover:text-white">Home</a>
-          <a href="hardware.html" class="link-underline active text-[13.5px] font-semibold text-white transition-colors hover:text-white">Hardware</a>
+          <!-- <a href="hardware.html" class="link-underline active text-[13.5px] font-semibold text-white transition-colors hover:text-white">Hardware</a> -->
           <a href="services.html" class="link-underline text-[13.5px] font-semibold text-slate-300 transition-colors hover:text-white">Services</a>
           <a href="plans.html" class="link-underline text-[13.5px] font-semibold text-slate-300 transition-colors hover:text-white">Plans</a>
           <a href="about.html" class="link-underline text-[13.5px] font-semibold text-slate-300 transition-colors hover:text-white">About</a>
@@ -351,7 +351,7 @@
       <div id="mobile-menu" class="mt-2 hidden overflow-hidden rounded-2xl border border-white/10 bg-[#121B2C]/95 shadow-lift backdrop-blur-xl lg:hidden">
         <nav class="flex flex-col p-3">
           <a href="index.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Home</a>
-          <a href="hardware.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-white bg-white/10">Hardware</a>
+          <!-- <a href="hardware.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-white bg-white/10">Hardware</a> -->
           <a href="services.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Services</a>
           <a href="plans.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Plans</a>
           <a href="about.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">About</a>
@@ -735,8 +735,16 @@
 
   <!-- ======================= FOOTER ======================= -->
   <footer class="relative overflow-hidden bg-azora-ink text-white border-t border-white/10">
+    <!-- Big AZORA watermark behind footer content with bottom fade blending into background -->
+    <div class="pointer-events-none select-none absolute inset-x-0 bottom-0 z-0 flex items-end justify-center overflow-hidden" aria-hidden="true">
+      <span class="font-heading font-black tracking-tighter leading-none text-white opacity-[0.06] text-[20vw] translate-y-[15%]"
+            style="mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 92%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 92%);">
+        AZORA
+      </span>
+    </div>
+
     <div class="bg-darkgrid absolute inset-0 opacity-60"></div>
-    <div class="relative mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:px-8">
+    <div class="z-10 relative mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:px-8">
       <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <a href="index.html" class="flex items-center gap-2.5">
@@ -781,8 +789,8 @@
           <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Get Started</h4>
           <p class="mt-4 text-sm leading-relaxed text-slate-300">Quote a single terminal or a nationwide fleet. Our team will build the bundle.</p>
           <div class="mt-5 space-y-2 text-sm text-slate-300">
-            <a href="mailto:info@azorasolution.com" class="block transition-colors hover:text-white">
-              info@azorasolution.com
+            <a href="mailto:sales@azorasolution.com" class="block transition-colors hover:text-white">
+              sales@azorasolution.com
             </a>
             <a href="tel:+19843888298" class="block transition-colors hover:text-white">
               (984) 388-8298
@@ -796,9 +804,11 @@
 
       <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
         <p class="text-xs text-white/40">© 2026 Azora Solutions. All rights reserved.</p>
-        <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-white/35">POS Hardware Leasing · From $29.99/mo</p>
+        <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-white/35">Business Technology &amp; Growth Solutions</p>
       </div>
     </div>
+
+    
   </footer>
 
   <!-- Modals + concierge -->
