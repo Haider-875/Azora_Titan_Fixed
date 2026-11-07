@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>POS System Hardware, Retail &amp; Restaurant Terminals | Azora Solution</title>
   <meta name="description" content="Explore retail POS solutions, restaurant POS software terminals, wireless PIN pads, and POS system hardware leasing from $29.99/mo by Azora Solution." />
-  <meta name="keywords" content="POS system USA, restaurant POS software, retail POS solutions, POS hardware leasing, Clover station duo, Dejavoo Z9, PAX A920" />
+  <meta name="keywords" content="POS system Pakistan, restaurant POS software, retail POS solutions, POS hardware leasing, Clover station duo, Dejavoo Z9, PAX A920" />
   <link rel="canonical" href="https://azorasolution.com/hardware" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1320'/%3E%3Cpath d='M32 14 50 50h-8.6L32 26.4 22.6 50H14z' fill='%23fff'/%3E%3Ccircle cx='32' cy='45' r='4.4' fill='%232469EB'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231C273B'/%3E%3Cpath d='M32 14 50 50h-8.6L32 26.4 22.6 50H14z' fill='%23fff'/%3E%3Ccircle cx='32' cy='45' r='4.4' fill='%232469EB'/%3E%3C/svg%3E" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://azorasolution.com/hardware" />
   <meta property="og:site_name" content="Azora Solution" />
@@ -33,28 +33,42 @@
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://azorasolution.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Hardware", "item": "https://azorasolution.com/hardware" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://azorasolution.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Hardware",
+            "item": "https://azorasolution.com/hardware"
+          }
         ]
       },
       {
         "@type": "Service",
         "name": "POS System Hardware Solutions",
         "serviceType": "POS System Leasing & Sales",
-        "provider": { "@type": "Organization", "name": "Azora Solution", "url": "https://azorasolution.com/" },
+        "provider": {
+          "@type": "Organization",
+          "name": "Azora Solution",
+          "url": "https://azorasolution.com/"
+        },
         "description": "Retail POS solutions, restaurant POS software hardware, countertop smart terminals, and wireless PIN pads.",
-        "areaServed": "United States"
+        "areaServed": "Worldwide"
       }
     ]
   }
   </script>
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS (Play CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -62,530 +76,636 @@
         extend: {
           colors: {
             azora: {
-              blue: '#0B1320',
-              deep: '#070B14',
-              surface: '#0F192C',
-              card: '#121F36',
-              accent: '#2469EB',
-              cyan: '#38BDF8',
-              glow: 'rgba(36,105,235,0.35)',
+              blue: '#1C273B',
+              ink:  '#121B2C',
+              dark: '#0B1320',
+              card: '#162238',
+              red:  '#2469EB',
               mist: '#F4F7FC',
               line: 'rgba(255,255,255,0.08)'
             }
           },
           fontFamily: {
-            heading: ['"Plus Jakarta Sans"', '"Inter Tight"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            heading: ['"Inter Tight"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
             sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace']
-          }
+          },
+          boxShadow: {
+            card: '0 4px 20px -2px rgba(0,0,0,0.5)',
+            lift: '0 25px 50px -12px rgba(0,0,0,0.7)',
+            chip: '0 10px 30px -10px rgba(36,105,235,.5)',
+            glow: '0 0 35px -5px rgba(36,105,235,0.3)'
+          },
+          borderRadius: { xl2: '1.25rem' }
         }
       }
     }
   </script>
 
-  <!-- Modern Azora Design System Stylesheet -->
-  <link rel="stylesheet" href="/assets/css/azora-modern.css" />
+  <style>
+    :root { --azora-blue:#1C273B; --azora-red:#2469EB; }
+    *, ::before, ::after { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden !important; position: relative; }
+    html { scroll-behavior:smooth; background:#0B1320; color:#fff; }
+    body { -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; background:#0B1320; color:#fff; }
+    img, svg, video { max-width: 100%; }
+    ::selection { background:#2469EB; color:#fff; }
+    ::-webkit-scrollbar { width:10px; height:10px; }
+    ::-webkit-scrollbar-track { background:#0B1320; }
+    ::-webkit-scrollbar-thumb { background:#1E2D4A; border-radius:8px; border:2px solid #0B1320; }
+    ::-webkit-scrollbar-thumb:hover { background:#2469EB; }
+
+    .font-heading { letter-spacing:-0.02em; }
+
+    /* Reveal on scroll (Safe fallback so content is always visible) */
+    .rv { opacity: 1; }
+    html.js .rv { opacity:0; transform:translateY(24px); transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    html.js .rv.in { opacity:1; transform:none; }
+    .rv-d1 { transition-delay:.08s } .rv-d2 { transition-delay:.16s } .rv-d3 { transition-delay:.24s }
+    .rv-d4 { transition-delay:.32s } .rv-d5 { transition-delay:.40s } .rv-d6 { transition-delay:.48s }
+
+    .bg-darkgrid {
+      background-image:
+        radial-gradient(ellipse 65% 55% at 50% -10%, rgba(36,105,235,.22), transparent 70%),
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size:100% 100%, 44px 44px, 44px 44px;
+    }
+    
+    .bg-subtle-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size:40px 40px;
+    }
+
+    .glass-nav-dark {
+      border:1px solid rgba(255,255,255,.10) !important;
+      background:rgba(14,23,38,.80) !important;
+      box-shadow:0 12px 32px -18px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.12) !important;
+      backdrop-filter:blur(22px) saturate(150%);
+      -webkit-backdrop-filter:blur(22px) saturate(150%);
+    }
+
+    .link-underline { position:relative; }
+    .link-underline::after { content:''; position:absolute; left:0; right:100%; bottom:-4px; height:2px; background:#2469EB; transition:right .35s cubic-bezier(.16,1,.3,1); }
+    .link-underline:hover::after, .link-underline.active::after { right:0; }
+    .link-underline.active { color:#2469EB; }
+
+    .card-hover { transition:transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s cubic-bezier(.16,1,.3,1), border-color .5s; }
+    .card-hover:hover { transform:translateY(-6px); box-shadow:0 25px 50px -15px rgba(0,0,0,.7), 0 0 25px -5px rgba(36,105,235,0.2); border-color:rgba(36,105,235,.45); }
+    .card-img { transition:transform .8s cubic-bezier(.16,1,.3,1); }
+    .card-hover:hover .card-img { transform:scale(1.06); }
+
+    /* Hardware Catalog Dark Grid */
+    #catalog-grid { align-items:stretch; }
+    #catalog-grid > article {
+      isolation:isolate;
+      border:1px solid rgba(255,255,255,.10);
+      background:linear-gradient(145deg, #121B2C 0%, #162238 100%);
+      box-shadow:0 4px 20px -2px rgba(0,0,0,0.5);
+      border-radius:1.25rem;
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      transition:transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s cubic-bezier(.16,1,.3,1), border-color .4s;
+    }
+    #catalog-grid > article:hover {
+      transform:translateY(-7px);
+      box-shadow:0 25px 50px -15px rgba(0,0,0,.75), 0 0 30px -5px rgba(36,105,235,0.3);
+      border-color:rgba(36,105,235,.5);
+    }
+    #catalog-grid > article::before {
+      content:'';
+      position:absolute;
+      top:0; left:0; right:0;
+      height:3px;
+      opacity:.8;
+      transition:opacity .3s;
+      z-index:2;
+    }
+    #catalog-grid > article:hover::before { opacity:1; }
+    #catalog-grid > article[data-brand="clover"]::before { background:linear-gradient(90deg, #10B981, #059669); }
+    #catalog-grid > article[data-brand="dejavoo"]::before { background:linear-gradient(90deg, #3B82F6, #2563EB); }
+    #catalog-grid > article[data-brand="pax"]::before { background:linear-gradient(90deg, #F59E0B, #D97706); }
+    #catalog-grid > article[data-brand="bundles"]::before { background:linear-gradient(90deg, #8B5CF6, #6D28D9); }
+
+    #catalog-grid > article > button:first-child {
+      position:relative;
+      aspect-ratio:4/3;
+      padding:1.75rem;
+      text-align:left;
+      width:100%;
+      display:block;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 78% 18%, rgba(36,105,235,.18), transparent 48%),
+        linear-gradient(145deg, #0d1522 0%, #131e31 100%);
+      transition:background .4s;
+    }
+    #catalog-grid > article:hover > button:first-child {
+      background:
+        radial-gradient(circle at 78% 18%, rgba(36,105,235,.32), transparent 50%),
+        linear-gradient(145deg, #121c2e 0%, #19263e 100%);
+    }
+    #catalog-grid > article > button:first-child img,
+    #catalog-grid > article > button:first-child .card-img { position:relative; z-index:1; }
+    #catalog-grid > article > div { padding:1.25rem 1.35rem; display:flex; flex:1; flex-direction:column; }
+    #catalog-grid > article h3 { font-size:1.18rem; line-height:1.2; color:#fff; font-weight:800; }
+    #catalog-grid > article h3::after {
+      content:'↗';
+      display:inline-block;
+      margin-left:.4rem;
+      color:rgba(36,105,235,.8);
+      font-size:.85em;
+      opacity:0;
+      transform:translate(-4px,3px);
+      transition:opacity .3s ease,transform .3s ease;
+    }
+    #catalog-grid > article:hover h3::after,
+    #catalog-grid > article:focus-within h3::after { opacity:1; transform:none; }
+    #catalog-grid > article .border-t { border-color:rgba(255,255,255,.10); }
+    #catalog-grid > article .grid.grid-cols-2 { margin-top:auto; padding-top:1rem; }
+    #catalog-grid > article .grid.grid-cols-2 > * { min-height:42px; display:flex; align-items:center; justify-content:center; }
+
+    /* Chip Filter */
+    .chip { border:1px solid rgba(255,255,255,.14); border-radius:999px; padding:.45rem 1.05rem; font-size:.825rem; font-weight:600; color:rgba(255,255,255,.75); background:#162238; transition:all .25s; cursor:pointer; user-select:none; }
+    .chip:hover { border-color:#2469EB; color:#fff; background:rgba(36,105,235,.15); }
+    .chip.on { background:#2469EB; border-color:#2469EB; color:#fff; box-shadow:0 10px 25px -8px rgba(36,105,235,.6); }
+    #brand-filters .chip { background:#162238; color:rgba(255,255,255,.8); }
+    #brand-filters .chip:hover { border-color:#2469EB; color:#fff; }
+    #brand-filters .chip.on { background:#2469EB; border-color:#2469EB; color:#fff; }
+
+    /* ================= CONCIERGE CHATBOT ================= */
+    #concierge-btn {
+      position: fixed !important;
+      bottom: 1.5rem !important;
+      right: 1.5rem !important;
+      z-index: 60 !important;
+      display: grid !important;
+      place-items: center !important;
+      height: 3.5rem !important;
+      width: 3.5rem !important;
+      border-radius: 1rem !important;
+      border: 1px solid rgba(255,255,255,.15) !important;
+      background: #2469EB !important;
+      color: #fff !important;
+      box-shadow: 0 10px 30px -8px rgba(36,105,235,0.6) !important;
+      transition: all 0.3s cubic-bezier(0.16,1,0.3,1) !important;
+      cursor: pointer !important;
+    }
+    #concierge-btn:hover {
+      background: #1d57c7 !important;
+      box-shadow: 0 15px 35px -8px rgba(36,105,235,0.8) !important;
+      transform: translateY(-2px);
+    }
+    #concierge-panel {
+      position: fixed !important;
+      bottom: 5.75rem !important;
+      right: 1rem !important;
+      z-index: 60 !important;
+      border: 1px solid rgba(255,255,255,.12) !important;
+      background: #121B2C !important;
+      box-shadow: 0 25px 60px -15px rgba(0,0,0,0.8), 0 0 35px -5px rgba(36,105,235,0.2) !important;
+      backdrop-filter: blur(20px);
+    }
+    @media (min-width: 640px) {
+      #concierge-panel { right: 1.5rem !important; }
+    }
+    #concierge-panel .bg-azora-blue {
+      background: #0E1726 !important;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    #concierge-msgs {
+      background: #0B1320 !important;
+    }
+    #concierge-msgs .bg-white {
+      background: #162238 !important;
+      border-color: rgba(255,255,255,0.08) !important;
+      color: rgba(255,255,255,0.9) !important;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
+    }
+    #concierge-msgs .bg-azora-blue {
+      background: #2469EB !important;
+      color: #fff !important;
+    }
+    #concierge-panel .border-t {
+      border-color: rgba(255,255,255,0.08) !important;
+      background: #0E1726 !important;
+    }
+
+    /* ================= MOBILE OPTIMIZATIONS ================= */
+    @media (max-width: 767px) {
+      html, body { width: 100%; max-width: 100%; overflow-x: hidden; font-size: 15px; }
+      #app { padding-top: 78px; }
+      .rv { opacity: 1 !important; transform: none !important; }
+      #catalog-grid > article > button:first-child { min-height: 196px; padding-top: 3.15rem !important; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; }
+    }
+  </style>
 </head>
 
-<body class="bg-mesh-dark font-sans text-white antialiased selection:bg-[#2469EB] selection:text-white" data-page="hardware">
-  <!-- Interactive Custom Cursor Elements -->
-  <div class="cursor-core" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
+<body class="bg-[#0B1320] font-sans text-slate-100 antialiased selection:bg-azora-red selection:text-white" data-page="hardware">
 
-  <!-- ======================= NAVIGATION HEADER ======================= -->
-  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <!-- ======================= HEADER ======================= -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-40 transition-all duration-500">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div id="header-inner" class="glass-nav-header mt-3 flex items-center justify-between rounded-2xl px-4 py-3 sm:px-6">
-        
+      <div id="header-inner" class="glass-nav-dark mt-3 flex items-center justify-between rounded-2xl px-4 py-3 sm:px-5 transition-all duration-500">
         <!-- Logo -->
-        <a href="/" class="group flex items-center gap-3">
-          <span class="relative grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[#2469EB] to-[#1D4ED8] p-0.5 shadow-[0_0_20px_rgba(36,105,235,0.6)] transition-transform duration-500 group-hover:scale-105">
-            <span class="grid h-full w-full place-items-center rounded-[10px] bg-[#070B14]">
-              <svg viewBox="0 0 24 24" class="h-5 w-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3l9 18h-4.4L12 9.6 7.4 21H3z" />
-                <circle cx="12" cy="18" r="1.8" fill="#38BDF8" stroke="none" />
-              </svg>
-            </span>
+        <a href="index.html" class="group flex items-center gap-2.5">
+          <span class="grid h-9 w-9 place-items-center rounded-xl bg-white text-azora-blue transition-transform duration-500 group-hover:rotate-6">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 18h-4.4L12 9.6 7.4 21H3z"/><circle cx="12" cy="18" r="1.6" fill="#2469EB" stroke="none"/></svg>
           </span>
           <span class="leading-none">
-            <span class="block font-heading text-[17px] font-extrabold tracking-tight text-white group-hover:text-sky-400 transition-colors">AZORA</span>
-            <span class="mt-0.5 block font-mono text-[8.5px] uppercase tracking-[0.28em] text-slate-400">Digital Solutions</span>
+            <span class="block font-heading text-[17px] font-extrabold tracking-tight text-white">AZORA</span>
+            <span class="mt-0.5 block font-mono text-[9px] font-semibold uppercase tracking-[0.28em] text-white/50">Solutions</span>
           </span>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden items-center gap-1 lg:flex" id="nav-links">
-          <a href="/" class="nav-link-modern">Home</a>
-          
-          <!-- Services Dropdown -->
-          <div class="relative group">
-            <a href="/services" class="nav-link-modern inline-flex items-center gap-1.5">
-              Services
-              <svg viewBox="0 0 20 20" class="h-3.5 w-3.5 opacity-60 transition-transform group-hover:rotate-180" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-              </svg>
-            </a>
-            <div class="invisible absolute left-0 top-full pt-2 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 w-72">
-              <div class="glass-panel overflow-hidden rounded-2xl border border-white/10 p-2 shadow-2xl backdrop-blur-2xl">
-                <a href="/hardware" class="flex items-start gap-3 rounded-xl p-2.5 transition-colors hover:bg-white/5">
-                  <span class="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-blue-500/15 text-sky-400">
-                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h4"/></svg>
-                  </span>
-                  <div>
-                    <div class="text-xs font-bold text-white">POS Fleet Systems</div>
-                    <div class="text-[11px] text-slate-400">Clover, Dejavoo, PAX, Audrey</div>
-                  </div>
-                </a>
-                <a href="/plans#website-plans" class="flex items-start gap-3 rounded-xl p-2.5 transition-colors hover:bg-white/5">
-                  <span class="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-emerald-500/15 text-emerald-400">
-                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg>
-                  </span>
-                  <div>
-                    <div class="text-xs font-bold text-white">Website Development</div>
-                    <div class="text-[11px] text-slate-400">Custom business web architecture</div>
-                  </div>
-                </a>
-                <a href="/plans#marketing-plans" class="flex items-start gap-3 rounded-xl p-2.5 transition-colors hover:bg-white/5">
-                  <span class="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-purple-500/15 text-purple-400">
-                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg>
-                  </span>
-                  <div>
-                    <div class="text-xs font-bold text-white">Digital Growth &amp; SEO</div>
-                    <div class="text-[11px] text-slate-400">Google Map Pack &amp; local ranking</div>
-                  </div>
-                </a>
-                <a href="/services#ai-front-office" class="flex items-start gap-3 rounded-xl p-2.5 transition-colors hover:bg-white/5">
-                  <span class="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-amber-500/15 text-amber-400">
-                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l1.9 5.6 5.8.2-4.6 3.6 1.7 5.8-4.8-3.4-4.8 3.4 1.7-5.8L4.3 7.8l5.8-.2z"/></svg>
-                  </span>
-                  <div>
-                    <div class="text-xs font-bold text-white">AI Front Office</div>
-                    <div class="text-[11px] text-slate-400">WhatsApp &amp; Voice Receptionist</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <a href="/hardware" class="nav-link-modern active">Hardware</a>
-          <a href="/plans" class="nav-link-modern">Pricing &amp; Plans</a>
-          <a href="/client-success" class="nav-link-modern">Portfolio</a>
-          <a href="/about" class="nav-link-modern">About Us</a>
+        <!-- Desktop nav -->
+        <nav class="hidden items-center gap-8 lg:flex" id="nav-links">
+          <a href="index.html" class="link-underline text-[13.5px] font-semibold text-slate-300 transition-colors hover:text-white">Home</a>
+          <a href="hardware.html" class="link-underline active text-[13.5px] font-semibold text-white transition-colors hover:text-white">Hardware</a>
+          <a href="services.html" class="link-underline text-[13.5px] font-semibold text-slate-300 transition-colors hover:text-white">Services</a>
+          <a href="plans.html" class="link-underline text-[13.5px] font-semibold text-slate-300 transition-colors hover:text-white">Plans</a>
+          <a href="about.html" class="link-underline text-[13.5px] font-semibold text-slate-300 transition-colors hover:text-white">About</a>
+          <a href="client-success.html" class="link-underline text-[13.5px] font-semibold text-slate-300 transition-colors hover:text-white">Client Success</a>
         </nav>
 
-        <!-- Right Quick Actions -->
-        <div class="flex items-center gap-3">
-          <a href="tel:+19843888298" class="hidden xl:flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3.5 py-2 text-xs font-semibold text-slate-200 hover:border-sky-400/40 hover:text-white transition-all">
-            <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            (984) 388-8298
+        <div class="flex items-center gap-2.5">
+          <a href="get-a-quote.html" class="hidden items-center gap-2 rounded-xl bg-azora-red px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-chip transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-600 sm:inline-flex">
+            Get a Quote
           </a>
-
-          <button type="button" onclick="AZ.openQuoteModal()" class="btn-modern-primary !py-2.5 !px-4 text-xs">
-            <span>Get a Quote</span>
-            <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </button>
-
-          <!-- Mobile Toggle Button -->
-          <button id="menu-btn" aria-label="Toggle navigation menu" class="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-white transition-colors hover:bg-white/10 lg:hidden">
+          <button id="menu-btn" aria-label="Toggle menu" class="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-white transition-colors hover:bg-white/10 lg:hidden">
             <svg id="menu-ic-open" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
             <svg id="menu-ic-close" viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
           </button>
         </div>
       </div>
 
-      <!-- Mobile Animated Menu Drawer -->
-      <div id="mobile-menu" class="mt-2 hidden overflow-hidden rounded-2xl border border-white/12 bg-[#0B1320]/95 p-4 shadow-2xl backdrop-blur-2xl lg:hidden">
-        <nav class="flex flex-col space-y-1">
-          <a href="/" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Home</a>
-          <a href="/hardware" class="rounded-xl px-4 py-3 text-sm font-semibold text-sky-400 bg-white/5">POS Hardware Lineup</a>
-          <a href="/services" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">All Services</a>
-          <a href="/plans" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Plans &amp; Pricing</a>
-          <a href="/client-success" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Client Success Stories</a>
-          <a href="/about" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">About Azora</a>
-          
-          <div class="pt-3 border-t border-white/10 space-y-2">
-            <a href="tel:+19843888298" class="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-xs font-semibold text-white">
-              <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Call (984) 388-8298
-            </a>
-            <button type="button" onclick="AZ.openQuoteModal()" class="w-full btn-modern-primary !py-3 text-xs">
-              Request a Custom Quote
-            </button>
-          </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="mt-2 hidden overflow-hidden rounded-2xl border border-white/10 bg-[#121B2C]/95 shadow-lift backdrop-blur-xl lg:hidden">
+        <nav class="flex flex-col p-3">
+          <a href="index.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Home</a>
+          <a href="hardware.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-white bg-white/10">Hardware</a>
+          <a href="services.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Services</a>
+          <a href="plans.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Plans</a>
+          <a href="about.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">About</a>
+          <a href="client-success.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5">Client Success</a>
+          <a href="get-a-quote.html" class="mt-2 flex items-center justify-center gap-2 rounded-xl bg-azora-red px-4 py-3 text-sm font-semibold text-white shadow-chip">Get a Quote</a>
         </nav>
       </div>
     </div>
   </header>
 
-  <!-- ======================= MAIN CONTENT ======================= -->
-  <main id="app" class="relative min-h-screen pt-[96px]">
+  <!-- ======================= PAGE ======================= -->
+  <main id="app" class="min-h-screen pt-[92px]">
 
     <!-- HERO SECTION -->
-    <section class="relative overflow-hidden border-b border-white/10 pb-16 pt-12 sm:pt-16 lg:pb-24 lg:pt-20">
-      <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-        <div class="absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-[#2469EB]/20 blur-[130px]"></div>
-      </div>
-
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section class="relative overflow-hidden bg-azora-ink border-b border-white/10">
+      <div class="bg-darkgrid absolute inset-0 opacity-70"></div>
+      <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div class="rv in max-w-3xl">
-          <div class="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-500/10 px-3.5 py-1.5 font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-sky-400">
-            <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>Fleet Terminal Catalog
+          <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-azora-red/30 bg-azora-red/10 text-azora-red px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.22em]">
+            <span class="h-1.5 w-1.5 rounded-full bg-azora-red animate-pulse"></span>Hardware Catalog
           </div>
-          <h1 class="mt-6 font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.08]">
-            Explore our <span class="text-gradient-cyan">hardware fleet</span>.
+          <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Explore our catalog
           </h1>
-          <p class="mt-6 max-w-xl text-[16px] leading-relaxed text-slate-300">
-            Quote the terminal or full workstation that fits your exact business operations — every model is available on flexible monthly leasing from <strong class="text-white">$29.99/month</strong>.
+          <p class="mt-5 max-w-xl text-[15px] leading-relaxed text-slate-300">
+            Quote the terminal that fits your business — every model is available on flexible leasing from <span class="font-bold text-white">$29.99/month</span>.
           </p>
         </div>
-
-        <!-- Brand Filter Pills -->
-        <div class="rv in rv-d2 mt-10 flex flex-wrap gap-2.5" id="brand-filters">
-          <button class="filter-pill active" data-brand="all" onclick="AZ.filterBrand('all', this)">All Hardware</button>
-          <button class="filter-pill" data-brand="clover" onclick="AZ.filterBrand('clover', this)">Clover Series</button>
-          <button class="filter-pill" data-brand="dejavoo" onclick="AZ.filterBrand('dejavoo', this)">Dejavoo Terminals</button>
-          <button class="filter-pill" data-brand="pax" onclick="AZ.filterBrand('pax', this)">PAX Smart POS</button>
-          <button class="filter-pill" data-brand="bundles" onclick="AZ.filterBrand('bundles', this)">Audrey &amp; Joy Bundles</button>
+        <div class="rv in rv-d2 mt-9 flex flex-wrap gap-2.5" id="brand-filters">
+          <button class="chip on" data-brand="all" onclick="AZ.filterBrand('all', this)">All Hardware</button>
+          <button class="chip" data-brand="clover" onclick="AZ.filterBrand('clover', this)">Clover Series</button>
+          <button class="chip" data-brand="dejavoo" onclick="AZ.filterBrand('dejavoo', this)">Dejavoo Terminals</button>
+          <button class="chip" data-brand="pax" onclick="AZ.filterBrand('pax', this)">PAX Smart Terminals</button>
+          <button class="chip" data-brand="bundles" onclick="AZ.filterBrand('bundles', this)">Audrey &amp; Joy Bundles</button>
         </div>
       </div>
     </section>
 
-    <!-- CATALOG GRID SECTION -->
-    <section class="py-16 lg:py-24">
+    <!-- CATALOG GRID -->
+    <section class="py-16 lg:py-20 bg-subtle-grid">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
-        <div class="mb-10 flex items-center justify-between border-b border-white/10 pb-4">
-          <p class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-slate-300" id="catalog-count">10 models · All Hardware</p>
-          <p class="hidden font-mono text-xs font-semibold uppercase tracking-[0.2em] text-sky-400 sm:block">Monthly Leasing: $29.99–$84.99/mo</p>
+        <div class="mb-8 flex items-center justify-between">
+          <p class="font-mono text-[11.5px] font-bold uppercase tracking-[0.2em] text-slate-300" id="catalog-count">10 models · All Hardware</p>
+          <p class="hidden font-mono text-[11.5px] font-semibold uppercase tracking-[0.2em] text-slate-300 sm:block">Lease · $29.99–$84.99/mo</p>
         </div>
 
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" id="catalog-grid">
           
           <!-- 1. Clover Station Duo -->
-          <article class="glass-card-interactive flex flex-col" data-brand="clover" data-id="clover-station-duo">
-            <button onclick="AZ.openProduct('clover-station-duo')" class="relative block aspect-[4/3] overflow-hidden p-6 text-left w-full bg-[#070B14]">
+          <article class="rv in card-hover group relative flex flex-col overflow-hidden rounded-2xl" data-brand="clover" data-id="clover-station-duo">
+            <button onclick="AZ.openProduct('clover-station-duo')" class="relative block aspect-[4/3] overflow-hidden p-7 text-left w-full bg-[#0B1320]/60">
               <div class="absolute inset-x-3.5 top-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
-                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-emerald-400 backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
-                <span class="truncate rounded-full bg-white/10 border border-white/15 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-white/90 backdrop-blur">Countertop Duo</span>
+                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-emerald-400 shadow-card backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
+                <span class="truncate rounded-full bg-white/10 border border-white/15 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-white/90 backdrop-blur text-right">Countertop System</span>
               </div>
-              <img src="/assets/img/products/clover-station-duo.jpg" alt="Clover Station Duo" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:scale-105" />
+              <img src="assets/img/products/clover-station-duo.jpg" alt="Clover Station Duo" loading="lazy" class="card-img h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)]" />
             </button>
-            <div class="flex flex-1 flex-col p-5">
+            <div class="flex flex-1 flex-col p-5 pt-4">
               <button onclick="AZ.openProduct('clover-station-duo')" class="text-left">
-                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors hover:text-sky-400">Clover Station Duo</h3>
+                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-azora-red">Clover Station Duo</h3>
               </button>
-              <p class="mt-1 text-xs leading-snug text-slate-300">Feature-heavy dual-screen terminal setup with drawer and printer</p>
-              
-              <div class="mt-4 flex items-end justify-between border-t border-white/8 pt-3">
+              <p class="mt-1 text-[13.5px] leading-snug text-slate-300 font-medium">Feature-heavy dual-screen terminal setup</p>
+              <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
                 <div>
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Lease</div>
-                  <div class="font-heading text-xl font-extrabold text-sky-400">$84.99<span class="text-xs font-normal text-slate-400">/mo</span></div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Lease</div>
+                  <div class="font-heading text-[1.45rem] font-black leading-tight text-azora-red">$84.99<span class="text-[13px] font-bold text-slate-300">/mo</span></div>
                 </div>
                 <div class="text-right">
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Retail Value</div>
-                  <div class="font-mono text-xs text-slate-500 line-through">$1,799.99</div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Retail Value</div>
+                  <div class="font-mono text-[13px] font-semibold text-slate-400 line-through decoration-slate-500">$1,799.99</div>
                 </div>
               </div>
-              
               <div class="mt-4 grid grid-cols-2 gap-2">
-                <button onclick="AZ.openProduct('clover-station-duo')" class="btn-modern-secondary !py-2 text-xs">View Details</button>
-                <button onclick="AZ.openQuoteModal('clover-station-duo')" class="btn-modern-primary !py-2 text-xs">Quote Fleet</button>
+                <button onclick="AZ.openProduct('clover-station-duo')" class="rounded-xl border border-white/20 bg-white/10 py-2.5 text-[12.5px] font-bold text-white transition-all hover:border-azora-red hover:bg-azora-red/20">View Details</button>
+                <a href="get-a-quote.html?hardware=clover-station-duo" class="rounded-xl bg-azora-red py-2.5 text-center text-[12.5px] font-bold text-white transition-all hover:bg-blue-600 hover:shadow-chip shadow-md">Request Quote</a>
               </div>
             </div>
           </article>
 
           <!-- 2. Audrey A7 Bundle -->
-          <article class="glass-card-interactive flex flex-col" data-brand="bundles" data-id="audrey-a7">
-            <button onclick="AZ.openProduct('audrey-a7')" class="relative block aspect-[4/3] overflow-hidden p-6 text-left w-full bg-[#070B14]">
+          <article class="rv in card-hover group relative flex flex-col overflow-hidden rounded-2xl" data-brand="bundles" data-id="audrey-a7">
+            <button onclick="AZ.openProduct('audrey-a7')" class="relative block aspect-[4/3] overflow-hidden p-7 text-left w-full bg-[#0B1320]/60">
               <div class="absolute inset-x-3.5 top-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
-                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-emerald-400 backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
-                <span class="truncate rounded-full bg-amber-500/20 border border-amber-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-amber-300 backdrop-blur">Enterprise Bundle</span>
+                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-emerald-400 shadow-card backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
+                <span class="truncate rounded-full bg-purple-500/20 border border-purple-500/40 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-purple-300 backdrop-blur text-right">Enterprise Bundle</span>
               </div>
-              <img src="/assets/img/products/audrey-a7.jpg" alt="Audrey A7 Bundle" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:scale-105" />
+              <img src="assets/img/products/audrey-a7.jpg" alt="Audrey A7 Bundle" loading="lazy" class="card-img h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)]" />
             </button>
-            <div class="flex flex-1 flex-col p-5">
+            <div class="flex flex-1 flex-col p-5 pt-4">
               <button onclick="AZ.openProduct('audrey-a7')" class="text-left">
-                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors hover:text-sky-400">Audrey A7 Bundle</h3>
+                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-azora-red">Audrey A7 Bundle</h3>
               </button>
-              <p class="mt-1 text-xs leading-snug text-slate-300">Intel i5 enterprise bundle with 21.5" touch screen, drawer &amp; scanner</p>
-              
-              <div class="mt-4 flex items-end justify-between border-t border-white/8 pt-3">
+              <p class="mt-1 text-[13.5px] leading-snug text-slate-200 font-medium">Premium enterprise full kit with scanner, drawer &amp; printer</p>
+              <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
                 <div>
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Lease</div>
-                  <div class="font-heading text-xl font-extrabold text-sky-400">$79.99<span class="text-xs font-normal text-slate-400">/mo</span></div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Lease</div>
+                  <div class="font-heading text-[1.45rem] font-black leading-tight text-azora-red">$79.99<span class="text-[13px] font-bold text-slate-300">/mo</span></div>
                 </div>
                 <div class="text-right">
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Retail Value</div>
-                  <div class="font-mono text-xs text-slate-500 line-through">$2,599.99</div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Retail Value</div>
+                  <div class="font-mono text-[13px] font-semibold text-slate-400 line-through decoration-slate-500">$2,599.99</div>
                 </div>
               </div>
-              
               <div class="mt-4 grid grid-cols-2 gap-2">
-                <button onclick="AZ.openProduct('audrey-a7')" class="btn-modern-secondary !py-2 text-xs">View Details</button>
-                <button onclick="AZ.openQuoteModal('audrey-a7')" class="btn-modern-primary !py-2 text-xs">Quote Fleet</button>
+                <button onclick="AZ.openProduct('audrey-a7')" class="rounded-xl border border-white/20 bg-white/10 py-2.5 text-[12.5px] font-bold text-white transition-all hover:border-azora-red hover:bg-azora-red/20">View Details</button>
+                <a href="get-a-quote.html?hardware=audrey-a7" class="rounded-xl bg-azora-red py-2.5 text-center text-[12.5px] font-bold text-white transition-all hover:bg-blue-600 hover:shadow-chip shadow-md">Request Quote</a>
               </div>
             </div>
           </article>
 
           <!-- 3. Audrey A5-II Bundle -->
-          <article class="glass-card-interactive flex flex-col" data-brand="bundles" data-id="audrey-a5-ii">
-            <button onclick="AZ.openProduct('audrey-a5-ii')" class="relative block aspect-[4/3] overflow-hidden p-6 text-left w-full bg-[#070B14]">
+          <article class="rv in card-hover group relative flex flex-col overflow-hidden rounded-2xl" data-brand="bundles" data-id="audrey-a5-ii">
+            <button onclick="AZ.openProduct('audrey-a5-ii')" class="relative block aspect-[4/3] overflow-hidden p-7 text-left w-full bg-[#0B1320]/60">
               <div class="absolute inset-x-3.5 top-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
-                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-emerald-400 backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
-                <span class="truncate rounded-full bg-blue-500/20 border border-blue-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-sky-300 backdrop-blur">Pro Bundle</span>
+                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-emerald-400 shadow-card backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
+                <span class="truncate rounded-full bg-blue-500/20 border border-blue-500/40 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-blue-300 backdrop-blur text-right">Pro Bundle</span>
               </div>
-              <img src="/assets/img/products/audrey-a5-ii.jpg" alt="Audrey A5-II Bundle" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:scale-105" />
+              <img src="assets/img/products/audrey-a5-ii.jpg" alt="Audrey A5-II Bundle" loading="lazy" class="card-img h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)]" />
             </button>
-            <div class="flex flex-1 flex-col p-5">
+            <div class="flex flex-1 flex-col p-5 pt-4">
               <button onclick="AZ.openProduct('audrey-a5-ii')" class="text-left">
-                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors hover:text-sky-400">Audrey A5-II Bundle</h3>
+                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-azora-red">Audrey A5-II Bundle</h3>
               </button>
-              <p class="mt-1 text-xs leading-snug text-slate-300">Mid-tier standard retail bundle with 15.6" screen &amp; hardware</p>
-              
-              <div class="mt-4 flex items-end justify-between border-t border-white/8 pt-3">
+              <p class="mt-1 text-[13.5px] leading-snug text-slate-200 font-medium">Mid-tier standard retail bundle with 15.6" screen &amp; hardware</p>
+              <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
                 <div>
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Lease</div>
-                  <div class="font-heading text-xl font-extrabold text-sky-400">$69.99<span class="text-xs font-normal text-slate-400">/mo</span></div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Lease</div>
+                  <div class="font-heading text-[1.45rem] font-black leading-tight text-azora-red">$69.99<span class="text-[13px] font-bold text-slate-300">/mo</span></div>
                 </div>
                 <div class="text-right">
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Retail Value</div>
-                  <div class="font-mono text-xs text-slate-500 line-through">$2,299.99</div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Retail Value</div>
+                  <div class="font-mono text-[13px] font-semibold text-slate-400 line-through decoration-slate-500">$2,299.99</div>
                 </div>
               </div>
-              
               <div class="mt-4 grid grid-cols-2 gap-2">
-                <button onclick="AZ.openProduct('audrey-a5-ii')" class="btn-modern-secondary !py-2 text-xs">View Details</button>
-                <button onclick="AZ.openQuoteModal('audrey-a5-ii')" class="btn-modern-primary !py-2 text-xs">Quote Fleet</button>
+                <button onclick="AZ.openProduct('audrey-a5-ii')" class="rounded-xl border border-white/20 bg-white/10 py-2.5 text-[12.5px] font-bold text-white transition-all hover:border-azora-red hover:bg-azora-red/20">View Details</button>
+                <a href="get-a-quote.html?hardware=audrey-a5-ii" class="rounded-xl bg-azora-red py-2.5 text-center text-[12.5px] font-bold text-white transition-all hover:bg-blue-600 hover:shadow-chip shadow-md">Request Quote</a>
               </div>
             </div>
           </article>
 
           <!-- 4. PAX A920 Pro -->
-          <article class="glass-card-interactive flex flex-col" data-brand="pax" data-id="pax-a920-pro">
-            <button onclick="AZ.openProduct('pax-a920-pro')" class="relative block aspect-[4/3] overflow-hidden p-6 text-left w-full bg-[#070B14]">
+          <article class="rv in card-hover group relative flex flex-col overflow-hidden rounded-2xl" data-brand="pax" data-id="pax-a920-pro">
+            <button onclick="AZ.openProduct('pax-a920-pro')" class="relative block aspect-[4/3] overflow-hidden p-7 text-left w-full bg-[#0B1320]/60">
               <div class="absolute inset-x-3.5 top-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
-                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-emerald-400 backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
-                <span class="truncate rounded-full bg-purple-500/20 border border-purple-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-purple-300 backdrop-blur">Smart Android</span>
+                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-emerald-400 shadow-card backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
+                <span class="truncate rounded-full bg-amber-500/20 border border-amber-500/40 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-amber-300 backdrop-blur text-right">Mobile Smart Terminal</span>
               </div>
-              <img src="/assets/img/products/pax-a920-pro.jpg" alt="PAX A920 Pro" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:scale-105" />
+              <img src="assets/img/products/pax-a920-pro.jpg" alt="PAX A920 Pro" loading="lazy" class="card-img h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)]" />
             </button>
-            <div class="flex flex-1 flex-col p-5">
+            <div class="flex flex-1 flex-col p-5 pt-4">
               <button onclick="AZ.openProduct('pax-a920-pro')" class="text-left">
-                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors hover:text-sky-400">PAX A920 Pro</h3>
+                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-azora-red">PAX A920 Pro</h3>
               </button>
-              <p class="mt-1 text-xs leading-snug text-slate-300">Android PayDroid smart terminal with 5.5" screen &amp; rapid printer</p>
-              
-              <div class="mt-4 flex items-end justify-between border-t border-white/8 pt-3">
+              <p class="mt-1 text-[13.5px] leading-snug text-slate-300 font-medium">High-end mobile terminal with Android 10 and internal printer</p>
+              <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
                 <div>
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Lease</div>
-                  <div class="font-heading text-xl font-extrabold text-sky-400">$54.99<span class="text-xs font-normal text-slate-400">/mo</span></div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Lease</div>
+                  <div class="font-heading text-[1.45rem] font-black leading-tight text-azora-red">$54.99<span class="text-[13px] font-bold text-slate-300">/mo</span></div>
                 </div>
                 <div class="text-right">
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Retail Value</div>
-                  <div class="font-mono text-xs text-slate-500 line-through">$600.00</div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Retail Value</div>
+                  <div class="font-mono text-[13px] font-semibold text-slate-400 line-through decoration-slate-500">$600</div>
                 </div>
               </div>
-              
               <div class="mt-4 grid grid-cols-2 gap-2">
-                <button onclick="AZ.openProduct('pax-a920-pro')" class="btn-modern-secondary !py-2 text-xs">View Details</button>
-                <button onclick="AZ.openQuoteModal('pax-a920-pro')" class="btn-modern-primary !py-2 text-xs">Quote Fleet</button>
+                <button onclick="AZ.openProduct('pax-a920-pro')" class="rounded-xl border border-white/20 bg-white/10 py-2.5 text-[12.5px] font-bold text-white transition-all hover:border-azora-red hover:bg-azora-red/20">View Details</button>
+                <a href="get-a-quote.html?hardware=pax-a920-pro" class="rounded-xl bg-azora-red py-2.5 text-center text-[12.5px] font-bold text-white transition-all hover:bg-blue-600 hover:shadow-chip shadow-md">Request Quote</a>
               </div>
             </div>
           </article>
 
           <!-- 5. Clover Mini v3 -->
-          <article class="glass-card-interactive flex flex-col" data-brand="clover" data-id="clover-mini-v3">
-            <button onclick="AZ.openProduct('clover-mini-v3')" class="relative block aspect-[4/3] overflow-hidden p-6 text-left w-full bg-[#070B14]">
+          <article class="rv in card-hover group relative flex flex-col overflow-hidden rounded-2xl" data-brand="clover" data-id="clover-mini-v3">
+            <button onclick="AZ.openProduct('clover-mini-v3')" class="relative block aspect-[4/3] overflow-hidden p-7 text-left w-full bg-[#0B1320]/60">
               <div class="absolute inset-x-3.5 top-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
-                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-emerald-400 backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
-                <span class="truncate rounded-full bg-white/10 border border-white/15 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-white/90 backdrop-blur">Compact Counter</span>
+                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-emerald-400 shadow-card backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
+                <span class="truncate rounded-full bg-white/10 border border-white/15 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-white/90 backdrop-blur text-right">Compact Countertop</span>
               </div>
-              <img src="/assets/img/products/clover-mini-v3.jpg" alt="Clover Mini v3" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:scale-105" />
+              <img src="assets/img/products/clover-mini-v3.jpg" alt="Clover Mini v3" loading="lazy" class="card-img h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)]" />
             </button>
-            <div class="flex flex-1 flex-col p-5">
+            <div class="flex flex-1 flex-col p-5 pt-4">
               <button onclick="AZ.openProduct('clover-mini-v3')" class="text-left">
-                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors hover:text-sky-400">Clover Mini v3</h3>
+                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-azora-red">Clover Mini v3</h3>
               </button>
-              <p class="mt-1 text-xs leading-snug text-slate-300">Space-saving countertop terminal with high-speed receipt printer</p>
-              
-              <div class="mt-4 flex items-end justify-between border-t border-white/8 pt-3">
+              <p class="mt-1 text-[13.5px] leading-snug text-slate-300 font-medium">Compact advanced countertop POS system</p>
+              <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
                 <div>
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Lease</div>
-                  <div class="font-heading text-xl font-extrabold text-sky-400">$49.99<span class="text-xs font-normal text-slate-400">/mo</span></div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Lease</div>
+                  <div class="font-heading text-[1.45rem] font-black leading-tight text-azora-red">$49.99<span class="text-[13px] font-bold text-slate-300">/mo</span></div>
                 </div>
                 <div class="text-right">
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Retail Value</div>
-                  <div class="font-mono text-xs text-slate-500 line-through">$550.00</div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Retail Value</div>
+                  <div class="font-mono text-[13px] font-semibold text-slate-400 line-through decoration-slate-500">$550</div>
                 </div>
               </div>
-              
               <div class="mt-4 grid grid-cols-2 gap-2">
-                <button onclick="AZ.openProduct('clover-mini-v3')" class="btn-modern-secondary !py-2 text-xs">View Details</button>
-                <button onclick="AZ.openQuoteModal('clover-mini-v3')" class="btn-modern-primary !py-2 text-xs">Quote Fleet</button>
+                <button onclick="AZ.openProduct('clover-mini-v3')" class="rounded-xl border border-white/20 bg-white/10 py-2.5 text-[12.5px] font-bold text-white transition-all hover:border-azora-red hover:bg-azora-red/20">View Details</button>
+                <a href="get-a-quote.html?hardware=clover-mini-v3" class="rounded-xl bg-azora-red py-2.5 text-center text-[12.5px] font-bold text-white transition-all hover:bg-blue-600 hover:shadow-chip shadow-md">Request Quote</a>
               </div>
             </div>
           </article>
 
           <!-- 6. Joy J14 Bundle -->
-          <article class="glass-card-interactive flex flex-col" data-brand="bundles" data-id="joy-j14">
-            <button onclick="AZ.openProduct('joy-j14')" class="relative block aspect-[4/3] overflow-hidden p-6 text-left w-full bg-[#070B14]">
+          <article class="rv in card-hover group relative flex flex-col overflow-hidden rounded-2xl" data-brand="bundles" data-id="joy-j14">
+            <button onclick="AZ.openProduct('joy-j14')" class="relative block aspect-[4/3] overflow-hidden p-7 text-left w-full bg-[#0B1320]/60">
               <div class="absolute inset-x-3.5 top-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
-                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-emerald-400 backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
-                <span class="truncate rounded-full bg-blue-500/20 border border-blue-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-sky-300 backdrop-blur">Value Kit</span>
+                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-emerald-400 shadow-card backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
+                <span class="truncate rounded-full bg-emerald-500/20 border border-emerald-500/40 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-emerald-300 backdrop-blur text-right">Value Bundle</span>
               </div>
-              <img src="/assets/img/products/joy-j14.jpg" alt="Joy J14 Bundle" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:scale-105" />
+              <img src="assets/img/products/joy-j14.jpg" alt="Joy J14 Bundle" loading="lazy" class="card-img h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)]" />
             </button>
-            <div class="flex flex-1 flex-col p-5">
+            <div class="flex flex-1 flex-col p-5 pt-4">
               <button onclick="AZ.openProduct('joy-j14')" class="text-left">
-                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors hover:text-sky-400">Joy J14 Bundle</h3>
+                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-azora-red">Joy J14 Bundle</h3>
               </button>
-              <p class="mt-1 text-xs leading-snug text-slate-300">Streamlined 14" entry workstation bundled with peripherals</p>
-              
-              <div class="mt-4 flex items-end justify-between border-t border-white/8 pt-3">
+              <p class="mt-1 text-[13.5px] leading-snug text-slate-200 font-medium">Compact high-value entry bundle with scanner, drawer &amp; printer</p>
+              <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
                 <div>
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Lease</div>
-                  <div class="font-heading text-xl font-extrabold text-sky-400">$44.99<span class="text-xs font-normal text-slate-400">/mo</span></div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Lease</div>
+                  <div class="font-heading text-[1.45rem] font-black leading-tight text-azora-red">$44.99<span class="text-[13px] font-bold text-slate-300">/mo</span></div>
                 </div>
                 <div class="text-right">
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Retail Value</div>
-                  <div class="font-mono text-xs text-slate-500 line-through">$1,399.99</div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Retail Value</div>
+                  <div class="font-mono text-[13px] font-semibold text-slate-400 line-through decoration-slate-500">$1,399.99</div>
                 </div>
               </div>
-              
               <div class="mt-4 grid grid-cols-2 gap-2">
-                <button onclick="AZ.openProduct('joy-j14')" class="btn-modern-secondary !py-2 text-xs">View Details</button>
-                <button onclick="AZ.openQuoteModal('joy-j14')" class="btn-modern-primary !py-2 text-xs">Quote Fleet</button>
+                <button onclick="AZ.openProduct('joy-j14')" class="rounded-xl border border-white/20 bg-white/10 py-2.5 text-[12.5px] font-bold text-white transition-all hover:border-azora-red hover:bg-azora-red/20">View Details</button>
+                <a href="get-a-quote.html?hardware=joy-j14" class="rounded-xl bg-azora-red py-2.5 text-center text-[12.5px] font-bold text-white transition-all hover:bg-blue-600 hover:shadow-chip shadow-md">Request Quote</a>
               </div>
             </div>
           </article>
 
           <!-- 7. Clover Flex -->
-          <article class="glass-card-interactive flex flex-col" data-brand="clover" data-id="clover-flex">
-            <button onclick="AZ.openProduct('clover-flex')" class="relative block aspect-[4/3] overflow-hidden p-6 text-left w-full bg-[#070B14]">
+          <article class="rv in card-hover group relative flex flex-col overflow-hidden rounded-2xl" data-brand="clover" data-id="clover-flex">
+            <button onclick="AZ.openProduct('clover-flex')" class="relative block aspect-[4/3] overflow-hidden p-7 text-left w-full bg-[#0B1320]/60">
               <div class="absolute inset-x-3.5 top-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
-                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-emerald-400 backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
-                <span class="truncate rounded-full bg-sky-500/20 border border-sky-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-sky-300 backdrop-blur">Mobile POS</span>
+                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-emerald-400 shadow-card backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
+                <span class="truncate rounded-full bg-white/10 border border-white/15 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-white/90 backdrop-blur text-right">Handheld Terminal</span>
               </div>
-              <img src="/assets/img/products/clover-flex.jpg" alt="Clover Flex" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:scale-105" />
+              <img src="assets/img/products/clover-flex.jpg" alt="Clover Flex" loading="lazy" class="card-img h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)]" />
             </button>
-            <div class="flex flex-1 flex-col p-5">
+            <div class="flex flex-1 flex-col p-5 pt-4">
               <button onclick="AZ.openProduct('clover-flex')" class="text-left">
-                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors hover:text-sky-400">Clover Flex Handheld</h3>
+                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-azora-red">Clover Flex</h3>
               </button>
-              <p class="mt-1 text-xs leading-snug text-slate-300">Ultra-mobile full POS terminal with built-in scanning &amp; printer</p>
-              
-              <div class="mt-4 flex items-end justify-between border-t border-white/8 pt-3">
+              <p class="mt-1 text-[13.5px] leading-snug text-slate-300 font-medium">Handheld mobile terminal with built-in scanning &amp; printer</p>
+              <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
                 <div>
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Lease</div>
-                  <div class="font-heading text-xl font-extrabold text-sky-400">$39.99<span class="text-xs font-normal text-slate-400">/mo</span></div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Lease</div>
+                  <div class="font-heading text-[1.45rem] font-black leading-tight text-azora-red">$39.99<span class="text-[13px] font-bold text-slate-300">/mo</span></div>
                 </div>
                 <div class="text-right">
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Retail Value</div>
-                  <div class="font-mono text-xs text-slate-500 line-through">$399.00</div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Retail Value</div>
+                  <div class="font-mono text-[13px] font-semibold text-slate-400 line-through decoration-slate-500">$399</div>
                 </div>
               </div>
-              
               <div class="mt-4 grid grid-cols-2 gap-2">
-                <button onclick="AZ.openProduct('clover-flex')" class="btn-modern-secondary !py-2 text-xs">View Details</button>
-                <button onclick="AZ.openQuoteModal('clover-flex')" class="btn-modern-primary !py-2 text-xs">Quote Fleet</button>
+                <button onclick="AZ.openProduct('clover-flex')" class="rounded-xl border border-white/20 bg-white/10 py-2.5 text-[12.5px] font-bold text-white transition-all hover:border-azora-red hover:bg-azora-red/20">View Details</button>
+                <a href="get-a-quote.html?hardware=clover-flex" class="rounded-xl bg-azora-red py-2.5 text-center text-[12.5px] font-bold text-white transition-all hover:bg-blue-600 hover:shadow-chip shadow-md">Request Quote</a>
               </div>
             </div>
           </article>
 
           <!-- 8. Dejavoo Z9 -->
-          <article class="glass-card-interactive flex flex-col" data-brand="dejavoo" data-id="dejavoo-z9">
-            <button onclick="AZ.openProduct('dejavoo-z9')" class="relative block aspect-[4/3] overflow-hidden p-6 text-left w-full bg-[#070B14]">
+          <article class="rv in card-hover group relative flex flex-col overflow-hidden rounded-2xl" data-brand="dejavoo" data-id="dejavoo-z9">
+            <button onclick="AZ.openProduct('dejavoo-z9')" class="relative block aspect-[4/3] overflow-hidden p-7 text-left w-full bg-[#0B1320]/60">
               <div class="absolute inset-x-3.5 top-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
-                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-emerald-400 backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
-                <span class="truncate rounded-full bg-teal-500/20 border border-teal-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-teal-300 backdrop-blur">Wireless PIN Pad</span>
+                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-emerald-400 shadow-card backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
+                <span class="truncate rounded-full bg-blue-500/20 border border-blue-500/40 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-blue-300 backdrop-blur text-right">Mobile PIN Pad</span>
               </div>
-              <img src="/assets/img/products/dejavoo-z9.jpg" alt="Dejavoo Z9" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:scale-105" />
+              <img src="assets/img/products/dejavoo-z9.jpg" alt="Dejavoo Z9" loading="lazy" class="card-img h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)]" />
             </button>
-            <div class="flex flex-1 flex-col p-5">
+            <div class="flex flex-1 flex-col p-5 pt-4">
               <button onclick="AZ.openProduct('dejavoo-z9')" class="text-left">
-                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors hover:text-sky-400">Dejavoo Z9 Wireless</h3>
+                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-azora-red">Dejavoo Z9</h3>
               </button>
-              <p class="mt-1 text-xs leading-snug text-slate-300">Mobile standalone PIN pad with ultra-lasting battery</p>
-              
-              <div class="mt-4 flex items-end justify-between border-t border-white/8 pt-3">
+              <p class="mt-1 text-[13.5px] leading-snug text-slate-300 font-medium">Wireless mobile PIN pad with high battery capacity</p>
+              <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
                 <div>
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Lease</div>
-                  <div class="font-heading text-xl font-extrabold text-sky-400">$34.99<span class="text-xs font-normal text-slate-400">/mo</span></div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Lease</div>
+                  <div class="font-heading text-[1.45rem] font-black leading-tight text-azora-red">$34.99<span class="text-[13px] font-bold text-slate-300">/mo</span></div>
                 </div>
                 <div class="text-right">
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Retail Value</div>
-                  <div class="font-mono text-xs text-slate-500 line-through">$450.00</div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Retail Value</div>
+                  <div class="font-mono text-[13px] font-semibold text-slate-400 line-through decoration-slate-500">$450</div>
                 </div>
               </div>
-              
               <div class="mt-4 grid grid-cols-2 gap-2">
-                <button onclick="AZ.openProduct('dejavoo-z9')" class="btn-modern-secondary !py-2 text-xs">View Details</button>
-                <button onclick="AZ.openQuoteModal('dejavoo-z9')" class="btn-modern-primary !py-2 text-xs">Quote Fleet</button>
+                <button onclick="AZ.openProduct('dejavoo-z9')" class="rounded-xl border border-white/20 bg-white/10 py-2.5 text-[12.5px] font-bold text-white transition-all hover:border-azora-red hover:bg-azora-red/20">View Details</button>
+                <a href="get-a-quote.html?hardware=dejavoo-z9" class="rounded-xl bg-azora-red py-2.5 text-center text-[12.5px] font-bold text-white transition-all hover:bg-blue-600 hover:shadow-chip shadow-md">Request Quote</a>
               </div>
             </div>
           </article>
 
           <!-- 9. Dejavoo QD4 -->
-          <article class="glass-card-interactive flex flex-col" data-brand="dejavoo" data-id="dejavoo-qd4">
-            <button onclick="AZ.openProduct('dejavoo-qd4')" class="relative block aspect-[4/3] overflow-hidden p-6 text-left w-full bg-[#070B14]">
+          <article class="rv in card-hover group relative flex flex-col overflow-hidden rounded-2xl" data-brand="dejavoo" data-id="dejavoo-qd4">
+            <button onclick="AZ.openProduct('dejavoo-qd4')" class="relative block aspect-[4/3] overflow-hidden p-7 text-left w-full bg-[#0B1320]/60">
               <div class="absolute inset-x-3.5 top-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
-                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-emerald-400 backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
-                <span class="truncate rounded-full bg-teal-500/20 border border-teal-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-teal-300 backdrop-blur">Android Smart</span>
+                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-emerald-400 shadow-card backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
+                <span class="truncate rounded-full bg-blue-500/20 border border-blue-500/40 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-blue-300 backdrop-blur text-right">Smart Terminal</span>
               </div>
-              <img src="/assets/img/products/dejavoo-qd4.jpg" alt="Dejavoo QD4" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:scale-105" />
+              <img src="assets/img/products/dejavoo-qd4.jpg" alt="Dejavoo QD4" loading="lazy" class="card-img h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)]" />
             </button>
-            <div class="flex flex-1 flex-col p-5">
+            <div class="flex flex-1 flex-col p-5 pt-4">
               <button onclick="AZ.openProduct('dejavoo-qd4')" class="text-left">
-                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors hover:text-sky-400">Dejavoo QD4 Smart</h3>
+                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-azora-red">Dejavoo QD4</h3>
               </button>
-              <p class="mt-1 text-xs leading-snug text-slate-300">Secure Android terminal with 5.5" screen, printer, and barcode scanner</p>
-              
-              <div class="mt-4 flex items-end justify-between border-t border-white/8 pt-3">
+              <p class="mt-1 text-[13.5px] leading-snug text-slate-300 font-medium">Smart Android handheld with small integrated thermal printer</p>
+              <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
                 <div>
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Lease</div>
-                  <div class="font-heading text-xl font-extrabold text-sky-400">$32.99<span class="text-xs font-normal text-slate-400">/mo</span></div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Lease</div>
+                  <div class="font-heading text-[1.45rem] font-black leading-tight text-azora-red">$32.99<span class="text-[13px] font-bold text-slate-300">/mo</span></div>
                 </div>
                 <div class="text-right">
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Retail Value</div>
-                  <div class="font-mono text-xs text-slate-500 line-through">$350.00</div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Retail Value</div>
+                  <div class="font-mono text-[13px] font-semibold text-slate-400 line-through decoration-slate-500">$350</div>
                 </div>
               </div>
-              
               <div class="mt-4 grid grid-cols-2 gap-2">
-                <button onclick="AZ.openProduct('dejavoo-qd4')" class="btn-modern-secondary !py-2 text-xs">View Details</button>
-                <button onclick="AZ.openQuoteModal('dejavoo-qd4')" class="btn-modern-primary !py-2 text-xs">Quote Fleet</button>
+                <button onclick="AZ.openProduct('dejavoo-qd4')" class="rounded-xl border border-white/20 bg-white/10 py-2.5 text-[12.5px] font-bold text-white transition-all hover:border-azora-red hover:bg-azora-red/20">View Details</button>
+                <a href="get-a-quote.html?hardware=dejavoo-qd4" class="rounded-xl bg-azora-red py-2.5 text-center text-[12.5px] font-bold text-white transition-all hover:bg-blue-600 hover:shadow-chip shadow-md">Request Quote</a>
               </div>
             </div>
           </article>
 
           <!-- 10. Dejavoo Z11 -->
-          <article class="glass-card-interactive flex flex-col" data-brand="dejavoo" data-id="dejavoo-z11">
-            <button onclick="AZ.openProduct('dejavoo-z11')" class="relative block aspect-[4/3] overflow-hidden p-6 text-left w-full bg-[#070B14]">
+          <article class="rv in card-hover group relative flex flex-col overflow-hidden rounded-2xl" data-brand="dejavoo" data-id="dejavoo-z11">
+            <button onclick="AZ.openProduct('dejavoo-z11')" class="relative block aspect-[4/3] overflow-hidden p-7 text-left w-full bg-[#0B1320]/60">
               <div class="absolute inset-x-3.5 top-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
-                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-emerald-400 backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
-                <span class="truncate rounded-full bg-white/10 border border-white/15 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.14em] text-white/90 backdrop-blur">Countertop Workhorse</span>
+                <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-emerald-400 shadow-card backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>In Stock</span>
+                <span class="truncate rounded-full bg-blue-500/20 border border-blue-500/40 px-2.5 py-1 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-blue-300 backdrop-blur text-right">Payment Terminal</span>
               </div>
-              <img src="/assets/img/products/dejavoo-z11.jpg" alt="Dejavoo Z11" loading="lazy" class="h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:scale-105" />
+              <img src="assets/img/products/dejavoo-z11.jpg" alt="Dejavoo Z11" loading="lazy" class="card-img h-full w-full object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)]" />
             </button>
-            <div class="flex flex-1 flex-col p-5">
+            <div class="flex flex-1 flex-col p-5 pt-4">
               <button onclick="AZ.openProduct('dejavoo-z11')" class="text-left">
-                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors hover:text-sky-400">Dejavoo Z11 Counter</h3>
+                <h3 class="font-heading text-lg font-bold tracking-tight text-white transition-colors group-hover:text-azora-red">Dejavoo Z11</h3>
               </button>
-              <p class="mt-1 text-xs leading-snug text-slate-300">Tri-Comm capability (Dial, IP, Wi-Fi) with EMV and contactless NFC</p>
-              
-              <div class="mt-4 flex items-end justify-between border-t border-white/8 pt-3">
+              <p class="mt-1 text-[13.5px] leading-snug text-slate-300 font-medium">Compact, essential dial/IP/WiFi countertop terminal</p>
+              <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
                 <div>
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Lease</div>
-                  <div class="font-heading text-xl font-extrabold text-sky-400">$29.99<span class="text-xs font-normal text-slate-400">/mo</span></div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Lease</div>
+                  <div class="font-heading text-[1.45rem] font-black leading-tight text-azora-red">$29.99<span class="text-[13px] font-bold text-slate-300">/mo</span></div>
                 </div>
                 <div class="text-right">
-                  <div class="font-mono text-[9px] uppercase tracking-wider text-slate-400">Retail Value</div>
-                  <div class="font-mono text-xs text-slate-500 line-through">$300.00</div>
+                  <div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">Retail Value</div>
+                  <div class="font-mono text-[13px] font-semibold text-slate-400 line-through decoration-slate-500">$300</div>
                 </div>
               </div>
-              
               <div class="mt-4 grid grid-cols-2 gap-2">
-                <button onclick="AZ.openProduct('dejavoo-z11')" class="btn-modern-secondary !py-2 text-xs">View Details</button>
-                <button onclick="AZ.openQuoteModal('dejavoo-z11')" class="btn-modern-primary !py-2 text-xs">Quote Fleet</button>
+                <button onclick="AZ.openProduct('dejavoo-z11')" class="rounded-xl border border-white/20 bg-white/10 py-2.5 text-[12.5px] font-bold text-white transition-all hover:border-azora-red hover:bg-azora-red/20">View Details</button>
+                <a href="get-a-quote.html?hardware=dejavoo-z11" class="rounded-xl bg-azora-red py-2.5 text-center text-[12.5px] font-bold text-white transition-all hover:bg-blue-600 hover:shadow-chip shadow-md">Request Quote</a>
               </div>
             </div>
           </article>
@@ -594,93 +714,103 @@
       </div>
     </section>
 
+    <!-- BOTTOM CTA BANNER -->
+    <section class="border-t border-white/10 bg-azora-ink py-14">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="rv in flex flex-col items-center justify-between gap-6 rounded-3xl border border-white/10 bg-gradient-to-r from-azora-card via-[#121B2C] to-azora-card p-8 sm:p-10 lg:flex-row">
+          <div class="flex items-center gap-4">
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-azora-red/15 text-azora-red border border-azora-red/25">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></svg>
+            </span>
+            <div>
+              <h3 class="font-heading text-xl font-extrabold tracking-tight text-white">Configure your fleet</h3>
+              <p class="mt-1 text-[13.5px] text-slate-300">Add terminals as you grow locations. Quote a single unit or a nationwide fleet, and we build the bundle.</p>
+            </div>
+          </div>
+          <a href="get-a-quote.html" class="shrink-0 rounded-xl bg-azora-red px-7 py-3.5 text-sm font-bold text-white transition-all hover:bg-blue-600 hover:shadow-chip shadow-md">Get a Quote</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ======================= FOOTER ======================= -->
-  <footer class="relative overflow-hidden border-t border-white/10 bg-[#070B14] py-16 text-white sm:py-24">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5">
-        
-        <div class="lg:col-span-2">
-          <a href="/" class="group flex items-center gap-3">
-            <span class="relative grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[#2469EB] to-[#1D4ED8] p-0.5 shadow-[0_0_20px_rgba(36,105,235,0.6)]">
-              <span class="grid h-full w-full place-items-center rounded-[10px] bg-[#070B14]">
-                <svg viewBox="0 0 24 24" class="h-5 w-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 3l9 18h-4.4L12 9.6 7.4 21H3z" />
-                  <circle cx="12" cy="18" r="1.8" fill="#38BDF8" stroke="none" />
-                </svg>
-              </span>
+  <footer class="relative overflow-hidden bg-azora-ink text-white border-t border-white/10">
+    <div class="bg-darkgrid absolute inset-0 opacity-60"></div>
+    <div class="relative mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5">
+            <span class="grid h-9 w-9 place-items-center rounded-xl bg-white text-azora-blue">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 18h-4.4L12 9.6 7.4 21H3z"/><circle cx="12" cy="18" r="1.6" fill="#2469EB" stroke="none"/></svg>
             </span>
             <span class="leading-none">
-              <span class="block font-heading text-[18px] font-extrabold tracking-tight text-white">AZORA</span>
-              <span class="mt-0.5 block font-mono text-[9px] font-semibold uppercase tracking-[0.28em] text-slate-400">Digital Solutions</span>
+              <span class="block font-heading text-[17px] font-extrabold tracking-tight text-white">AZORA</span>
+              <span class="mt-0.5 block font-mono text-[9px] font-semibold uppercase tracking-[0.28em] text-white/50">Solutions</span>
             </span>
           </a>
-          <p class="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">
-            Azora Solution is an authorized provider of enterprise Clover, Dejavoo, and PAX point-of-sale hardware terminals with flexible nationwide leasing.
+          <p class="mt-5 max-w-sm text-sm leading-relaxed text-slate-300">
+            Premium POS hardware on flexible leasing from $29.99/month. Clover, Dejavoo, PAX, Audrey &amp; Joy terminals for modern commerce.
           </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="rounded-full border border-white/12 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50 bg-white/5">Nationwide Deployment</span>
+          </div>
         </div>
 
         <div>
-          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-slate-400">POS Fleets</h4>
-          <ul class="mt-4 space-y-2.5 text-xs text-slate-400">
-            <li><a href="/hardware?brand=clover" class="transition-colors hover:text-white">Clover Series</a></li>
-            <li><a href="/hardware?brand=dejavoo" class="transition-colors hover:text-white">Dejavoo Terminals</a></li>
-            <li><a href="/hardware?brand=pax" class="transition-colors hover:text-white">PAX Smart POS</a></li>
-            <li><a href="/hardware?brand=bundles" class="transition-colors hover:text-white">Audrey &amp; Joy Bundles</a></li>
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Hardware</h4>
+          <ul class="mt-4 space-y-2.5 text-sm text-slate-300">
+            <li><a href="hardware.html?brand=clover" class="transition-colors hover:text-white">Clover Series</a></li>
+            <li><a href="hardware.html?brand=dejavoo" class="transition-colors hover:text-white">Dejavoo Terminals</a></li>
+            <li><a href="hardware.html?brand=pax" class="transition-colors hover:text-white">PAX Smart Terminals</a></li>
+            <li><a href="hardware.html?brand=bundles" class="transition-colors hover:text-white">Audrey &amp; Joy Bundles</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-slate-400">Digital Growth</h4>
-          <ul class="mt-4 space-y-2.5 text-xs text-slate-400">
-            <li><a href="/plans#website-plans" class="transition-colors hover:text-white">Custom Web Design</a></li>
-            <li><a href="/plans#marketing-plans" class="transition-colors hover:text-white">Google Map Pack SEO</a></li>
-            <li><a href="/plans" class="transition-colors hover:text-white">Pricing &amp; Bundles</a></li>
-            <li><a href="/client-success" class="transition-colors hover:text-white">Portfolio Stories</a></li>
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Company</h4>
+          <ul class="mt-4 space-y-2.5 text-sm text-slate-300">
+            <li><a href="about.html" class="transition-colors hover:text-white">About</a></li>
+            <li><a href="client-success.html" class="transition-colors hover:text-white">Client Success</a></li>
+            <li><a href="services.html" class="transition-colors hover:text-white">Services</a></li>
+            <li><a href="plans.html" class="transition-colors hover:text-white">Plans</a></li>
+            <li><a href="admin-inventory.html" class="transition-colors hover:text-white">Inventory Admin</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-slate-400">Connect Direct</h4>
-          <div class="mt-4 space-y-2 text-xs text-slate-300">
-            <a href="tel:+19843888298" class="flex items-center gap-2 transition-colors hover:text-sky-400">
-              <span class="text-sky-400">📞</span> (984) 388-8298
+          <h4 class="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">Get Started</h4>
+          <p class="mt-4 text-sm leading-relaxed text-slate-300">Quote a single terminal or a nationwide fleet. Our team will build the bundle.</p>
+          <div class="mt-5 space-y-2 text-sm text-slate-300">
+            <a href="mailto:info@azorasolution.com" class="block transition-colors hover:text-white">
+              info@azorasolution.com
             </a>
-            <a href="mailto:info@azorasolution.com" class="flex items-center gap-2 transition-colors hover:text-sky-400">
-              <span class="text-sky-400">✉️</span> info@azorasolution.com
+            <a href="tel:+19843888298" class="block transition-colors hover:text-white">
+              (984) 388-8298
             </a>
           </div>
-          <button type="button" onclick="AZ.openQuoteModal()" class="mt-5 btn-modern-primary w-full !py-2.5 text-xs font-bold">
-            Request Quote &rarr;
-          </button>
-        </div>
-
-      </div>
-
-      <div class="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-xs text-slate-500">&copy; 2026 Azora Solution. All rights reserved.</p>
-        <div class="flex items-center gap-6 font-mono text-[10px] uppercase tracking-wider text-slate-500">
-          <a href="/privacy" class="hover:text-slate-300 transition-colors">Privacy</a>
-          <a href="/terms" class="hover:text-slate-300 transition-colors">Terms</a>
-          <a href="/sitemap.xml" class="hover:text-slate-300 transition-colors">Sitemap</a>
+          <a href="get-a-quote.html" class="mt-5 inline-flex items-center gap-2 rounded-xl bg-azora-red px-5 py-3 text-sm font-semibold text-white shadow-chip transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-600">
+            Get a Quote
+          </a>
         </div>
       </div>
-    </div>
 
-    <div class="azora-watermark text-center text-[22vw] mt-6 select-none opacity-40">
-      AZORA
+      <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
+        <p class="text-xs text-white/40">© 2026 Azora Solutions. All rights reserved.</p>
+        <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-white/35">POS Hardware Leasing · From $29.99/mo</p>
+      </div>
     </div>
   </footer>
 
+  <!-- Modals + concierge -->
   <div id="modal-root"></div>
   <div id="concierge-root"></div>
 
+  <!-- Synchronous scripts for 100% reliable local file and web server execution -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/imgdata.js"></script>
+  <script src="assets/js/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="/supabase/config.js"></script>
-  <script src="/assets/js/lead-store.js"></script>
-  <script src="/assets/js/data.js" defer></script>
-  <script src="/assets/js/imgdata.js" defer></script>
-  <script src="/assets/js/app.js" defer></script>
+  <script src="supabase/config.js"></script>
+  <script src="assets/js/catalog-sync.js"></script>
 </body>
 </html>

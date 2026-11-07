@@ -249,196 +249,21 @@
   /* ---------- modal shell ---------- */
   var modalRoot = $('#modal-root');
   function openModal(inner, width) {
-    if (!modalRoot) {
-      modalRoot = document.createElement('div');
-      modalRoot.id = 'modal-root';
-      document.body.appendChild(modalRoot);
-    }
+    if (!modalRoot) return;
     modalRoot.innerHTML =
       '<div class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6" id="modal-overlay">' +
-        '<div class="fade-in absolute inset-0 bg-black/80 backdrop-blur-md" onclick="AZ.closeModal()"></div>' +
-        '<div class="sheet-up relative w-full ' + (width || 'max-w-2xl') + ' overflow-hidden rounded-2xl bg-[#0F192C] border border-white/12 shadow-2xl" role="dialog" aria-modal="true">' + inner + '</div>' +
+        '<div class="fade-in absolute inset-0 bg-black/75 backdrop-blur-md" onclick="AZ.closeModal()"></div>' +
+        '<div class="sheet-up relative w-full ' + (width || 'max-w-2xl') + ' overflow-hidden rounded-2xl bg-[#121B2C] border border-white/10 shadow-lift" role="dialog" aria-modal="true">' + inner + '</div>' +
       '</div>';
     document.body.style.overflow = 'hidden';
     document.addEventListener('keydown', escClose);
   }
   function escClose(e) { if (e.key === 'Escape') AZ.closeModal(); }
-  AZ.openModal = openModal;
   AZ.closeModal = function () {
     var ov = $('#modal-overlay');
     if (ov) { ov.style.transition = 'opacity .25s'; ov.style.opacity = '0'; setTimeout(function () { if (modalRoot) modalRoot.innerHTML = ''; }, 240); }
     document.body.style.overflow = '';
     document.removeEventListener('keydown', escClose);
-  };
-
-  /* ---------- global quick quote modal ---------- */
-  AZ.openQuoteModal = function (preselectId) {
-    var allOptions = [
-      { id: 'website-growth', name: 'Website Growth Plan ($185/mo)', cat: 'Web' },
-      { id: 'website-premium', name: 'Website Premium ($249/mo)', cat: 'Web' },
-      { id: 'marketing-growth', name: 'SEO & Marketing Growth ($365/mo)', cat: 'SEO' },
-      { id: 'marketing-starter', name: 'Local Marketing Starter ($285/mo)', cat: 'SEO' },
-      { id: 'clover-station-duo', name: 'Clover Station Duo ($84.99/mo)', cat: 'POS' },
-      { id: 'clover-flex', name: 'Clover Flex Handheld ($39.99/mo)', cat: 'POS' },
-      { id: 'audrey-a7', name: 'Audrey A7 Retail Bundle ($79.99/mo)', cat: 'POS' },
-      { id: 'ai-voice-receptionist', name: 'AI Voice Receptionist', cat: 'AI' },
-      { id: 'whatsapp-ai-assistant', name: 'WhatsApp AI Concierge', cat: 'AI' }
-    ];
-
-    var selectedItems = [];
-    if (preselectId) {
-      selectedItems.push(preselectId);
-    }
-
-    var optionsHtml = allOptions.map(function (opt) {
-      var isSel = selectedItems.indexOf(opt.id) !== -1;
-      return '<button type="button" data-val="' + esc(opt.id) + '" class="modal-pick-btn rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all ' +
-        (isSel ? 'border-sky-400 bg-sky-500/20 text-white shadow-[0_0_12px_rgba(56,189,248,0.3)]' : 'border-white/10 bg-white/5 text-slate-300 hover:border-white/25 hover:text-white') + '">' +
-        esc(opt.name) + '</button>';
-    }).join('');
-
-    openModal(
-      '<div class="relative bg-[#0E1726] border border-white/12 text-white p-6 sm:p-8 rounded-2xl shadow-2xl max-h-[92vh] overflow-y-auto no-scrollbar">' +
-        '<div class="flex items-center justify-between border-b border-white/10 pb-4">' +
-          '<div>' +
-            '<div class="font-mono text-[9.5px] font-bold uppercase tracking-[0.2em] text-sky-400">Azora Solution — Rapid Quote</div>' +
-            '<h2 class="mt-1 font-heading text-xl sm:text-2xl font-extrabold tracking-tight text-white">Request a Custom Proposal</h2>' +
-          '</div>' +
-          '<button type="button" onclick="AZ.closeModal()" aria-label="Close" class="grid h-9 w-9 place-items-center rounded-xl bg-white/5 text-slate-400 hover:bg-white/10 hover:text-white transition-colors">' + I('x') + '</button>' +
-        '</div>' +
-        '<p class="mt-3 text-xs sm:text-[13px] leading-relaxed text-slate-300">Select any systems or fleet hardware you want quoted. Our US-based engineering team reviews your scope and delivers an itemized proposal with zero obligation.</p>' +
-        '<div class="mt-5">' +
-          '<label class="block font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400 mb-2">Target Services / Hardware</label>' +
-          '<div id="modal-quote-picks" class="flex flex-wrap gap-2">' + optionsHtml + '</div>' +
-        '</div>' +
-        '<form id="modal-quote-form" class="mt-6 space-y-4">' +
-          '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">' +
-            '<div>' +
-              '<label class="block font-mono text-[9.5px] uppercase tracking-[0.14em] text-slate-400 mb-1">Business Name *</label>' +
-              '<input name="business" required placeholder="e.g. Apex Retail LLC" class="w-full rounded-xl border border-white/10 bg-[#070B14] px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-sky-400 focus:outline-none" />' +
-            '</div>' +
-            '<div>' +
-              '<label class="block font-mono text-[9.5px] uppercase tracking-[0.14em] text-slate-400 mb-1">Contact Name *</label>' +
-              '<input name="contact" required placeholder="Your full name" class="w-full rounded-xl border border-white/10 bg-[#070B14] px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-sky-400 focus:outline-none" />' +
-            '</div>' +
-          '</div>' +
-          '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">' +
-            '<div>' +
-              '<label class="block font-mono text-[9.5px] uppercase tracking-[0.14em] text-slate-400 mb-1">Email Address *</label>' +
-              '<input type="email" name="email" required placeholder="name@company.com" class="w-full rounded-xl border border-white/10 bg-[#070B14] px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-sky-400 focus:outline-none" />' +
-            '</div>' +
-            '<div>' +
-              '<label class="block font-mono text-[9.5px] uppercase tracking-[0.14em] text-slate-400 mb-1">Phone Number</label>' +
-              '<input type="tel" name="phone" placeholder="(984) 388-8298" class="w-full rounded-xl border border-white/10 bg-[#070B14] px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-sky-400 focus:outline-none" />' +
-            '</div>' +
-          '</div>' +
-          '<div>' +
-            '<label class="block font-mono text-[9.5px] uppercase tracking-[0.14em] text-slate-400 mb-1">Fleet Scope or Project Goals</label>' +
-            '<textarea name="message" rows="2" placeholder="Describe your terminal count, current POS software, or digital goals..." class="w-full rounded-xl border border-white/10 bg-[#070B14] px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-sky-400 focus:outline-none resize-none"></textarea>' +
-          '</div>' +
-          '<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-2">' +
-            '<div class="text-[11px] text-slate-400 flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Direct US Team · Response under 15m</div>' +
-            '<button type="submit" id="modal-submit-btn" class="btn-modern-primary !py-2.5 !px-5 text-xs">Submit Quote Request &rarr;</button>' +
-          '</div>' +
-        '</form>' +
-      '</div>',
-      'max-w-xl'
-    );
-
-    var container = $('#modal-quote-picks');
-    if (container) {
-      container.addEventListener('click', function (e) {
-        var btn = e.target.closest('.modal-pick-btn');
-        if (!btn) return;
-        var val = btn.dataset.val;
-        var idx = selectedItems.indexOf(val);
-        if (idx !== -1) {
-          selectedItems.splice(idx, 1);
-          btn.className = 'modal-pick-btn rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all border-white/10 bg-white/5 text-slate-300 hover:border-white/25 hover:text-white';
-        } else {
-          selectedItems.push(val);
-          btn.className = 'modal-pick-btn rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all border-sky-400 bg-sky-500/20 text-white shadow-[0_0_12px_rgba(56,189,248,0.3)]';
-        }
-      });
-    }
-
-    var mForm = $('#modal-quote-form');
-    if (mForm) {
-      mForm.addEventListener('submit', async function (e) {
-        e.preventDefault();
-        var submitBtn = $('#modal-submit-btn');
-        if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Submitting Request…'; }
-
-        var fd = new FormData(mForm);
-        var now = new Date();
-        var ref = 'AZ-' + String(now.getFullYear()).slice(2) + String(now.getMonth() + 1).padStart(2, '0') + String(now.getDate()).padStart(2, '0') + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
-
-        var leadData = {
-          event_type: selectedItems.length ? 'quote_request' : 'general_inquiry',
-          ref: ref,
-          business: String(fd.get('business') || '').trim(),
-          contact: String(fd.get('contact') || '').trim(),
-          email: String(fd.get('email') || '').trim(),
-          phone: String(fd.get('phone') || '').trim(),
-          locations: '1',
-          message: String(fd.get('message') || '').trim(),
-          items: selectedItems.map(function (it) { return { id: it, name: it }; })
-        };
-
-        try {
-          localStorage.setItem('azora_last_quote', JSON.stringify(leadData));
-        } catch (err) {}
-
-        if (window.AZStore) {
-          try {
-            await window.AZStore.saveLead(leadData);
-          } catch (err) {
-            console.error('Lead save error:', err);
-          }
-        }
-
-        AZ.closeModal();
-        setTimeout(function () {
-          if (typeof AZ.showQuoteSuccessModal === 'function') {
-            AZ.showQuoteSuccessModal(leadData);
-          } else {
-            window.location.href = '/success';
-          }
-        }, 260);
-      });
-    }
-  };
-
-  /* ---------- hero interactive widget switcher ---------- */
-  AZ.switchHeroDemo = function (tab) {
-    $$('.hero-demo-pill').forEach(function (btn) {
-      btn.classList.toggle('active', btn.dataset.demo === tab);
-    });
-    $$('.hero-demo-view').forEach(function (view) {
-      if (view.dataset.demo === tab) {
-        view.classList.remove('hidden');
-        view.classList.add('fade-in');
-      } else {
-        view.classList.add('hidden');
-        view.classList.remove('fade-in');
-      }
-    });
-  };
-
-  /* ---------- pricing tabs switcher ---------- */
-  AZ.switchPricingTab = function (tab) {
-    $$('.pricing-filter-pill').forEach(function (btn) {
-      btn.classList.toggle('active', btn.dataset.tab === tab);
-    });
-    $$('.pricing-tab-pane').forEach(function (pane) {
-      if (pane.dataset.tab === tab) {
-        pane.classList.remove('hidden');
-        pane.classList.add('fade-in');
-      } else {
-        pane.classList.add('hidden');
-        pane.classList.remove('fade-in');
-      }
-    });
   };
 
   /* ---------- product detail modal ---------- */
